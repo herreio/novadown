@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+Rscript renv/activate.R
+Rscript -e "renv::restore()"

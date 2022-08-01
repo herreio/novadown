@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+Rscript -e "bookdown::serve_book()"

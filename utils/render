@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+Rscript -e "book <- bookdown::render_book()"
