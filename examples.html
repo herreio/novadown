@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Examples | novadown</title>
+  <meta name="description" content="Examples | novadown" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Examples | novadown" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="herreio/novadown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Examples | novadown" />
+  
+  
+  
+
+<meta name="author" content="Donatus Herre" />
+
+
+<meta name="date" content="2022-08-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="archive.html"/>
+<link rel="next" href="formats.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="assets/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">novadown</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Intro</a></li>
+<li class="chapter" data-level="" data-path="archive.html"><a href="archive.html"><i class="fa fa-check"></i>Archive</a>
+<ul>
+<li class="chapter" data-level="" data-path="archive.html"><a href="archive.html#herzogin-anna-amalia-bibliothek-de-32"><i class="fa fa-check"></i>Herzogin Anna Amalia Bibliothek (<code>DE-32</code>)</a>
+<ul>
+<li class="chapter" data-level="" data-path="archive.html"><a href="archive.html#zugangsverzeichnis-19072008"><i class="fa fa-check"></i>Zugangsverzeichnis (1907–2008)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="archive.html"><a href="archive.html#smb-kunstbibliothek-de-b11"><i class="fa fa-check"></i>SMB Kunstbibliothek (<code>DE-B11</code>)</a>
+<ul>
+<li class="chapter" data-level="" data-path="archive.html"><a href="archive.html#erwerbungsbücher-acquisition-logs-18681992"><i class="fa fa-check"></i>Erwerbungsbücher / Acquisition Logs (1868–1992?)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html"><i class="fa fa-check"></i>Examples</a>
+<ul>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#deutsches-historisches-institut-dhi-paris-de-2795"><i class="fa fa-check"></i>Deutsches Historisches Institut (DHI) Paris (<code>DE-2795</code>)</a>
+<ul>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#neuerwerbungen-new-acquisitions-nouvelles-acquisitions"><i class="fa fa-check"></i>Neuerwerbungen / New Acquisitions / Nouvelles acquisitions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#herzogin-anna-amalia-bibliothek-de-32-1"><i class="fa fa-check"></i>Herzogin Anna Amalia Bibliothek (<code>DE-32</code>)</a>
+<ul>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#neuerwerbungen"><i class="fa fa-check"></i>Neuerwerbungen</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#rss-feed"><i class="fa fa-check"></i>RSS Feed</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#ibero-amerikanisches-institut-de-204"><i class="fa fa-check"></i>Ibero-Amerikanisches Institut (<code>DE-204</code>)</a>
+<ul>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#new-acquisitions-neuerwerbungen"><i class="fa fa-check"></i>New Acquisitions / Neuerwerbungen</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#niedersächsische-staats--und-universitätsbibliothek-göttingen-de-7"><i class="fa fa-check"></i>Niedersächsische Staats- und Universitätsbibliothek Göttingen (<code>DE-7</code>)</a>
+<ul>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#neuerwerbungen-1"><i class="fa fa-check"></i>Neuerwerbungen</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#atom-feed"><i class="fa fa-check"></i>Atom Feed</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#leibniz-institut-für-deutsche-sprache-ids"><i class="fa fa-check"></i>Leibniz-Institut für Deutsche Sprache (IDS)</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#fachinformationsdienst-bbi-fid-bbi-de-23"><i class="fa fa-check"></i>Fachinformationsdienst BBI (<code>FID-BBI-DE-23</code>)</a>
+<ul>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#rss-feed-1"><i class="fa fa-check"></i>RSS Feed</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#stanford-university"><i class="fa fa-check"></i>Stanford University</a>
+<ul>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#science-library"><i class="fa fa-check"></i>Science Library</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#searchworks"><i class="fa fa-check"></i>SearchWorks</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#heidelberg-university"><i class="fa fa-check"></i>Heidelberg University</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#kunsthochschule-für-medien-köln-de-kn185"><i class="fa fa-check"></i>Kunsthochschule für Medien Köln (<code>DE-Kn185</code>)</a>
+<ul>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#neuerwerbungen-new-acquisitions"><i class="fa fa-check"></i>Neuerwerbungen / New Acquisitions</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#sdi-via-opac"><i class="fa fa-check"></i>SDI via OPAC</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#leo-baeck-institute-lbi"><i class="fa fa-check"></i>Leo Baeck Institute (LBI)</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#university-of-florence"><i class="fa fa-check"></i>University of Florence</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#university-of-oregon"><i class="fa fa-check"></i>University of Oregon</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#warburg-library"><i class="fa fa-check"></i>Warburg Library</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html"><i class="fa fa-check"></i>Formats</a>
+<ul>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#marc21"><i class="fa fa-check"></i>MARC21</a>
+<ul>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#date-and-time-of-latest-transaction"><i class="fa fa-check"></i><code>005</code>- Date and Time of Latest Transaction</a></li>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#fixed-length-data-elements-general-information"><i class="fa fa-check"></i><code>008</code> - Fixed-Length Data Elements-General Information</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#pica3pica"><i class="fa fa-check"></i>PICA3/PICA+</a>
+<ul>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#b---selektion-und-sortierung-von-neuerwerbungslisten"><i class="fa fa-check"></i><code>4880</code> / <code>237B</code> - Selektion und Sortierung von Neuerwerbungslisten</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i>Literature</a>
+<ul>
+<li class="chapter" data-level="" data-path="literature.html"><a href="literature.html#concepts"><i class="fa fa-check"></i>Concepts</a>
+<ul>
+<li class="chapter" data-level="" data-path="literature.html"><a href="literature.html#accessions-list"><i class="fa fa-check"></i>Accessions List</a></li>
+<li class="chapter" data-level="" data-path="literature.html"><a href="literature.html#current-awareness"><i class="fa fa-check"></i>Current Awareness</a></li>
+<li class="chapter" data-level="" data-path="literature.html"><a href="literature.html#selective-dissemination-of-information"><i class="fa fa-check"></i>Selective Dissemination of Information</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="literature.html"><a href="literature.html#implementations"><i class="fa fa-check"></i>Implementations</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="publications.html"><a href="publications.html"><i class="fa fa-check"></i>Publications</a>
+<ul>
+<li class="chapter" data-level="" data-path="publications.html"><a href="publications.html#slub-dresden"><i class="fa fa-check"></i>SLUB Dresden</a>
+<ul>
+<li class="chapter" data-level="" data-path="publications.html"><a href="publications.html#landesbibliothek-19201990"><i class="fa fa-check"></i>Landesbibliothek (1920–1990)</a></li>
+<li class="chapter" data-level="" data-path="publications.html"><a href="publications.html#universitätsbibliothek-19301980"><i class="fa fa-check"></i>Universitätsbibliothek (1930–1980)</a></li>
+<li class="chapter" data-level="" data-path="publications.html"><a href="publications.html#bibliothek-der-pädagogischen-hochschule-19801990"><i class="fa fa-check"></i>Bibliothek der Pädagogischen Hochschule (1980–1990)</a></li>
+<li class="chapter" data-level="" data-path="publications.html"><a href="publications.html#bibliothek-der-hochschule-für-verkehrswesen-19501990"><i class="fa fa-check"></i>Bibliothek der Hochschule für Verkehrswesen (1950–1990)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="publications.html"><a href="publications.html#american-institute-of-electrical-engineers"><i class="fa fa-check"></i>American Institute of Electrical Engineers</a>
+<ul>
+<li class="chapter" data-level="" data-path="publications.html"><a href="publications.html#proceedings-19051919"><i class="fa fa-check"></i>Proceedings (1905–1919)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="queries.html"><a href="queries.html"><i class="fa fa-check"></i>Queries</a>
+<ul>
+<li class="chapter" data-level="" data-path="queries.html"><a href="queries.html#rvk"><i class="fa fa-check"></i>RVK</a>
+<ul>
+<li class="chapter" data-level="" data-path="queries.html"><a href="queries.html#an-95200-selektive-informationsvermittlung-sdi"><i class="fa fa-check"></i>AN 95200 – Selektive Informationsvermittlung (SDI)</a></li>
+<li class="chapter" data-level="" data-path="queries.html"><a href="queries.html#st-515-wissensmanagement-information-engineering"><i class="fa fa-check"></i>ST 515 – Wissensmanagement, Information engineering</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html"><i class="fa fa-check"></i>Software</a>
+<ul>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#ex-libris"><i class="fa fa-check"></i>Ex Libris</a></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#koha"><i class="fa fa-check"></i>Koha</a></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#laminas"><i class="fa fa-check"></i>Laminas</a></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#libero"><i class="fa fa-check"></i>Libero</a></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#oclc"><i class="fa fa-check"></i>OCLC</a>
+<ul>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#lbs-opc"><i class="fa fa-check"></i>LBS OPC</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#typo3"><i class="fa fa-check"></i>Typo3</a>
+<ul>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#find"><i class="fa fa-check"></i>Find</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#vufind"><i class="fa fa-check"></i>VuFind</a>
+<ul>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#code"><i class="fa fa-check"></i>Code</a></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#issues"><i class="fa fa-check"></i>Issues</a></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#wiki"><i class="fa fa-check"></i>Wiki</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">novadown</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="examples" class="section level1 hasAnchor">
+<h1>Examples<a href="examples.html#examples" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="deutsches-historisches-institut-dhi-paris-de-2795" class="section level2 hasAnchor">
+<h2>Deutsches Historisches Institut (DHI) Paris (<code>DE-2795</code>)<a href="examples.html#deutsches-historisches-institut-dhi-paris-de-2795" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://uri.gbv.de/database/opac-fr-751035202">GBV-Datenbankverzeichnis</a> (<code>opac-fr-751035202</code>)</li>
+</ul>
+<div id="neuerwerbungen-new-acquisitions-nouvelles-acquisitions" class="section level3 hasAnchor">
+<h3>Neuerwerbungen / New Acquisitions / Nouvelles acquisitions<a href="examples.html#neuerwerbungen-new-acquisitions-nouvelles-acquisitions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://vzlbs2.gbv.de/DB=44/NEUERWERBUNGEN">DHIP-Systematik / DHIP-Scheme / Classement systématique IHAP</a> via <a href="https://vzlbs2.gbv.de/DB=44/">LBS</a> / <a href="https://vzlbs2.gbv.de/DB=44/XML=1.0/IKTLIST">IKTLIST</a></li>
+</ul>
+</div>
+</div>
+<div id="herzogin-anna-amalia-bibliothek-de-32-1" class="section level2 hasAnchor">
+<h2>Herzogin Anna Amalia Bibliothek (<code>DE-32</code>)<a href="examples.html#herzogin-anna-amalia-bibliothek-de-32-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://uri.gbv.de/database/opac-de-32">GBV-Datenbankverzeichnis</a> (<code>opac-de-32</code>)</li>
+</ul>
+<div id="neuerwerbungen" class="section level3 hasAnchor">
+<h3>Neuerwerbungen<a href="examples.html#neuerwerbungen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://haab.weimar-klassik.de/newlweimar.php">Fachgebiete</a> via <a href="https://opac.lbs-weimar.gbv.de/DB=2/">LBS</a> / <a href="https://opac.lbs-weimar.gbv.de/DB=2/XML=1.0/IKTLIST">IKTLIST</a></li>
+</ul>
+</div>
+<div id="rss-feed" class="section level3 hasAnchor">
+<h3>RSS Feed<a href="examples.html#rss-feed" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Diese Suchanfrage abonnieren (RSS)<br />
+<code>vzlbs.gbv.de/php/rssopc/rss_feeds.php</code></p>
+<div id="parameter" class="section level4 hasAnchor">
+<h4>Parameter<a href="examples.html#parameter" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>HOST</li>
+<li>INTPORT</li>
+<li>EXTPORT</li>
+<li>DB</li>
+<li>SEARCH</li>
+<li>SEARCHTEXT</li>
+<li>EDOC</li>
+<li>COOKIE</li>
+</ul>
+</div>
+<div id="response" class="section level4 hasAnchor">
+<h4>Response<a href="examples.html#response" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="examples.html#cb1-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">error</span>&gt; No search server definition or HOST, INTPORT or/and EXTPORT parameter in link.&lt;/<span class="kw">error</span>&gt;</span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="ibero-amerikanisches-institut-de-204" class="section level2 hasAnchor">
+<h2>Ibero-Amerikanisches Institut (<code>DE-204</code>)<a href="examples.html#ibero-amerikanisches-institut-de-204" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://uri.gbv.de/database/opac-de-204">GBV-Datenbankverzeichnis</a> (<code>opac-de-204</code>)</li>
+</ul>
+<div id="new-acquisitions-neuerwerbungen" class="section level3 hasAnchor">
+<h3>New Acquisitions / Neuerwerbungen<a href="examples.html#new-acquisitions-neuerwerbungen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://lbsiai.gbv.de/DB=1/NEUERWERBUNGEN">Start</a> via <a href="https://lbsiai.gbv.de/DB=1/">LBS</a> / <a href="https://lbsiai.gbv.de/DB=1/XML=1.0/IKTLIST">IKTLIST</a></li>
+<li><a href="https://web.archive.org/web/20200729065829/https://www.iai.spk-berlin.de/fileadmin/dokumentenbibliothek/Oeffentlichkeitsarbeit/Einblicke_in_die_Arbeit_des_IAI_-_Archiv/2009/032009_ENG.pdf">New Services from the Library’s OPAC: Lists of New Acquisitions</a> (2009-03)</li>
+</ul>
+</div>
+</div>
+<div id="niedersächsische-staats--und-universitätsbibliothek-göttingen-de-7" class="section level2 hasAnchor">
+<h2>Niedersächsische Staats- und Universitätsbibliothek Göttingen (<code>DE-7</code>)<a href="examples.html#niedersächsische-staats--und-universitätsbibliothek-göttingen-de-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://uri.gbv.de/database/opac-de-7">GBV-Datenbankverzeichnis</a> (<code>opac-de-7</code>)</li>
+</ul>
+<div id="neuerwerbungen-1" class="section level3 hasAnchor">
+<h3>Neuerwerbungen<a href="examples.html#neuerwerbungen-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Fachinformation
+<ul>
+<li>Geisteswissenschaften und Theologie
+<ul>
+<li><a href="https://www.sub.uni-goettingen.de/geisteswissenschaften-und-theologie/digital-humanities/neuerwerbungen/">Digital Humanities</a></li>
+<li><a href="https://www.sub.uni-goettingen.de/geisteswissenschaften-und-theologie/philosophie/neuerwerbungen/">Philosophie</a></li>
+</ul></li>
+<li>…</li>
+</ul></li>
+</ul>
+</div>
+<div id="atom-feed" class="section level3 hasAnchor">
+<h3>Atom Feed<a href="examples.html#atom-feed" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><code>www.sub.uni-goettingen.de/opac.atom</code> via <a href="https://opac.sub.uni-goettingen.de/">LBS</a> / <a href="https://opac.sub.uni-goettingen.de/XML=1.0/IKTLIST">IKTLIST</a></p>
+<div id="beispielanfragen" class="section level4 hasAnchor">
+<h4>Beispielanfragen<a href="examples.html#beispielanfragen" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Digital Humanities: <a href="https://www.sub.uni-goettingen.de/opac.atom?q=(lkl+g+000)"><code>q=(lkl+g+000)</code></a></li>
+<li>Philosophie: <a href="https://www.sub.uni-goettingen.de/opac.atom?q=(lkl+d+*+or+lkl+da*+or+lkl+db*+or+lkl+dc*+or+lkl+df*+or+lkl+dh*+or+lkl+di*+or+lkl+dk*+or+lkl+dm*+or+lkl+dn*+or+lkl+do*+or+lkl+dq*+or+lkl+dr*+or+lkl+ds*+or+lkl+dt*+or+lkl+du*)"><code>q=(lkl d * or lkl da* or lkl db* or lkl dc* or lkl df* or lkl dh* or lkl di* or lkl dk* or lkl dm* or lkl dn* or lkl do* or lkl dq* or lkl dr* or lkl ds* or lkl dt* or lkl du*)</code></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="leibniz-institut-für-deutsche-sprache-ids" class="section level2 hasAnchor">
+<h2>Leibniz-Institut für Deutsche Sprache (IDS)<a href="examples.html#leibniz-institut-für-deutsche-sprache-ids" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://www.ids-mannheim.de/bibliothek/neuerwerb/">Neuerwerbungen</a> via <a href="https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?op=list&amp;category=2">Koha</a> (Public lists)</li>
+</ul>
+</div>
+<div id="fachinformationsdienst-bbi-fid-bbi-de-23" class="section level2 hasAnchor">
+<h2>Fachinformationsdienst BBI (<code>FID-BBI-DE-23</code>)<a href="examples.html#fachinformationsdienst-bbi-fid-bbi-de-23" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="rss-feed-1" class="section level3 hasAnchor">
+<h3>RSS Feed<a href="examples.html#rss-feed-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://katalog.fid-bbi.de/">Katalogsuchen</a> via finc/VuFind
+<ul>
+<li>Beispielanfrage: <a href="https://katalog.fid-bbi.de/Search/Results?join=AND&amp;bool0%5B%5D=AND&amp;lookfor0%5B%5D=neuerwerbungsliste&amp;type0%5B%5D=Title">(Title:neuerwerbungsliste)</a>
+<ul>
+<li><a href="https://katalog.fid-bbi.de/Search/Results?join=AND&amp;bool0%5B%5D=AND&amp;lookfor0%5B%5D=neuerwerbungsliste&amp;type0%5B%5D=Title&amp;view=rss">view=rss</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="examples.html#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">rss</span><span class="ot"> xmlns:opensearch=</span><span class="st">&quot;http://a9.com/-/spec/opensearch/1.1/&quot;</span><span class="ot"> xmlns:atom=</span><span class="st">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="ot"> xmlns:slash=</span><span class="st">&quot;http://purl.org/rss/1.0/modules/slash/&quot;</span><span class="ot"> version=</span><span class="st">&quot;2.0&quot;</span>&gt;</span>
+<span id="cb2-2"><a href="examples.html#cb2-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">channel</span>&gt;</span>
+<span id="cb2-3"><a href="examples.html#cb2-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">title</span>&gt;Results for (Title:neuerwerbungsliste)&lt;/<span class="kw">title</span>&gt;</span>
+<span id="cb2-4"><a href="examples.html#cb2-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">description</span>&gt;Showing 1 - 15 results of 15&lt;/<span class="kw">description</span>&gt;</span>
+<span id="cb2-5"><a href="examples.html#cb2-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">generator</span>&gt;Zend_Feed_Writer 2 (http://framework.zend.com)&lt;/<span class="kw">generator</span>&gt;</span>
+<span id="cb2-6"><a href="examples.html#cb2-6" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">link</span>&gt;https://katalog.fid-bbi.de/Search/Results?sort=score+desc<span class="er">&amp;</span>limit=50<span class="er">&amp;</span>join=AND<span class="er">&amp;</span>bool0%5B%5D=AND<span class="er">&amp;</span>lookfor0%5B%5D=neuerwerbungsliste<span class="er">&amp;</span>type0%5B%5D=Title&lt;/<span class="kw">link</span>&gt;</span>
+<span id="cb2-7"><a href="examples.html#cb2-7" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">opensearch:totalResults</span>&gt;15&lt;/<span class="kw">opensearch:totalResults</span>&gt;</span>
+<span id="cb2-8"><a href="examples.html#cb2-8" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">opensearch:startIndex</span>&gt;0&lt;/<span class="kw">opensearch:startIndex</span>&gt;</span>
+<span id="cb2-9"><a href="examples.html#cb2-9" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">opensearch:itemsPerPage</span>&gt;50&lt;/<span class="kw">opensearch:itemsPerPage</span>&gt;</span>
+<span id="cb2-10"><a href="examples.html#cb2-10" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">opensearch:Query</span><span class="ot"> role=</span><span class="st">&quot;request&quot;</span><span class="ot"> searchTerms=</span><span class="st">&quot;neuerwerbungsliste&quot;</span><span class="ot"> startIndex=</span><span class="st">&quot;0&quot;</span>/&gt;</span>
+<span id="cb2-11"><a href="examples.html#cb2-11" aria-hidden="true" tabindex="-1"></a>  ...</span>
+<span id="cb2-12"><a href="examples.html#cb2-12" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">item</span>&gt;</span>
+<span id="cb2-13"><a href="examples.html#cb2-13" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">title</span>&gt;&lt;<span class="kw">i</span>&gt;Neuerwerbungsliste / Nordstadtbücherei, Stadtbüchereien Hannover&lt;/<span class="kw">i</span>&gt;. [Hannover].&lt;/<span class="kw">title</span>&gt;</span>
+<span id="cb2-14"><a href="examples.html#cb2-14" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">link</span>&gt;https://katalog.fid-bbi.de/Record/183-629835926&lt;/<span class="kw">link</span>&gt;</span>
+<span id="cb2-15"><a href="examples.html#cb2-15" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">guid</span>&gt;https://katalog.fid-bbi.de/Record/183-629835926&lt;/<span class="kw">guid</span>&gt;</span>
+<span id="cb2-16"><a href="examples.html#cb2-16" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">slash:comments</span>&gt;0&lt;/<span class="kw">slash:comments</span>&gt;</span>
+<span id="cb2-17"><a href="examples.html#cb2-17" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">item</span>&gt;</span>
+<span id="cb2-18"><a href="examples.html#cb2-18" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">item</span>&gt;</span>
+<span id="cb2-19"><a href="examples.html#cb2-19" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">title</span>&gt;&lt;<span class="kw">i</span>&gt;Neuerwerbungsliste / Stadtbüchereien Hannover, Fahrbücherei&lt;/<span class="kw">i</span>&gt;. [Hannover].&lt;/<span class="kw">title</span>&gt;</span>
+<span id="cb2-20"><a href="examples.html#cb2-20" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">link</span>&gt;https://katalog.fid-bbi.de/Record/183-629835896&lt;/<span class="kw">link</span>&gt;</span>
+<span id="cb2-21"><a href="examples.html#cb2-21" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">guid</span>&gt;https://katalog.fid-bbi.de/Record/183-629835896&lt;/<span class="kw">guid</span>&gt;</span>
+<span id="cb2-22"><a href="examples.html#cb2-22" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">slash:comments</span>&gt;0&lt;/<span class="kw">slash:comments</span>&gt;</span>
+<span id="cb2-23"><a href="examples.html#cb2-23" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">item</span>&gt;</span>
+<span id="cb2-24"><a href="examples.html#cb2-24" aria-hidden="true" tabindex="-1"></a>  ...</span>
+<span id="cb2-25"><a href="examples.html#cb2-25" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">channel</span>&gt;</span>
+<span id="cb2-26"><a href="examples.html#cb2-26" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">rss</span>&gt;</span></code></pre></div>
+</div>
+</div>
+<div id="stanford-university" class="section level2 hasAnchor">
+<h2>Stanford University<a href="examples.html#stanford-university" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="science-library" class="section level3 hasAnchor">
+<h3>Science Library<a href="examples.html#science-library" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://library.stanford.edu/science/collections/new-acquisitions">New acquisitions</a> via <a href="https://searchworks.stanford.edu/">SearchWork</a> (VuFind)
+<ul>
+<li><a href="https://library.stanford.edu/science/collections/new-acquisitions/2021-archives">2021 archives</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="searchworks" class="section level3 hasAnchor">
+<h3>SearchWorks<a href="examples.html#searchworks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://library-status.stanford.edu/">System Status</a></li>
+</ul>
+</div>
+</div>
+<div id="heidelberg-university" class="section level2 hasAnchor">
+<h2>Heidelberg University<a href="examples.html#heidelberg-university" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://www.ub.uni-heidelberg.de/service/MyUBinfo/verwenden.html#profil-anlegen-mit-7-klicks">MyUB-Info verwenden</a></li>
+<li><a href="https://www.ub.uni-heidelberg.de/helios/nel/NEL.html">Neuerwerbungslisten</a>
+<ul>
+<li><a href="https://www.ub.uni-heidelberg.de/helios/nel/Welcome.html">Neuerwerbungslisten der UB</a></li>
+<li><a href="https://www.ub.uni-heidelberg.de/helios/nel_ssg/">Neuerwerbungslisten der Fachinformationsdienste arthistoricum.net, Propylaeum und CrossAsia</a>
+<ul>
+<li><a href="https://www.ub.uni-heidelberg.de/helios/nel_ssg/00/AY00/Welcome.html">Ägyptologie</a></li>
+<li><a href="https://www.ub.uni-heidelberg.de/helios/nel_ssg/00/AC00/Welcome.html">Klassische Archäologie</a></li>
+<li><a href="https://www.ub.uni-heidelberg.de/helios/nel_ssg/Kunst.html">Mittlere und Neuere Kunstgeschichte bis 1945 und Allgemeine Kunstwissenschaft</a></li>
+<li><a href="https://www.ub.uni-heidelberg.de/helios/nel_ssg/Suedasien.html">Südasien</a></li>
+</ul></li>
+<li><a href="https://www.ub.uni-heidelberg.de/helios/nel_inst/Welcome.html">Dezentrale Bibliotheken</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="kunsthochschule-für-medien-köln-de-kn185" class="section level2 hasAnchor">
+<h2>Kunsthochschule für Medien Köln (<code>DE-Kn185</code>)<a href="examples.html#kunsthochschule-für-medien-köln-de-kn185" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="neuerwerbungen-new-acquisitions" class="section level3 hasAnchor">
+<h3>Neuerwerbungen / New Acquisitions<a href="examples.html#neuerwerbungen-new-acquisitions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://www.khm.de/bib_neuerwerbungen/">Monatslisten</a> / <a href="https://en.khm.de/bib_neuerwerbungen/">monthly list</a> via Primo / OPAC</li>
+</ul>
+<div id="beispielanfragen-1" class="section level4 hasAnchor">
+<h4>Beispielanfragen<a href="examples.html#beispielanfragen-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Januar 2022: <a href="http://bibkatalog.khm.de/F/?func=find-a&amp;find_code=ABR&amp;request=kn185:0122" class="uri">http://bibkatalog.khm.de/F/?func=find-a&amp;find_code=ABR&amp;request=kn185:0122</a></li>
+<li>Februar 2022: <a href="http://bibkatalog.khm.de/F/?func=find-a&amp;find_code=ABR&amp;request=kn185:0222" class="uri">http://bibkatalog.khm.de/F/?func=find-a&amp;find_code=ABR&amp;request=kn185:0222</a></li>
+<li>März 2022: <a href="http://bibkatalog.khm.de/F/?func=find-a&amp;find_code=ABR&amp;request=kn185:0322" class="uri">http://bibkatalog.khm.de/F/?func=find-a&amp;find_code=ABR&amp;request=kn185:0322</a></li>
+<li>April 2022: <a href="http://bibkatalog.khm.de/F/?func=find-a&amp;find_code=ABR&amp;request=kn185:0422" class="uri">http://bibkatalog.khm.de/F/?func=find-a&amp;find_code=ABR&amp;request=kn185:0422</a></li>
+<li>Mai 2022: <a href="http://bibkatalog.khm.de/F/?func=find-a&amp;find_code=ABR&amp;request=kn185:0522" class="uri">http://bibkatalog.khm.de/F/?func=find-a&amp;find_code=ABR&amp;request=kn185:0522</a></li>
+<li>Juni 2022: <a href="http://bibkatalog.khm.de/F/?func=find-a&amp;find_code=ABR&amp;request=kn185:0622" class="uri">http://bibkatalog.khm.de/F/?func=find-a&amp;find_code=ABR&amp;request=kn185:0622</a></li>
+</ul>
+</div>
+</div>
+<div id="sdi-via-opac" class="section level3 hasAnchor">
+<h3>SDI via OPAC<a href="examples.html#sdi-via-opac" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><a href="http://bibkatalog.khm.de/">Hilfe</a></p>
+<blockquote>
+<p>SDI (Selective Dissemination of Information) ist ein Dienst, über den Benutzer über neue Titel in ihrem Interessengebiet informiert werden können. Mit dem SDI-Mechanismus sendet Ihre Bibliothek eine Nachricht, sobald es neue Bücher in einem bestimmten Themenfeld oder neue Hefte einer Zeitschrift gibt.</p>
+<p>Sie müssen eine SDI-Berechtigung in Ihrem Profil haben, um SDI-Anfragen anlegen zu können.</p>
+<p>Um eine SDI-Anfrage anzulegen, klicken Sie aus der Ergebnisliste oder dem Suchverlauf auf einen SDI-Link. So gelangen Sie auf die Seite SDI-Profil (neu/ändern). In diesem Fenster können Sie ein neues SDI-Profil anlegen oder ein bestehendes ändern. Es enthält die folgenden Felder:</p>
+<ul>
+<li>SDI-Name: Geben Sie den Namen an, unter dem Ihre Anfrage gespeichert werden soll.</li>
+<li>Print Format: Wählen Sie das Format, in dem Sie die Titel erhalten möchten.</li>
+<li>Intervall: Legen Sie die Abstände zwischen den Durchläufen der SDI-Anfrage fest, z.B. sieben Tage oder vier Wochen.</li>
+<li>SDI-Nachricht: Geben Sie Text ein, der in der gesendeten E-Mail erscheinen soll.</li>
+<li>SDI-Anfrage: Hier wird der ursprüngliche Suchbegriff angezeigt (z.B. words=Buddhism).</li>
+<li>SDI-Zweigstelle: Sie können die Anfrage für eine einzelne Zweigstelle oder für alle Zweigstellen laufen lassen.</li>
+<li>SDI-Datenbankliste: Wählen Sie die Datenbanken, in denen Ihre Anfrage laufen soll.</li>
+<li>Alternative E-Mail: Sie können Ihre SDI-Ergebnisse an eine weitere E-Mail-Adresse senden lassen.</li>
+<li>E-Mail-Betreff: Wählen Sie einen Betreff für die SDI-Ergebnislisten.</li>
+<li>Ablaufdatum: Wählen Sie ein Ablaufdatum. Die Ergebnislisten werden nach diesem Datum nicht mehr gesendet.</li>
+<li>SDI aussetzen von/bis: Sie können für bestimmte Zeiträume (z.B. Ferien) die SDI-Suchen aussetzen. Bis zum Ende dieses Zeitraums werden Sie keine Benachrichtigungen erhalten.</li>
+<li>Codierung: Wählen Sie den Zeichensatz, in dem Sie die Listen empfangen wollen.</li>
+<li>Nachricht bei keinen Ergebnissen: Hier stellen Sie ein, ob Sie auch eine Benachrichtigung erhalten möchten, wenn die Suche keine Ergebnisse hat.</li>
+</ul>
+<p>Um alle Ihre SDI-Profile zu sehen, gehen Sie in den Benutzerausweis und klicken Sie dort auf den Link SDI-Profile. Dort können Sie Ihre Profile ändern, duplizieren oder löschen. Wenn Sie auf Sofort suchen klicken, wird die Suche sogleich ausgeführt; eine E-Mail-Benachrichtigung wird in diesem Fall nicht verschickt.</p>
+</blockquote>
+</div>
+</div>
+<div id="leo-baeck-institute-lbi" class="section level2 hasAnchor">
+<h2>Leo Baeck Institute (LBI)<a href="examples.html#leo-baeck-institute-lbi" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://www.lbi.org/collections/new-library-acquisitions/">New Library Acquisitions</a> / <a href="https://www.lbi.org/de/collections/new-library-acquisitions/">Neuerwerbungen der LBI Bibliothek</a> via Primo
+<ul>
+<li><a href="http://search.cjh.org/primo-explore/search?query=any,contains,%22LBI%20Library%20New%20Acquisitions%202022%22&amp;tab=default_tab&amp;search_scope=LBI&amp;vid=lbi&amp;lang=en_US&amp;offset=0">View new library acquisitions in the Catalog</a>
+<ul>
+<li>„Liste von Neuerwerbungen in unserem online Katalog“</li>
+</ul></li>
+<li><a href="http://search.cjh.org/primo-explore/search?query=any,contains,%22LBI%20Library%20New%20Acquisitions%202021%22&amp;tab=default_tab&amp;search_scope=LBI&amp;vid=lbi&amp;lang=en_US&amp;offset=0">View 2021 library acquisitions in the Catalog</a>
+<ul>
+<li>„Bibliothekserwerbungen 2021 im Katalog anzeigen“</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="university-of-florence" class="section level2 hasAnchor">
+<h2>University of Florence<a href="examples.html#university-of-florence" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://sbafirenze.it/Alma_newacq2/">Nuove acquisizioni</a> via ALMA</li>
+</ul>
+</div>
+<div id="university-of-oregon" class="section level2 hasAnchor">
+<h2>University of Oregon<a href="examples.html#university-of-oregon" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://library.uoregon.edu/new-acquisitions-list">New Acquisitions List</a> via Primo</li>
+</ul>
+</div>
+<div id="warburg-library" class="section level2 hasAnchor">
+<h2>Warburg Library<a href="examples.html#warburg-library" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://warburg.libguides.com/collections/new">New Acquisitions</a> via <a href="http://warburg.libguides.com/">LibGuides</a></li>
+<li><a href="https://twitter.com/search?q=(%23NewAcquisitions)%20(from%3AWarburg_Library)&amp;f=live">#NewAcquisitions</a> via <a href="https://twitter.com/Warburg_Library">Twitter</a> (@Warburg_Library)</li>
+</ul>
+
+</div>
+</div>
+<script type="text/javascript">
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="archive.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="formats.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": true,
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"info": false
+});
+});
+</script>
+
+</body>
+
+</html>

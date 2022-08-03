@@ -1,0 +1,430 @@
+Index: import/import.properties
+===================================================================
+--- import/import.properties	(revision 2812)
++++ import/import.properties	(working copy)
+@@ -11,7 +11,7 @@
+ # solrmarc.custom.jar.path - Jar containing custom java code to use in indexing. 
+ # If solr.indexer below is defined (other than the default of org.solrmarc.index.SolrIndexer)
+ # you MUST define this value to be the Jar containing the class listed there. 
+-solrmarc.custom.jar.path=VuFindIndexer.jar
++solrmarc.custom.jar.path=VuFindIndexer.jar|lib/ini4j-0.5.2-SNAPSHOT.jar|lib/mysql-connector-java-5.0.8-bin.jar
+ 
+ # Path to your solr instance
+ solr.path = /usr/local/vufind/solr
+Index: import/index_scripts/getLatestTransaction.bsh
+===================================================================
+--- import/index_scripts/getLatestTransaction.bsh	(revision 0)
++++ import/index_scripts/getLatestTransaction.bsh	(revision 0)
+@@ -0,0 +1,88 @@
++import org.marc4j.marc.Record;
++import java.text.DateFormat;
++import java.text.SimpleDateFormat;
++
++// define the base level indexer so that its methods can be called from the script.
++// note that the SolrIndexer code will set this value before the script methods are called.
++org.solrmarc.index.SolrIndexer indexer = null;
++
++SimpleDateFormat marc005date = new SimpleDateFormat("yyyyMMddHHmmss.S");
++SimpleDateFormat marc008date = new SimpleDateFormat("yyMMdd");
++
++public java.util.Date normalize005Date(String input)
++{
++    // Normalize "null" strings to a generic bad value:
++    if (input == null) {
++        input = "null";
++    }
++
++    // Try to parse the date; default to "millsecond 0" (very old date) if we can't
++    // parse the data successfully.
++    java.util.Date retVal;
++    try {
++        retVal = marc005date.parse(input);
++    } catch(java.text.ParseException e) {
++        retVal = new java.util.Date(0);
++    }
++    return retVal;
++}
++
++public java.util.Date normalize008Date(String input)
++{
++    // Normalize "null" strings to a generic bad value:
++    if (input == null || input.length() < 6) {
++        input = "null";
++    }
++
++    // Try to parse the date; default to "millsecond 0" (very old date) if we can't
++    // parse the data successfully.
++    java.util.Date retVal;
++    try {
++        retVal = marc008date.parse(input.substring(0, 6));
++    } catch(java.text.ParseException e) {
++        retVal = new java.util.Date(0);
++    }
++    return retVal;
++}
++
++/**
++ * Extract the latest transaction date from the MARC record.
++ * @param indexer
++ * @param record
++ * @param fieldSpec
++ * @return Latest transaction date.
++ */
++public java.util.Date getLatestTransaction(org.solrmarc.index.SolrIndexer indexer, 
++    Record record) {
++    // First try the 005 -- this is most likely to have a precise transaction date:
++    Set dates = indexer.getFieldList(record, "005");
++    if (dates != null) {
++        String current;
++        Iterator dateIter = dates.iterator();
++        if (dateIter.hasNext()) {
++            return normalize005Date(dateIter.next());
++        }
++    }
++
++    // No luck with 005?  Try 008 next -- less precise, but better than nothing:
++    Set dates = indexer.getFieldList(record, "008");
++    if (dates != null) {
++        String current;
++        Iterator dateIter = dates.iterator();
++        if (dateIter.hasNext()) {
++            return normalize008Date(dateIter.next());
++        }
++    }
++
++    // If we got this far, we couldn't find a valid value; return an arbitrary date:
++    return new java.util.Date(0);
++}
++
++/**
++ * Extract the latest transaction date from the MARC record.
++ * @param record
++ * @return Latest transaction date.
++ */
++public String getLatestTransaction(Record record) {
++    return getLatestTransaction(indexer, record);
++}
+Index: import/index_scripts/indexTimes.bsh
+===================================================================
+--- import/index_scripts/indexTimes.bsh	(revision 0)
++++ import/index_scripts/indexTimes.bsh	(revision 0)
+@@ -0,0 +1,58 @@
++import org.marc4j.marc.Record;
++import org.marc4j.marc.DataField;
++
++// define the base level indexer so that its methods can be called from the script.
++// note that the SolrIndexer code will set this value before the script methods are called.
++org.solrmarc.index.SolrIndexer indexer = null;
++
++// Give ourselves the ability to import other BeanShell scripts
++addClassPath("../import");
++importCommands("index_scripts");
++
++/**
++ * Get the "first indexed" date for the current record.
++ * @param record
++ * @param fieldSpec
++ * @return ID string
++ */
++public String getFirstIndexed(Record record, String fieldSpec) {
++    // Set up date tracker:
++    loadUpdateDateTracker();
++    UpdateDateTracker tracker = new UpdateDateTracker("biblio", indexer.getFirstFieldVal(record, fieldSpec));
++    String retVal = tracker.getFirstIndexed(getLatestTransaction(indexer, record));
++    tracker.close();
++    return retVal;
++}
++
++/**
++ * Get the "first indexed" date for the current record.
++ * @param record
++ * @return ID string
++ */
++public String getFirstIndexed(Record record) {
++    getFirstIndexed(record, "001");
++}
++
++/**
++ * Get the "last indexed" date for the current record.
++ * @param record
++ * @param fieldSpec
++ * @return ID string
++ */
++public String getLastIndexed(Record record, String fieldSpec) {
++    // Set up date tracker:
++    loadUpdateDateTracker();
++    UpdateDateTracker tracker = new UpdateDateTracker("biblio", indexer.getFirstFieldVal(record, fieldSpec));
++    String retVal = tracker.getLastIndexed(getLatestTransaction(indexer, record));
++    tracker.close();
++    return retVal;
++}
++
++/**
++ * Get the "last indexed" date for the current record.
++ * @param record
++ * @return ID string
++ */
++public String getLastIndexed(Record record) {
++    getLastIndexed(record, "001");
++}
+Index: import/index_scripts/loadUpdateDateTracker.bsh
+===================================================================
+--- import/index_scripts/loadUpdateDateTracker.bsh	(revision 0)
++++ import/index_scripts/loadUpdateDateTracker.bsh	(revision 0)
+@@ -0,0 +1,189 @@
++import org.ini4j.Ini;
++import java.sql.*;
++import java.text.DateFormat;
++import java.text.SimpleDateFormat;
++
++public class UpdateDateTracker
++{
++    private Connection db;
++    private String core;
++    private String id;
++    private SimpleDateFormat iso8601 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
++
++    private Timestamp firstIndexed;
++    private Timestamp lastIndexed;
++    private Timestamp lastRecordChange;
++
++    /* Private support method: connect to the database.
++     */
++    private void connectToDatabase()
++    {
++        // Obtain the DSN from the config.ini file:
++        Ini ini = new Ini();
++        File file = new File("../web/conf/config.ini");
++        ini.load(new FileReader(file));
++        String dsn = ini.get("Database", "database");
++    
++        // Parse key settings from the PHP-style DSN:
++        String username = "";
++        String password = "";
++        if (dsn.substring(0, 8).equals("mysql://")) {
++            Class.forName( "com.mysql.jdbc.Driver" ).newInstance();
++            String[] parts = dsn.split("://");
++            if (parts.length > 1) {
++                parts = parts[1].split("@");
++                if (parts.length > 1) {
++                    dsn = "mysql://" + parts[1];
++                    parts = parts[0].split(":");
++                    username = parts[0];
++                    if (parts.length > 1) {
++                        password = parts[1];
++                    }
++                }
++            }
++        }
++    
++        // Connect to the database:
++        db = DriverManager.getConnection("jdbc:" + dsn, username, password);
++    }
++
++    /* Private support method: create a row in the change_tracker table.
++     */
++    private void createRow(Timestamp newRecordChange)
++    {
++        // Save new values to the object:
++        java.util.Date rightNow = new java.util.Date();
++        firstIndexed = lastIndexed = new Timestamp(rightNow.getTime());
++        lastRecordChange = newRecordChange;
++        
++        // Save new values to the database:
++        PreparedStatement sql = db.prepareStatement(
++            "INSERT INTO change_tracker(core, id, first_indexed, last_indexed, last_record_change) " +
++            "VALUES(?, ?, ?, ?, ?);");
++        sql.setString(1, core);
++        sql.setString(2, id);
++        sql.setTimestamp(3, firstIndexed);
++        sql.setTimestamp(4, lastIndexed);
++        sql.setTimestamp(5, lastRecordChange);
++        sql.executeUpdate();
++    }
++
++    /* Private support method: Update the database to indicate that the record has 
++     * just been received by the indexer:
++     */
++    private void index(java.util.Date recordChange)
++    {
++        // Convert incoming java.util.Date to a Timestamp:
++        Timestamp newRecordChange = new Timestamp(recordChange.getTime());
++
++        // No row?  Create one!
++        if (!readRow()) {
++            createRow(newRecordChange);
++        // Row already exists?  See if it needs to be updated:
++        } else {
++            // Was stored record change date before current record change date?
++            if (lastRecordChange.getTime() < newRecordChange.getTime()) {
++                updateRow(newRecordChange);
++            }
++        }
++    }
++
++    /* Private support method: read a row from the change_tracker table.
++     */
++    private boolean readRow()
++    {
++        PreparedStatement sql = db.prepareStatement(
++            "SELECT first_indexed, last_indexed, last_record_change " +
++            "FROM change_tracker WHERE core = ? AND id = ?;");
++        sql.setString(1, core);
++        sql.setString(2, id);
++        ResultSet result = sql.executeQuery();
++        
++        // No results?  Return false:
++        if (!result.first()) {
++            return false;
++        }
++        
++        // If we got this far, we have results -- load them into the object:
++        firstIndexed = result.getTimestamp(1);
++        lastIndexed = result.getTimestamp(2);
++        lastRecordChange = result.getTimestamp(3);
++        return true;
++    }
++
++    /* Private support method: update a row in the change_tracker table.
++     */
++    private void updateRow(Timestamp newRecordChange)
++    {
++        // Save new values to the object:
++        java.util.Date rightNow = new java.util.Date();
++        lastIndexed = new Timestamp(rightNow.getTime());
++        lastRecordChange = newRecordChange;
++
++        // Save new values to the database:
++        PreparedStatement sql = db.prepareStatement(
++            "UPDATE change_tracker SET last_indexed = ?, last_record_change = ?, deleted = ? " +
++            "WHERE core = ? AND id = ?;");
++        sql.setTimestamp(1, lastIndexed);
++        sql.setTimestamp(2, lastRecordChange);
++        sql.setNull(3, java.sql.Types.NULL);
++        sql.setString(4, core);
++        sql.setString(5, id);
++        sql.executeUpdate();
++    }
++
++    /* Constructor:
++     */
++    public UpdateDateTracker(String selectedCore, String selectedId)
++    {
++        // Store incoming identifiers:
++        core = selectedCore;
++        id = selectedId;
++
++        // Connect to the database:
++        connectToDatabase();
++    }
++    
++    /* Clean up after we're done with the object:
++     */
++    public void close()
++    {
++        db.close();
++    }
++
++    /* Get the first indexed date (this version MUST BE CALLED AFTER index())
++     */
++    public String getFirstIndexed()
++    {
++        return iso8601.format(new java.util.Date(firstIndexed.getTime()));
++    }
++
++    /* Get the first indexed date, given the latest record modification date:
++     */
++    public String getFirstIndexed(java.util.Date recordChange)
++    {
++        index(recordChange);
++        return getFirstIndexed();
++    }
++
++    /* Get the last indexed date (this version MUST BE CALLED AFTER index())
++     */
++    public String getLastIndexed()
++    {
++        return iso8601.format(new java.util.Date(lastIndexed.getTime()));
++    }
++
++    /* Get the last indexed date, given the latest record modification date:
++     */
++    public String getLastIndexed(java.util.Date recordChange)
++    {
++        index(recordChange);
++        return getLastIndexed();
++    }
++}
++
++public void loadUpdateDateTracker()
++{
++    // This function doesn't actually do anything, but by calling it, we load this
++    // whole BeanShell file, including the class definition above!
++}
+\ No newline at end of file
+Index: import/marc.properties
+===================================================================
+--- import/marc.properties	(revision 2812)
++++ import/marc.properties	(working copy)
+@@ -68,4 +68,9 @@
+ 
+ url = 856u
+ 
+-illustrated = script(illustrated.bsh), isIllustrated
+\ No newline at end of file
++illustrated = script(illustrated.bsh), isIllustrated
++
++# Track history of indexing times for RSS feeds and other update.  The parameter
++# to these functions must be the same fieldspec as the id setting above!
++first_indexed = script(indexTimes.bsh), getFirstIndexed(001)
++last_indexed = script(indexTimes.bsh), getLastIndexed(001)
+\ No newline at end of file
+Index: mysql.sql
+===================================================================
+--- mysql.sql	(revision 2809)
++++ mysql.sql	(working copy)
+@@ -159,6 +159,22 @@
+ 
+ 
+ --
++-- Table structure for table `change_tracker`
++--
++
++DROP TABLE IF EXISTS `change_tracker`;
++CREATE TABLE `change_tracker` (
++  `core` varchar(30) NOT NULL,              -- solr core containing record
++  `id` varchar(64) NOT NULL,                -- ID of record within core
++  `first_indexed` datetime,                 -- first time added to index
++  `last_indexed` datetime,                  -- last time changed in index
++  `last_record_change` datetime,            -- last time original record was edited
++  `deleted` datetime,                       -- time record was removed from index
++  PRIMARY KEY (`core`, `id`)
++) ENGINE=InnoDB DEFAULT CHARSET=latin1;
++
++
++--
+ -- Constraints for dumped tables
+ --
+ 
+Index: solr/biblio/conf/schema.xml
+===================================================================
+--- solr/biblio/conf/schema.xml	(revision 2809)
++++ solr/biblio/conf/schema.xml	(working copy)
+@@ -93,6 +93,7 @@
+         <filter class="solr.LengthFilterFactory" min="1" max="100" />
+       </analyzer>
+     </fieldType>
++    <fieldType name="date" class="solr.DateField" sortMissingLast="true" omitNorms="true"/>
+   </types>
+  <fields>
+    <!-- Core Fields  -->
+@@ -170,6 +171,9 @@
+    <field name="illustrated" type="string" indexed="true" stored="true" multiValued="false"/>
+    <!-- Used for loading correct record driver -->
+    <field name="recordtype" type="string" indexed="false" stored="true"/>
++   <!-- Tracking fields to keep track of oldest and most recent index times -->
++   <field name="first_indexed" type="date" indexed="true" stored="true"/>
++   <field name="last_indexed" type="date" indexed="true" stored="true"/>
+  </fields>
+  <uniqueKey>id</uniqueKey>
+  <defaultSearchField>allfields</defaultSearchField>

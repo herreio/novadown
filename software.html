@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Software | novadown</title>
+  <meta name="description" content="Software | novadown" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Software | novadown" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="herreio/novadown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Software | novadown" />
+  
+  
+  
+
+<meta name="author" content="Donatus Herre" />
+
+
+<meta name="date" content="2022-08-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="queries.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="assets/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">novadown</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Intro</a></li>
+<li class="chapter" data-level="" data-path="archive.html"><a href="archive.html"><i class="fa fa-check"></i>Archive</a>
+<ul>
+<li class="chapter" data-level="" data-path="archive.html"><a href="archive.html#herzogin-anna-amalia-bibliothek-de-32"><i class="fa fa-check"></i>Herzogin Anna Amalia Bibliothek (<code>DE-32</code>)</a>
+<ul>
+<li class="chapter" data-level="" data-path="archive.html"><a href="archive.html#zugangsverzeichnis-19072008"><i class="fa fa-check"></i>Zugangsverzeichnis (1907–2008)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="archive.html"><a href="archive.html#smb-kunstbibliothek-de-b11"><i class="fa fa-check"></i>SMB Kunstbibliothek (<code>DE-B11</code>)</a>
+<ul>
+<li class="chapter" data-level="" data-path="archive.html"><a href="archive.html#erwerbungsbücher-acquisition-logs-18681992"><i class="fa fa-check"></i>Erwerbungsbücher / Acquisition Logs (1868–1992?)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html"><i class="fa fa-check"></i>Examples</a>
+<ul>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#deutsches-historisches-institut-dhi-paris-de-2795"><i class="fa fa-check"></i>Deutsches Historisches Institut (DHI) Paris (<code>DE-2795</code>)</a>
+<ul>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#neuerwerbungen-new-acquisitions-nouvelles-acquisitions"><i class="fa fa-check"></i>Neuerwerbungen / New Acquisitions / Nouvelles acquisitions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#herzogin-anna-amalia-bibliothek-de-32-1"><i class="fa fa-check"></i>Herzogin Anna Amalia Bibliothek (<code>DE-32</code>)</a>
+<ul>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#neuerwerbungen"><i class="fa fa-check"></i>Neuerwerbungen</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#rss-feed"><i class="fa fa-check"></i>RSS Feed</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#ibero-amerikanisches-institut-de-204"><i class="fa fa-check"></i>Ibero-Amerikanisches Institut (<code>DE-204</code>)</a>
+<ul>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#new-acquisitions-neuerwerbungen"><i class="fa fa-check"></i>New Acquisitions / Neuerwerbungen</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#niedersächsische-staats--und-universitätsbibliothek-göttingen-de-7"><i class="fa fa-check"></i>Niedersächsische Staats- und Universitätsbibliothek Göttingen (<code>DE-7</code>)</a>
+<ul>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#neuerwerbungen-1"><i class="fa fa-check"></i>Neuerwerbungen</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#atom-feed"><i class="fa fa-check"></i>Atom Feed</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#leibniz-institut-für-deutsche-sprache-ids"><i class="fa fa-check"></i>Leibniz-Institut für Deutsche Sprache (IDS)</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#fachinformationsdienst-bbi-fid-bbi-de-23"><i class="fa fa-check"></i>Fachinformationsdienst BBI (<code>FID-BBI-DE-23</code>)</a>
+<ul>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#rss-feed-1"><i class="fa fa-check"></i>RSS Feed</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#stanford-university"><i class="fa fa-check"></i>Stanford University</a>
+<ul>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#science-library"><i class="fa fa-check"></i>Science Library</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#searchworks"><i class="fa fa-check"></i>SearchWorks</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#heidelberg-university"><i class="fa fa-check"></i>Heidelberg University</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#kunsthochschule-für-medien-köln-de-kn185"><i class="fa fa-check"></i>Kunsthochschule für Medien Köln (<code>DE-Kn185</code>)</a>
+<ul>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#neuerwerbungen-new-acquisitions"><i class="fa fa-check"></i>Neuerwerbungen / New Acquisitions</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#sdi-via-opac"><i class="fa fa-check"></i>SDI via OPAC</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#leo-baeck-institute-lbi"><i class="fa fa-check"></i>Leo Baeck Institute (LBI)</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#university-of-florence"><i class="fa fa-check"></i>University of Florence</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#university-of-oregon"><i class="fa fa-check"></i>University of Oregon</a></li>
+<li class="chapter" data-level="" data-path="examples.html"><a href="examples.html#warburg-library"><i class="fa fa-check"></i>Warburg Library</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html"><i class="fa fa-check"></i>Formats</a>
+<ul>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#marc21"><i class="fa fa-check"></i>MARC21</a>
+<ul>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#date-and-time-of-latest-transaction"><i class="fa fa-check"></i><code>005</code>- Date and Time of Latest Transaction</a></li>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#fixed-length-data-elements-general-information"><i class="fa fa-check"></i><code>008</code> - Fixed-Length Data Elements-General Information</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#pica3pica"><i class="fa fa-check"></i>PICA3/PICA+</a>
+<ul>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#b---selektion-und-sortierung-von-neuerwerbungslisten"><i class="fa fa-check"></i><code>4880</code> / <code>237B</code> - Selektion und Sortierung von Neuerwerbungslisten</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i>Literature</a>
+<ul>
+<li class="chapter" data-level="" data-path="literature.html"><a href="literature.html#concepts"><i class="fa fa-check"></i>Concepts</a>
+<ul>
+<li class="chapter" data-level="" data-path="literature.html"><a href="literature.html#accessions-list"><i class="fa fa-check"></i>Accessions List</a></li>
+<li class="chapter" data-level="" data-path="literature.html"><a href="literature.html#current-awareness"><i class="fa fa-check"></i>Current Awareness</a></li>
+<li class="chapter" data-level="" data-path="literature.html"><a href="literature.html#selective-dissemination-of-information"><i class="fa fa-check"></i>Selective Dissemination of Information</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="literature.html"><a href="literature.html#implementations"><i class="fa fa-check"></i>Implementations</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="publications.html"><a href="publications.html"><i class="fa fa-check"></i>Publications</a>
+<ul>
+<li class="chapter" data-level="" data-path="publications.html"><a href="publications.html#slub-dresden"><i class="fa fa-check"></i>SLUB Dresden</a>
+<ul>
+<li class="chapter" data-level="" data-path="publications.html"><a href="publications.html#landesbibliothek-19201990"><i class="fa fa-check"></i>Landesbibliothek (1920–1990)</a></li>
+<li class="chapter" data-level="" data-path="publications.html"><a href="publications.html#universitätsbibliothek-19301980"><i class="fa fa-check"></i>Universitätsbibliothek (1930–1980)</a></li>
+<li class="chapter" data-level="" data-path="publications.html"><a href="publications.html#bibliothek-der-pädagogischen-hochschule-19801990"><i class="fa fa-check"></i>Bibliothek der Pädagogischen Hochschule (1980–1990)</a></li>
+<li class="chapter" data-level="" data-path="publications.html"><a href="publications.html#bibliothek-der-hochschule-für-verkehrswesen-19501990"><i class="fa fa-check"></i>Bibliothek der Hochschule für Verkehrswesen (1950–1990)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="publications.html"><a href="publications.html#american-institute-of-electrical-engineers"><i class="fa fa-check"></i>American Institute of Electrical Engineers</a>
+<ul>
+<li class="chapter" data-level="" data-path="publications.html"><a href="publications.html#proceedings-19051919"><i class="fa fa-check"></i>Proceedings (1905–1919)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="queries.html"><a href="queries.html"><i class="fa fa-check"></i>Queries</a>
+<ul>
+<li class="chapter" data-level="" data-path="queries.html"><a href="queries.html#rvk"><i class="fa fa-check"></i>RVK</a>
+<ul>
+<li class="chapter" data-level="" data-path="queries.html"><a href="queries.html#an-95200-selektive-informationsvermittlung-sdi"><i class="fa fa-check"></i>AN 95200 – Selektive Informationsvermittlung (SDI)</a></li>
+<li class="chapter" data-level="" data-path="queries.html"><a href="queries.html#st-515-wissensmanagement-information-engineering"><i class="fa fa-check"></i>ST 515 – Wissensmanagement, Information engineering</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html"><i class="fa fa-check"></i>Software</a>
+<ul>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#ex-libris"><i class="fa fa-check"></i>Ex Libris</a></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#koha"><i class="fa fa-check"></i>Koha</a></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#laminas"><i class="fa fa-check"></i>Laminas</a></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#libero"><i class="fa fa-check"></i>Libero</a></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#oclc"><i class="fa fa-check"></i>OCLC</a>
+<ul>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#lbs-opc"><i class="fa fa-check"></i>LBS OPC</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#typo3"><i class="fa fa-check"></i>Typo3</a>
+<ul>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#find"><i class="fa fa-check"></i>Find</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#vufind"><i class="fa fa-check"></i>VuFind</a>
+<ul>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#code"><i class="fa fa-check"></i>Code</a></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#issues"><i class="fa fa-check"></i>Issues</a></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#wiki"><i class="fa fa-check"></i>Wiki</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">novadown</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="software" class="section level1 hasAnchor">
+<h1>Software<a href="software.html#software" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="ex-libris" class="section level2 hasAnchor">
+<h2>Ex Libris<a href="software.html#ex-libris" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Knowledge Center
+<ul>
+<li><a href="https://knowledge.exlibrisgroup.com/Alma">Alma</a>
+<ul>
+<li><a href="https://knowledge.exlibrisgroup.com/Alma/Knowledge_Articles/Set_Up_RSS_Feed_for_New_Items">Set Up RSS Feed for New Items</a></li>
+</ul></li>
+<li><a href="https://knowledge.exlibrisgroup.com/Primo">Primo</a></li>
+</ul></li>
+<li>Developers
+<ul>
+<li>Blog
+<ul>
+<li><a href="https://developers.exlibrisgroup.com/blog/Automated-New-Books-List-for-Primo/">Automated New Books List for Primo</a> (2015)</li>
+<li><a href="https://developers.exlibrisgroup.com/blog/Dumping-data-out-of-Alma-using-PERL-and-the-Alma-Analytics-API/">Exporting from Alma using PERL and the Alma Analytics API</a> (2017)</li>
+<li><a href="https://developers.exlibrisgroup.com/blog/a-webpage-to-retrieve-new-acquisitions-using-alma-analytics-api/">A webpage to retrieve new acquisitions using Alma Analytics API</a> (2019)</li>
+</ul></li>
+</ul></li>
+<li>SLC FAQs: <a href="https://slcny.libanswers.com/faq/264979">How can I generate a new title list for my library webpages?</a> (2020)</li>
+</ul>
+</div>
+<div id="koha" class="section level2 hasAnchor">
+<h2>Koha<a href="software.html#koha" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://koha-community.org/">Homepage</a></li>
+<li><a href="https://koha-community.org/manual/20.05/en/html/opac.html#search-rss-feeds">Search RSS Feeds</a> (20.05)</li>
+<li><a href="https://koha-community.org/manual/16.11/html/ch12s05.html#customrss">Custom RSS Feeds</a> (16.11)</li>
+</ul>
+</div>
+<div id="laminas" class="section level2 hasAnchor">
+<h2>Laminas<a href="software.html#laminas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Previously known as <strong>Zend Framework</strong>. Used by <a href="software.html#vufind">VuFind</a>.</p>
+<ul>
+<li><a href="https://docs.laminas.dev/laminas-feed/">laminas-feed</a> / <a href="https://github.com/laminas/laminas-feed">GitHub</a>
+<ul>
+<li><a href="https://docs.laminas.dev/laminas-feed/writer/">Writer</a></li>
+</ul></li>
+<li><a href="https://docs.zendframework.com/zend-feed/">zend-feed</a> / <a href="https://framework.zend.com/manual/2.4/en/modules/zend.feed.introduction.html">Zend\Feed</a> / <a href="https://github.com/zendframework/zend-feed">GitHub</a>
+<ul>
+<li><a href="https://docs.zendframework.com/zend-feed/writer/">Writer</a> / <a href="https://framework.zend.com/manual/2.4/en/modules/zend.feed.writer.html">Zend\Feed\Writer</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="libero" class="section level2 hasAnchor">
+<h2>Libero<a href="software.html#libero" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://libero.com.au/">AU</a> / <a href="https://libero-is.de/">DE</a></li>
+</ul>
+</div>
+<div id="oclc" class="section level2 hasAnchor">
+<h2>OCLC<a href="software.html#oclc" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>OCLC PICA (Wikipedia: <a href="https://en.wikipedia.org/wiki/OCLC_PICA">EN</a> / <a href="https://de.wikipedia.org/wiki/OCLC_PICA">DE</a>)</li>
+<li>OCLC: <a href="https://www.oclc.org/de/about/finance/mergers.html">Fusionen und Akquisitionen</a> (PICA B.V. / OCLC EMEA B.V)</li>
+</ul>
+<div id="lbs-opc" class="section level3 hasAnchor">
+<h3>LBS OPC<a href="software.html#lbs-opc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>OCLC: <a href="https://www.oclc.org/de/lbs.html">Lokales Bibliotheksverwaltungssystem mit integrierten Funktionen zum Katalogisieren und Bestellen</a></li>
+<li>GBV: <a href="https://verbundwiki.gbv.de/x/AoAJAg">LBS - Das Lokale Bibliothekssystem</a>
+<ul>
+<li>OPC4 - Die Nutzersicht
+<ul>
+<li><a href="https://verbundwiki.gbv.de/x/CQAgAg">Neuerwerbungslisten</a>
+<ul>
+<li><a href="https://verbundwiki.gbv.de/x/DQAgAg">Neuerwerbungslisten per RSS</a></li>
+</ul></li>
+<li><a href="https://verbundwiki.gbv.de/x/B4CNAg">Suchergebnisse in anderen Formaten (RSS, XML, …)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="typo3" class="section level2 hasAnchor">
+<h2>Typo3<a href="software.html#typo3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Tutorials &gt; Best practice &gt; <a href="https://docs.typo3.org/p/georgringer/news/main/en-us/Tutorials/BestPractice/Rss/Index.html">RSS feed</a></li>
+</ul>
+<div id="find" class="section level3 hasAnchor">
+<h3>Find<a href="software.html#find" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://github.com/subugoe/typo3-find">subgoe/typo3-find</a> (GitHub)</li>
+</ul>
+<blockquote>
+<h4 id="data-export" class="hasAnchor"><a href="https://github.com/subugoe/typo3-find#data-export">Data export</a><a href="software.html#data-export" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Creating data exports requires the following setup:</p>
+<ul>
+<li><p>set up a TYPO3 page type without HTML and the MIME Type you need;
+the extension provides type <code>1369315139</code> one for JSON:</p>
+<pre><code>tx_find_page = PAGE
+tx_find_page {
+typeNum = 1369315139
+10 &lt; tt_content.list.20.find_find
+config {
+disableAllHeaderCode = 1
+additionalHeaders = Content-type:application/json;charset=utf-8
+}
+}</code></pre></li>
+<li><p>create a link with <code>f:link.action</code> using the <code>pageType</code> you need,
+<code>format="data"</code> and add the argument <code>data-format</code> with the name of
+the format you want to the query</p></li>
+<li><p>create a partial for your data format in <code>Partials/Formats</code> with the
+<code>.data</code> file name extension and create the desired output there.</p></li>
+</ul>
+<p>Example output formats, e.g. for JSON, are available in the extension.
+The germania-sacra project contains additional ones.</p>
+<h4 id="query-string-arguments" class="hasAnchor"><a href="https://github.com/slub/typo3-find#query-string-arguments">Query String Arguments</a><a href="software.html#query-string-arguments" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The plug-in’s query parameters are of the form
+<code>tx_find_find[parameterName]</code>.</p>
+<h5 id="standard-arguments" class="hasAnchor">Standard arguments<a href="software.html#standard-arguments" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Built-in parameter names are</p>
+<ul>
+<li><code>id</code>: the Solr document ID of the document to show in the detail
+action; having the id argument will always trigger the detail action</li>
+<li><code>q</code>: for the query; this is an array with keys the queryField IDs,
+e.g. <code>tx_find_find[q][default]=term</code>; some query field types (e.g.
+Range) use an array as their value to cover both their input values</li>
+<li><code>facet</code>: for selected facets; this is an array with keys the facet
+IDs, and values arrays; those arrays have keys the facet term and
+value 1, e.g. <code>tx_find_find[facet][typ][formular]=1</code></li>
+<li><code>page</code>: the page of results to show (1-based)</li>
+<li><code>extended</code>: whether to show the extended search form</li>
+<li><code>sort</code>: the sort order to use</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div id="vufind" class="section level2 hasAnchor">
+<h2>VuFind<a href="software.html#vufind" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="code" class="section level3 hasAnchor">
+<h3>Code<a href="software.html#code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>GitHub: <a href="https://github.com/vufind-org/vufind">vufind-org/vufind</a> (default: <code>dev</code>)</li>
+<li>GitLab SC Uni Leipzig: <a href="https://git.sc.uni-leipzig.de/ubl/finc/vufind">ubl/finc/vufind</a> (default: <code>finc</code>)</li>
+</ul>
+<div id="schema.xml" class="section level4 hasAnchor">
+<h4><code>schema.xml</code><a href="software.html#schema.xml" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Path: <a href="https://github.com/vufind-org/vufind/blob/dev/solr/vufind/biblio/conf/schema.xml">vufind/solr/vufind/biblio/conf/schema.xml</a></p>
+<div id="tracking" class="section level5 hasAnchor">
+<h5>Tracking<a href="software.html#tracking" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb4"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb4-1"><a href="software.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Tracking fields to keep track of oldest and most recent index times --&gt;</span></span>
+<span id="cb4-2"><a href="software.html#cb4-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">field</span><span class="ot"> name=</span><span class="st">&quot;first_indexed&quot;</span><span class="ot"> type=</span><span class="st">&quot;date&quot;</span><span class="ot"> indexed=</span><span class="st">&quot;true&quot;</span><span class="ot"> stored=</span><span class="st">&quot;true&quot;</span><span class="ot"> docValues=</span><span class="st">&quot;true&quot;</span>/&gt;</span>
+<span id="cb4-3"><a href="software.html#cb4-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">field</span><span class="ot"> name=</span><span class="st">&quot;last_indexed&quot;</span><span class="ot"> type=</span><span class="st">&quot;date&quot;</span><span class="ot"> indexed=</span><span class="st">&quot;true&quot;</span><span class="ot"> stored=</span><span class="st">&quot;true&quot;</span><span class="ot"> docValues=</span><span class="st">&quot;true&quot;</span>/&gt;</span></code></pre></div>
+<p>Lines: <a href="https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/solr/vufind/biblio/conf/schema.xml#L228-L230">L228-L230</a></p>
+<hr />
+<p>Path: <a href="#">solr/biblio/admin/file?file=schema.xml</a> (<code>finc-main</code>)</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb5-1"><a href="software.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--  Tracking fields to keep track of oldest and most recent index times  --&gt;</span></span>
+<span id="cb5-2"><a href="software.html#cb5-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">field</span><span class="ot"> name=</span><span class="st">&quot;first_indexed&quot;</span><span class="ot"> type=</span><span class="st">&quot;date&quot;</span><span class="ot"> indexed=</span><span class="st">&quot;true&quot;</span><span class="ot"> stored=</span><span class="st">&quot;true&quot;</span><span class="ot"> docValues=</span><span class="st">&quot;true&quot;</span>/&gt;</span>
+<span id="cb5-3"><a href="software.html#cb5-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">field</span><span class="ot"> name=</span><span class="st">&quot;last_indexed&quot;</span><span class="ot"> type=</span><span class="st">&quot;date&quot;</span><span class="ot"> indexed=</span><span class="st">&quot;true&quot;</span><span class="ot"> stored=</span><span class="st">&quot;true&quot;</span><span class="ot"> docValues=</span><span class="st">&quot;true&quot;</span><span class="ot"> default=</span><span class="st">&quot;NOW&quot;</span>/&gt;</span></code></pre></div>
+</div>
+</div>
+<div id="example_atom.xsl" class="section level4 hasAnchor">
+<h4><code>example_atom.xsl</code><a href="software.html#example_atom.xsl" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<blockquote>
+<p>Simple transform of Solr query results to Atom</p>
+</blockquote>
+<p>Path: <a href="https://github.com/vufind-org/vufind/blob/dev/solr/vufind/biblio/conf/xslt/example_atom.xsl">vufind/solr/vufind/biblio/conf/xslt/example_atom.xsl</a></p>
+</div>
+<div id="example_rss.xsl" class="section level4 hasAnchor">
+<h4><code>example_rss.xsl</code><a href="software.html#example_rss.xsl" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<blockquote>
+<p>Simple transform of Solr query results to RSS</p>
+</blockquote>
+<p>Path: <a href="https://github.com/vufind-org/vufind/blob/dev/solr/vufind/biblio/conf/xslt/example_rss.xsl">vufind/solr/vufind/biblio/conf/xslt/example_rss.xsl</a></p>
+</div>
+<div id="marc_local.properties" class="section level4 hasAnchor">
+<h4><code>marc_local.properties</code><a href="software.html#marc_local.properties" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Path: <a href="https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/import/marc_local.properties">vufind/import/marc_local.properties</a></p>
+<div id="tracking-1" class="section level5 hasAnchor">
+<h5>Tracking<a href="software.html#tracking-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<pre class="properties"><code># Uncomment the following lines to track history of indexing times for RSS feeds,
+# OAI-PMH server and other updates.  The parameter to these functions must be the
+# same fieldspec as the id setting above!
+# IMPORTANT: Indexing this extra information will make extra database calls during
+#            the indexing process and will likely slow things down significantly.
+#first_indexed = custom, getFirstIndexed(001)
+#last_indexed = custom, getLastIndexed(001)</code></pre>
+<p>Lines: <a href="https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/import/marc_local.properties#L19-L25">19-25</a></p>
+</div>
+</div>
+<div id="config.ini" class="section level4 hasAnchor">
+<h4><code>config.ini</code><a href="software.html#config.ini" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Path: <a href="https://github.com/vufind-org/vufind/blob/dev/config/vufind/config.ini">vufind/config/vufind/config.ini</a></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb7-1"><a href="software.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">; This section controls features related to user accounts</span></span>
+<span id="cb7-2"><a href="software.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">[Account]</span></span>
+<span id="cb7-3"><a href="software.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">; ...</span></span>
+<span id="cb7-4"><a href="software.html#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="software.html#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">; Allow the user to &quot;subscribe&quot; to search history entries in order to receive</span></span>
+<span id="cb7-6"><a href="software.html#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">; email notifications of new search results.</span></span>
+<span id="cb7-7"><a href="software.html#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="dt">schedule_searches </span><span class="ot">=</span><span class="st"> </span><span class="kw">false</span></span>
+<span id="cb7-8"><a href="software.html#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="software.html#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">; Should we always send a scheduled search email the first time we run notices</span></span>
+<span id="cb7-10"><a href="software.html#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">; after a user has subscribed (true), or should we only send an email when there</span></span>
+<span id="cb7-11"><a href="software.html#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">; is actually something new (false, default)</span></span>
+<span id="cb7-12"><a href="software.html#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="dt">force_first_scheduled_email </span><span class="ot">=</span><span class="st"> </span><span class="kw">false</span></span>
+<span id="cb7-13"><a href="software.html#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="software.html#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co">; When schedule_searches is set to true, you can customize the schedule frequencies</span></span>
+<span id="cb7-15"><a href="software.html#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co">; here -- just use the number of days between notifications in the brackets. Labels</span></span>
+<span id="cb7-16"><a href="software.html#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co">; will be run through the translator.</span></span>
+<span id="cb7-17"><a href="software.html#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co">;scheduled_search_frequencies[0] = schedule_none</span></span>
+<span id="cb7-18"><a href="software.html#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="co">;scheduled_search_frequencies[1] = schedule_daily</span></span>
+<span id="cb7-19"><a href="software.html#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co">;scheduled_search_frequencies[7] = schedule_weekly</span></span></code></pre></div>
+<p>Lines: <a href="https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/config/vufind/config.ini#L392-L412">392-412</a></p>
+</div>
+<div id="searches.ini" class="section level4 hasAnchor">
+<h4><code>searches.ini</code><a href="software.html#searches.ini" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Path: <a href="https://github.com/vufind-org/vufind/blob/dev/config/vufind/searches.ini">vufind/config/vufind/searches.ini</a></p>
+<div id="new-items" class="section level5 hasAnchor">
+<h5>New Items<a href="software.html#new-items" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb8"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb8-1"><a href="software.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">; This section controls the &quot;New Items&quot; search.</span></span>
+<span id="cb8-2"><a href="software.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">[NewItem]</span></span>
+<span id="cb8-3"><a href="software.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">; New item information can be retrieved from Solr or from the ILS; this setting</span></span>
+<span id="cb8-4"><a href="software.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">; controls which mechanism is used. If using Solr, change tracking must be enabled</span></span>
+<span id="cb8-5"><a href="software.html#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">; (see https://vufind.org/wiki/indexing:tracking_record_changes). If using the ILS,</span></span>
+<span id="cb8-6"><a href="software.html#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">; your driver must support the getNewItems() method.</span></span>
+<span id="cb8-7"><a href="software.html#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">; Valid options: ils, solr; default: ils</span></span>
+<span id="cb8-8"><a href="software.html#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="dt">method </span><span class="ot">=</span><span class="st"> ils</span></span>
+<span id="cb8-9"><a href="software.html#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">; Comma-separated list of date ranges to offer to the user (i.e. 1,5,30 = one day</span></span>
+<span id="cb8-10"><a href="software.html#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">; old, or five days old, or thirty days old). If using the &quot;ils&quot; method, be careful</span></span>
+<span id="cb8-11"><a href="software.html#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">; about raising the maximum age too high -- searching very long date ranges may put</span></span>
+<span id="cb8-12"><a href="software.html#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co">; a load on your ILS.</span></span>
+<span id="cb8-13"><a href="software.html#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="dt">ranges </span><span class="ot">=</span><span class="st"> 1,5,30</span></span>
+<span id="cb8-14"><a href="software.html#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co">; This setting only applies when using the &quot;ils&quot; method. It controls the maximum</span></span>
+<span id="cb8-15"><a href="software.html#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co">; number of pages of results that will show up when doing a new item search.</span></span>
+<span id="cb8-16"><a href="software.html#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co">; It is necessary to limit the number of results to avoid getting a &quot;too many boolean</span></span>
+<span id="cb8-17"><a href="software.html#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co">; clauses&quot; error from the Solr index (see notes at</span></span>
+<span id="cb8-18"><a href="software.html#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co">; https://vufind.org/jira/browse/VUFIND-128 for more details).  However, if you</span></span>
+<span id="cb8-19"><a href="software.html#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co">; set the value too low, you may get the same results no matter which range setting</span></span>
+<span id="cb8-20"><a href="software.html#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co">; is selected!</span></span>
+<span id="cb8-21"><a href="software.html#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="dt">result_pages </span><span class="ot">=</span><span class="st"> </span><span class="dv">10</span></span>
+<span id="cb8-22"><a href="software.html#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co">; This setting can be used to automatically apply filter queries to the New Item</span></span>
+<span id="cb8-23"><a href="software.html#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co">; results.  For example, you might want to filter out certain content types.  You</span></span>
+<span id="cb8-24"><a href="software.html#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="co">; can add multiple filters by repeating the &quot;filter[] =&quot; line, or you can skip</span></span>
+<span id="cb8-25"><a href="software.html#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="co">; filtering entirely by leaving the line commented out.</span></span>
+<span id="cb8-26"><a href="software.html#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="co">; filter[] = &quot;format:Book&quot;</span></span></code></pre></div>
+<p>Lines: <a href="https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/config/vufind/searches.ini#L503-L528">503-528</a></p>
+</div>
+<div id="rss-feed-2" class="section level5 hasAnchor">
+<h5>RSS Feed<a href="software.html#rss-feed-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb9"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb9-1"><a href="software.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">; This section controls RSS feed behavior</span></span>
+<span id="cb9-2"><a href="software.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">[RSS]</span></span>
+<span id="cb9-3"><a href="software.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">; If set, this setting will override sort settings associated with RSS feeds.  This</span></span>
+<span id="cb9-4"><a href="software.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">; allows you to ensure that newly added or changed items in your index appear at</span></span>
+<span id="cb9-5"><a href="software.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">; the top of the feed.  Use &quot;first_indexed desc&quot; if you only want newly-added items</span></span>
+<span id="cb9-6"><a href="software.html#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">; to be listed first.  Use &quot;last_indexed desc&quot; if you want newly-added-or-changed</span></span>
+<span id="cb9-7"><a href="software.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">; items.  Comment out the whole setting if you do not want custom RSS sorting.</span></span>
+<span id="cb9-8"><a href="software.html#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">; IMPORTANT: In order for first_indexed and last_indexed sorting to work properly,</span></span>
+<span id="cb9-9"><a href="software.html#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">;            you need to index record change dates; see the Wiki page at</span></span>
+<span id="cb9-10"><a href="software.html#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">;            https://vufind.org/wiki/indexing:tracking_record_changes</span></span>
+<span id="cb9-11"><a href="software.html#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="dt">sort </span><span class="ot">=</span><span class="st"> &quot;last_indexed desc&quot;</span></span></code></pre></div>
+<p>Lines: <a href="https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/config/vufind/searches.ini#L530-L540">530-540</a></p>
+</div>
+</div>
+</div>
+<div id="issues" class="section level3 hasAnchor">
+<h3>Issues<a href="software.html#issues" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="vufind-167" class="section level4 hasAnchor">
+<h4>VUFIND-167<a href="software.html#vufind-167" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<blockquote>
+<p>Created November 10, 2009 at 1:47 AM<br />
+Updated September 30, 2010 at 8:01 PM<br />
+Resolved September 30, 2010 at 8:01 PM</p>
+</blockquote>
+<blockquote>
+<h5 id="rss-feature-is-not-really-rss" class="hasAnchor"><a href="https://openlibraryfoundation.atlassian.net/browse/VUFIND-167">RSS Feature is not really RSS</a><a href="software.html#rss-feature-is-not-really-rss" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<h6 id="description" class="hasAnchor">Description<a href="software.html#description" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>The feature we currently label on screen as RSS is not really RSS. I was working on the author screen today to implement the search object and noticed we don’t offer an RSS feed at the bottom. I thought that would be a great idea, because people (particularly in a public library context) would like to keep up-to-date on their favourite authors.</p>
+<p>However we don’t do any real syndication using RSS because we don’t keep dates against records in the system. We just select the top arbitrary 20 results and return them as XML. This number was 50 in Andrew’s RSS code which is an improvement, but both aren’t really RSS.</p>
+<p>As I understand most Libraries currently keeping a time against each record are relying on their ILMS to do so. For RSS to truly exist in VuFind we’d need the app code/database to keep this data somehow in a way that would survive a full index rebuild and not disrupt a user’s RSS feeds.</p>
+</blockquote>
+<p><a href="./source/VUFIND-167-trackIndexChanges.patch">TrackIndexChanges.patch</a></p>
+<div id="comments" class="section level5 hasAnchor">
+<h5>Comments<a href="software.html#comments" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<blockquote>
+<p>Demian Katz<br />
+September 30, 2010 at 8:01 PM<br />
+As of r3029, this issue is resolved – see details at <a href="http://vufind.org/wiki/tracking_record_changes#enhanced_rss_functionality" class="uri">http://vufind.org/wiki/tracking_record_changes#enhanced_rss_functionality</a> .</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="wiki" class="section level3 hasAnchor">
+<h3>Wiki<a href="software.html#wiki" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="configuration" class="section level4 hasAnchor">
+<h4>Configuration<a href="software.html#configuration" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<blockquote>
+<h5 id="email-alerts" class="hasAnchor"><a href="https://vufind.org/wiki/configuration:email_alerts">Email Alerts</a><a href="software.html#email-alerts" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Starting with release 6.1, VuFind supports “selective dissemination of information” (SDI) – users can subscribe to searches and receive notifications in the form of regular email alerts when new records appear in those result sets.</p>
+<p>…</p>
+</blockquote>
+</div>
+<div id="indexing" class="section level4 hasAnchor">
+<h4>Indexing<a href="software.html#indexing" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<blockquote>
+<h5 id="tracking-record-changes" class="hasAnchor"><a href="https://vufind.org/wiki/indexing:tracking_record_changes">Tracking Record Changes</a><a href="software.html#tracking-record-changes" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<h6 id="introduction" class="hasAnchor">Introduction<a href="software.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>For certain types of functionality, VuFind needs to be aware not only of the content of the records in its index, but also the times at which these records were first indexed and most recently changed. <strong>By understanding the history of its own records, VuFind can provide RSS feeds that show recent changes</strong>, and it can export its contents using the popular OAI-PMH protocol.</p>
+<p>Keeping track of the information needed to support these features adds some overhead – more data in your MySQL database, and <strong>slower indexing times</strong>. Because not everyone needs the features, they are disabled by default. …</p>
+<p>…</p>
+<h6 id="enabling-change-tracking" class="hasAnchor">Enabling Change Tracking<a href="software.html#enabling-change-tracking" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>…</p>
+<p class="heading" id="a-note-on-memory-usage">A Note on Memory Usage</p>
+<p>SolrMarc may require more memory in order to update the database and the Solr index at the same time. …</p>
+<h6 id="enhanced-rss-functionality" class="hasAnchor">Enhanced RSS Functionality<a href="software.html#enhanced-rss-functionality" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>When record change tracking is enabled, RSS feeds will be more effective. Without tracking, RSS dates are based on publication dates, which may or may not correspond with the dates that items were added to your collection. With change tracking turned on, RSS feeds will be sorted by index date and will display index dates within the feed. This means that patrons can truly track searches in order to be notified of new additions within their chosen areas of interest.</p>
+<p>Note that you can customize some of the RSS behavior in VuFind – see the [RSS] section of searches.ini.</p>
+<h6 id="solr-driven-new-items" class="hasAnchor">Solr-driven New Items<a href="software.html#solr-driven-new-items" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>By default, VuFind tries to use the ILS driver to power the “new items” search. However, not all ILS drivers support this functionality. If you turn on record change tracking, you can modify the method setting to “solr” in the [NewItem] section of searches.ini to gain new item searches without an ILS dependency.</p>
+<p>…</p>
+</blockquote>
+</div>
+<div id="videos" class="section level4 hasAnchor">
+<h4>Videos<a href="software.html#videos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><a href="https://vufind.org/wiki/videos:oai-pmh_server_and_harvest_functionality">OAI-PMH Server and Harvest Functionality</a>
+<ul>
+<li><a href="https://vufind.org/video/OAI-PMH.mp4">MP4</a> / <a href="https://youtu.be/vfDQElhYNQ8">YouTube</a></li>
+</ul></li>
+<li><a href="https://vufind.org/wiki/videos:xml_change_tracking_and_email_alerts">XML Change Tracking and Email Alerts</a>
+<ul>
+<li><a href="https://vufind.org/video/Email_Alerts.mp4">MP4</a> / <a href="https://youtu.be/uIIEqyKPNk0">YouTube</a></li>
+</ul></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="queries.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": true,
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"info": false
+});
+});
+</script>
+
+</body>
+
+</html>
