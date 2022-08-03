@@ -13,6 +13,7 @@
 
 - [GBV-Datenbankverzeichnis](https://uri.gbv.de/database/opac-de-b11) (`opac-de-b11`)
 
-### Erwerbungsbücher / Acquisition Logs
+### Erwerbungsbücher / Acquisition Logs (1868–1992?)
 
 - [Erwerbungsbücher der Kunstbibliothek](https://www.smb.museum/museen-einrichtungen/kunstbibliothek/sammeln-forschen/erwerbungsbuecher/) / [The Acquisition Logs of the Kunstbibliothek](https://www.smb.museum/en/museums-institutions/kunstbibliothek/collection-research/acquisition-and-accession-logs/)
+  - `storage.smb.museum/erwerbungsbuecher/*.pdf`
