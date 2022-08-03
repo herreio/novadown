@@ -6,7 +6,7 @@
 
 ### Neuerwerbungen / New Acquisitions / Nouvelles acquisitions
 
-- [DHIP-Scheme / DHIP-Systematik](https://vzlbs2.gbv.de/DB=44/NEUERWERBUNGEN) via [LBS](https://vzlbs2.gbv.de/DB=44/) / [IKTLIST](https://vzlbs2.gbv.de/DB=44/XML=1.0/IKTLIST)
+- [DHIP-Systematik / DHIP-Scheme / Classement systématique IHAP](https://vzlbs2.gbv.de/DB=44/NEUERWERBUNGEN) via [LBS](https://vzlbs2.gbv.de/DB=44/) / [IKTLIST](https://vzlbs2.gbv.de/DB=44/XML=1.0/IKTLIST)
 
 ## Herzogin Anna Amalia Bibliothek (`DE-32`)
 
@@ -19,7 +19,7 @@
 ### RSS Feed
 
 Diese Suchanfrage abonnieren (RSS)  
-`vzlbs.gbv.de/php/rssopc/rss_feeds.php` 
+`vzlbs.gbv.de/php/rssopc/rss_feeds.php`
 
 #### Parameter
 
