@@ -49,12 +49,24 @@ Diese Suchanfrage abonnieren (RSS)
 
 ## Niedersächsische Staats- und Universitätsbibliothek Göttingen (`DE-7`)
 
-- Neuerwerbungen via Atom Feed (`www.sub.uni-goettingen.de/opac.atom`) / [OPAC](https://opac.sub.uni-goettingen.de/)
-  - [Philosophie](https://www.sub.uni-goettingen.de/geisteswissenschaften-und-theologie/philosophie/neuerwerbungen/)
-    - Beispielanfrage: [`q=(lkl d * or lkl da* or lkl db* or lkl dc* or lkl df* or lkl dh* or lkl di* or lkl dk* or lkl dm* or lkl dn* or lkl do* or lkl dq* or lkl dr* or lkl ds* or lkl dt* or lkl du*)`](https://www.sub.uni-goettingen.de/opac.atom?q=(lkl+d+*+or+lkl+da*+or+lkl+db*+or+lkl+dc*+or+lkl+df*+or+lkl+dh*+or+lkl+di*+or+lkl+dk*+or+lkl+dm*+or+lkl+dn*+or+lkl+do*+or+lkl+dq*+or+lkl+dr*+or+lkl+ds*+or+lkl+dt*+or+lkl+du*))
-  - [Digital Humanities](https://www.sub.uni-goettingen.de/geisteswissenschaften-und-theologie/digital-humanities/neuerwerbungen/)
-    - Beispielanfrage: [`q=(lkl+g+000)`](https://www.sub.uni-goettingen.de/opac.atom?q=(lkl+g+000))
-- [GBV-Datenbankverzeichnis](https://uri.gbv.de/database/opac-de-7)
+- [GBV-Datenbankverzeichnis](https://uri.gbv.de/database/opac-de-7) (`opac-de-7`)
+
+### Neuerwerbungen
+
+- Fachinformation
+  - Geisteswissenschaften und Theologie
+    - [Digital Humanities](https://www.sub.uni-goettingen.de/geisteswissenschaften-und-theologie/digital-humanities/neuerwerbungen/)
+    - [Philosophie](https://www.sub.uni-goettingen.de/geisteswissenschaften-und-theologie/philosophie/neuerwerbungen/)
+  - ...
+
+### Atom Feed
+
+`www.sub.uni-goettingen.de/opac.atom` via [OPAC](https://opac.sub.uni-goettingen.de/)
+
+#### Beispielanfragen
+
+- Digital Humanities: [`q=(lkl+g+000)`](https://www.sub.uni-goettingen.de/opac.atom?q=(lkl+g+000))
+- Philosophie: [`q=(lkl d * or lkl da* or lkl db* or lkl dc* or lkl df* or lkl dh* or lkl di* or lkl dk* or lkl dm* or lkl dn* or lkl do* or lkl dq* or lkl dr* or lkl ds* or lkl dt* or lkl du*)`](https://www.sub.uni-goettingen.de/opac.atom?q=(lkl+d+*+or+lkl+da*+or+lkl+db*+or+lkl+dc*+or+lkl+df*+or+lkl+dh*+or+lkl+di*+or+lkl+dk*+or+lkl+dm*+or+lkl+dn*+or+lkl+do*+or+lkl+dq*+or+lkl+dr*+or+lkl+ds*+or+lkl+dt*+or+lkl+du*))
 
 ## Leibniz-Institut für Deutsche Sprache (IDS)
 
