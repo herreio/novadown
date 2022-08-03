@@ -2,7 +2,7 @@
 
 ## Herzogin Anna Amalia Bibliothek (`DE-32`)
 
-- [GBV-Datenbankverzeichnis](https://uri.gbv.de/database/opac-de-32)
+- [GBV-Datenbankverzeichnis](https://uri.gbv.de/database/opac-de-32) (`opac-de-32`)
 
 ### Zugangsverzeichnis (1907–2008)
 
@@ -11,7 +11,7 @@
 
 ## SMB Kunstbibliothek (`DE-B11`)
 
-- [GBV-Datenbankverzeichnis](https://uri.gbv.de/database/opac-de-b11)
+- [GBV-Datenbankverzeichnis](https://uri.gbv.de/database/opac-de-b11) (`opac-de-b11`)
 
 ### Erwerbungsbücher / Acquisition Logs
 

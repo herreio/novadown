@@ -61,7 +61,7 @@ Diese Suchanfrage abonnieren (RSS)
 
 ### Atom Feed
 
-`www.sub.uni-goettingen.de/opac.atom` via [OPAC](https://opac.sub.uni-goettingen.de/)
+`www.sub.uni-goettingen.de/opac.atom` via [LBS](https://opac.sub.uni-goettingen.de/) / [IKTLIST](https://opac.sub.uni-goettingen.de/XML=1.0/IKTLIST)
 
 #### Beispielanfragen
 
@@ -136,7 +136,16 @@ Diese Suchanfrage abonnieren (RSS)
 
 ### Neuerwerbungen / New Acquisitions
 
-- [Monatslisten](https://www.khm.de/bib_neuerwerbungen/) / [monthly list](https://en.khm.de/bib_neuerwerbungen/) via Primo
+- [Monatslisten](https://www.khm.de/bib_neuerwerbungen/) / [monthly list](https://en.khm.de/bib_neuerwerbungen/) via Primo / OPAC
+
+#### Beispielanfragen
+
+- Januar 2022: http://bibkatalog.khm.de/F/?func=find-a&find_code=ABR&request=kn185:0122
+- Februar 2022: http://bibkatalog.khm.de/F/?func=find-a&find_code=ABR&request=kn185:0222
+- März 2022: http://bibkatalog.khm.de/F/?func=find-a&find_code=ABR&request=kn185:0322
+- April 2022: http://bibkatalog.khm.de/F/?func=find-a&find_code=ABR&request=kn185:0422
+- Mai 2022: http://bibkatalog.khm.de/F/?func=find-a&find_code=ABR&request=kn185:0522
+- Juni 2022: http://bibkatalog.khm.de/F/?func=find-a&find_code=ABR&request=kn185:0622
 
 ### SDI via OPAC
 
