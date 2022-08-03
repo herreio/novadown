@@ -1,3 +1,4 @@
 #!/usr/bin/env Rscript
+rmarkdown::render("biblio/references.Rmd", output_dir = "biblio")
 library(servr)
-outpath <- bookdown::render_book()
+outpath <- bookdown::render_book("index.Rmd")
