@@ -1,0 +1,28 @@
+# Formats
+
+## MARC21
+
+### `005`- Date and Time of Latest Transaction
+
+> Sixteen characters that indicate the date and time of the latest record transaction and serve as a version identifier for the record. They are recorded according to Representation of Dates and Times (ISO 8601). The date requires 8 numeric characters in the pattern yyyymmdd. The time requires 8 numeric characters in the pattern hhmmss.f, expressed in terms of the 24-hour (00-23) clock.
+
+- LOC
+  - Bibliographic: [Full](https://www.loc.gov/marc/bibliographic/bd005.html) / [Concise](https://www.loc.gov/marc/bibliographic/concise/bd005.html)
+
+### `008` - Fixed-Length Data Elements-General Information
+
+- LOC
+  - Bibliographic: [Full](https://www.loc.gov/marc/bibliographic/bd008.html) / [Concise](https://www.loc.gov/marc/bibliographic/concise/bd008.html)
+
+#### `00-05` - Date entered on file
+
+> Computer-generated, six-character numeric string that indicates the date the MARC record was created. Recorded in the pattern yymmdd.
+
+- LOC
+  - Bibliographic: [Full](https://www.loc.gov/marc/bibliographic/bd008a.html) / [Concise](https://www.loc.gov/marc/bibliographic/concise/bd008a.html)
+
+## PICA3/PICA+
+
+### `4880` / `237B` - Selektion und Sortierung von Neuerwerbungslisten
+
+- K10plushelp.pl [SWB](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=4880&katalog=Standard)

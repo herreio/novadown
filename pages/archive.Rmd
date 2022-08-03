@@ -1,0 +1,13 @@
+# Archive
+
+## Herzogin Anna Amalia Bibliothek (`DE-32`)
+
+- Zugangsverzeichnis (1907–2008)
+  - [OPAC](https://opac.lbs-weimar.gbv.de/DB=2/SET=4/TTL=1/CMD?ACT=SRCHA&IKT=54&SRT=YOP&TRM=EPN%203671275693%20OR%20366656402X)
+  - [Digitale Sammlungen](https://haab-digital.klassik-stiftung.de/viewer/toc/3671275693/)
+- [GBV-Datenbankverzeichnis](https://uri.gbv.de/database/opac-de-32)
+
+## SMB Kunstbibliothek (`DE-B11`)
+
+- [Erwerbungsbücher der Kunstbibliothek](https://www.smb.museum/museen-einrichtungen/kunstbibliothek/sammeln-forschen/erwerbungsbuecher/) / [The Acquisition Logs of the Kunstbibliothek](https://www.smb.museum/en/museums-institutions/kunstbibliothek/collection-research/acquisition-and-accession-logs/)
+- [GBV-Datenbankverzeichnis](https://uri.gbv.de/database/opac-de-b11)

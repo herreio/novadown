@@ -1,0 +1,312 @@
+# Software
+
+## Laminas
+
+Previously known as **Zend Framework**. Used by [VuFind](#vufind).
+
+- [laminas-feed](https://docs.laminas.dev/laminas-feed/) / [GitHub](https://github.com/laminas/laminas-feed)
+  - [Writer](https://docs.laminas.dev/laminas-feed/writer/)
+- [zend-feed](https://docs.zendframework.com/zend-feed/) / [Zend\\Feed](https://framework.zend.com/manual/2.4/en/modules/zend.feed.introduction.html) / [GitHub](https://github.com/zendframework/zend-feed)
+  - [Writer](https://docs.zendframework.com/zend-feed/writer/) / [Zend\\Feed\\Writer](https://framework.zend.com/manual/2.4/en/modules/zend.feed.writer.html)
+  
+## LBS OPC
+
+- OCLC: [Lokales Bibliotheksverwaltungssystem mit integrierten Funktionen zum Katalogisieren und Bestellen](https://www.oclc.org/de/lbs.html)
+- OCLC PICA (Wikipedia: [EN](https://en.wikipedia.org/wiki/OCLC_PICA) / [DE](https://de.wikipedia.org/wiki/OCLC_PICA))
+- OCLC: [Fusionen und Akquisitionen](https://www.oclc.org/de/about/finance/mergers.html) (PICA B.V. / OCLC EMEA B.V)
+- GBV: [LBS - Das Lokale Bibliothekssystem](https://verbundwiki.gbv.de/x/AoAJAg)
+  - OPC4 - Die Nutzersicht
+    - [Neuerwerbungslisten](	https://verbundwiki.gbv.de/x/CQAgAg)
+      - [Neuerwerbungslisten per RSS](https://verbundwiki.gbv.de/x/DQAgAg)
+    - [Suchergebnisse in anderen Formaten (RSS, XML, ...)](https://verbundwiki.gbv.de/x/B4CNAg)
+
+## Libero
+
+- [AU](https://libero.com.au/) / [DE](https://libero-is.de/)
+
+## Ex Libris
+
+- Knowledge Center
+  - [Alma](https://knowledge.exlibrisgroup.com/Alma)
+    - [Set Up RSS Feed for New Items](https://knowledge.exlibrisgroup.com/Alma/Knowledge_Articles/Set_Up_RSS_Feed_for_New_Items)
+  - [Primo](https://knowledge.exlibrisgroup.com/Primo)
+- Developers
+  - Blog
+    - [Automated New Books List for Primo](https://developers.exlibrisgroup.com/blog/Automated-New-Books-List-for-Primo/) (2015)
+    - [Exporting from Alma using PERL and the Alma Analytics API](https://developers.exlibrisgroup.com/blog/Dumping-data-out-of-Alma-using-PERL-and-the-Alma-Analytics-API/) (2017)
+    - [A webpage to retrieve new acquisitions using Alma Analytics API](https://developers.exlibrisgroup.com/blog/a-webpage-to-retrieve-new-acquisitions-using-alma-analytics-api/) (2019)
+- SLC FAQs: [How can I generate a new title list for my library webpages?](https://slcny.libanswers.com/faq/264979) (2020)
+
+## Typo3
+
+- Tutorials > Best practice > [RSS feed](https://docs.typo3.org/p/georgringer/news/main/en-us/Tutorials/BestPractice/Rss/Index.html)
+
+### Find
+
+- [subgoe/typo3-find](https://github.com/subugoe/typo3-find) (GitHub)
+
+> #### [Data export](https://github.com/subugoe/typo3-find#data-export)
+> 
+> Creating data exports requires the following setup:
+> 
+> -   set up a TYPO3 page type without HTML and the MIME Type you need;
+>     the extension provides type `1369315139` one for JSON:
+>     ```
+    tx_find_page = PAGE
+    tx_find_page {
+        typeNum = 1369315139
+        10 < tt_content.list.20.find_find
+        config {
+            disableAllHeaderCode = 1
+            additionalHeaders = Content-type:application/json;charset=utf-8
+        }
+    }
+    ```
+> -   create a link with `f:link.action` using the `pageType` you need,
+>     `format="data"` and add the argument `data-format` with the name of
+>     the format you want to the query
+> -   create a partial for your data format in `Partials/Formats` with the
+>     `.data` file name extension and create the desired output there.
+> 
+> Example output formats, e.g. for JSON, are available in the extension.
+> The germania-sacra project contains additional ones.
+> 
+> #### [Query String Arguments](https://github.com/slub/typo3-find#query-string-arguments)
+> 
+> The plug-in’s query parameters are of the form
+> `tx_find_find[parameterName]`.
+> 
+> ##### Standard arguments
+> 
+> Built-in parameter names are
+> 
+> - `id`: the Solr document ID of the document to show in the detail
+>     action; having the id argument will always trigger the detail action
+> - `q`: for the query; this is an array with keys the queryField IDs,
+>     e.g. `tx_find_find[q][default]=term`; some query field types (e.g.
+>     Range) use an array as their value to cover both their input values
+> - `facet`: for selected facets; this is an array with keys the facet
+>     IDs, and values arrays; those arrays have keys the facet term and
+>     value 1, e.g. `tx_find_find[facet][typ][formular]=1`
+> - `page`: the page of results to show (1-based)
+> - `extended`: whether to show the extended search form
+> - `sort`: the sort order to use
+
+## VuFind
+
+### Code
+
+- GitHub: [vufind-org/vufind](https://github.com/vufind-org/vufind) (default: `dev`)
+- GitLab SC Uni Leipzig: [ubl/finc/vufind](https://git.sc.uni-leipzig.de/ubl/finc/vufind) (default: `finc`)
+
+#### `schema.xml`
+
+Path: [vufind/solr/vufind/biblio/conf/schema.xml](https://github.com/vufind-org/vufind/blob/dev/solr/vufind/biblio/conf/schema.xml)
+
+##### Tracking
+
+```xml
+<!-- Tracking fields to keep track of oldest and most recent index times -->
+<field name="first_indexed" type="date" indexed="true" stored="true" docValues="true"/>
+<field name="last_indexed" type="date" indexed="true" stored="true" docValues="true"/>
+```
+
+Lines: [L228-L230](https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/solr/vufind/biblio/conf/schema.xml#L228-L230)
+
+---
+
+Path: [solr/biblio/admin/file?file=schema.xml](#) (`finc-main`)
+
+```xml
+<!--  Tracking fields to keep track of oldest and most recent index times  -->
+<field name="first_indexed" type="date" indexed="true" stored="true" docValues="true"/>
+<field name="last_indexed" type="date" indexed="true" stored="true" docValues="true" default="NOW"/>
+```
+
+#### `example_atom.xsl`
+
+> Simple transform of Solr query results to Atom
+
+Path: [vufind/solr/vufind/biblio/conf/xslt/example_atom.xsl](https://github.com/vufind-org/vufind/blob/dev/solr/vufind/biblio/conf/xslt/example_atom.xsl)
+
+#### `example_rss.xsl`
+
+> Simple transform of Solr query results to RSS
+
+Path: [vufind/solr/vufind/biblio/conf/xslt/example_rss.xsl](https://github.com/vufind-org/vufind/blob/dev/solr/vufind/biblio/conf/xslt/example_rss.xsl)
+
+#### `marc_local.properties`
+
+Path: [vufind/import/marc_local.properties](https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/import/marc_local.properties)
+
+##### Tracking
+
+```properties
+# Uncomment the following lines to track history of indexing times for RSS feeds,
+# OAI-PMH server and other updates.  The parameter to these functions must be the
+# same fieldspec as the id setting above!
+# IMPORTANT: Indexing this extra information will make extra database calls during
+#            the indexing process and will likely slow things down significantly.
+#first_indexed = custom, getFirstIndexed(001)
+#last_indexed = custom, getLastIndexed(001)
+```
+
+Lines: [19-25](https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/import/marc_local.properties#L19-L25)
+
+#### `config.ini`
+
+Path: [vufind/config/vufind/config.ini](https://github.com/vufind-org/vufind/blob/dev/config/vufind/config.ini)
+
+```ini
+; This section controls features related to user accounts
+[Account]
+; ...
+
+; Allow the user to "subscribe" to search history entries in order to receive
+; email notifications of new search results.
+schedule_searches = false
+
+; Should we always send a scheduled search email the first time we run notices
+; after a user has subscribed (true), or should we only send an email when there
+; is actually something new (false, default)
+force_first_scheduled_email = false
+
+; When schedule_searches is set to true, you can customize the schedule frequencies
+; here -- just use the number of days between notifications in the brackets. Labels
+; will be run through the translator.
+;scheduled_search_frequencies[0] = schedule_none
+;scheduled_search_frequencies[1] = schedule_daily
+;scheduled_search_frequencies[7] = schedule_weekly
+```
+
+Lines: [392-412](https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/config/vufind/config.ini#L392-L412)
+
+#### `searches.ini`
+
+Path: [vufind/config/vufind/searches.ini](https://github.com/vufind-org/vufind/blob/dev/config/vufind/searches.ini)
+
+##### New Items
+
+```ini
+; This section controls the "New Items" search.
+[NewItem]
+; New item information can be retrieved from Solr or from the ILS; this setting
+; controls which mechanism is used. If using Solr, change tracking must be enabled
+; (see https://vufind.org/wiki/indexing:tracking_record_changes). If using the ILS,
+; your driver must support the getNewItems() method.
+; Valid options: ils, solr; default: ils
+method = ils
+; Comma-separated list of date ranges to offer to the user (i.e. 1,5,30 = one day
+; old, or five days old, or thirty days old). If using the "ils" method, be careful
+; about raising the maximum age too high -- searching very long date ranges may put
+; a load on your ILS.
+ranges = 1,5,30
+; This setting only applies when using the "ils" method. It controls the maximum
+; number of pages of results that will show up when doing a new item search.
+; It is necessary to limit the number of results to avoid getting a "too many boolean
+; clauses" error from the Solr index (see notes at
+; https://vufind.org/jira/browse/VUFIND-128 for more details).  However, if you
+; set the value too low, you may get the same results no matter which range setting
+; is selected!
+result_pages = 10
+; This setting can be used to automatically apply filter queries to the New Item
+; results.  For example, you might want to filter out certain content types.  You
+; can add multiple filters by repeating the "filter[] =" line, or you can skip
+; filtering entirely by leaving the line commented out.
+; filter[] = "format:Book"
+```
+
+Lines: [503-528](https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/config/vufind/searches.ini#L503-L528)
+
+##### RSS Feed
+
+```ini
+; This section controls RSS feed behavior
+[RSS]
+; If set, this setting will override sort settings associated with RSS feeds.  This
+; allows you to ensure that newly added or changed items in your index appear at
+; the top of the feed.  Use "first_indexed desc" if you only want newly-added items
+; to be listed first.  Use "last_indexed desc" if you want newly-added-or-changed
+; items.  Comment out the whole setting if you do not want custom RSS sorting.
+; IMPORTANT: In order for first_indexed and last_indexed sorting to work properly,
+;            you need to index record change dates; see the Wiki page at
+;            https://vufind.org/wiki/indexing:tracking_record_changes
+sort = "last_indexed desc"
+```
+
+Lines: [530-540](https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/config/vufind/searches.ini#L530-L540)
+
+### Issues
+
+#### VUFIND-167
+
+> Created November 10, 2009 at 1:47 AM  
+> Updated September 30, 2010 at 8:01 PM  
+> Resolved September 30, 2010 at 8:01 PM  
+
+> ##### [RSS Feature is not really RSS](https://openlibraryfoundation.atlassian.net/browse/VUFIND-167)
+>
+> ###### Description
+>
+> The feature we currently label on screen as RSS is not really RSS. I was working on the author screen today to implement the search object and noticed we don't offer an RSS feed at the bottom. I thought that would be a great idea, because people (particularly in a public library context) would like to keep up-to-date on their favourite authors.
+>
+> However we don't do any real syndication using RSS because we don't keep dates against records in the system. We just select the top arbitrary 20 results and return them as XML. This number was 50 in Andrew's RSS code which is an improvement, but both aren't really RSS.
+>
+> As I understand most Libraries currently keeping a time against each record are relying on their ILMS to do so. For RSS to truly exist in VuFind we'd need the app code/database to keep this data somehow in a way that would survive a full index rebuild and not disrupt a user's RSS feeds.
+
+[TrackIndexChanges.patch](./source/VUFIND-167-trackIndexChanges.patch)
+
+##### Comments
+
+> Demian Katz  
+> September 30, 2010 at 8:01 PM  
+> As of r3029, this issue is resolved – see details at http://vufind.org/wiki/tracking_record_changes#enhanced_rss_functionality .
+
+### Wiki
+
+#### Configuration
+
+> ##### [Email Alerts](https://vufind.org/wiki/configuration:email_alerts)
+>
+> Starting with release 6.1, VuFind supports “selective dissemination of information” (SDI) – users can subscribe to searches and receive notifications in the form of regular email alerts when new records appear in those result sets.
+>
+> ...
+
+#### Indexing
+
+> ##### [Tracking Record Changes](https://vufind.org/wiki/indexing:tracking_record_changes)
+>
+> ###### Introduction
+>
+> For certain types of functionality, VuFind needs to be aware not only of the content of the records in its index, but also the times at which these records were first indexed and most recently changed. **By understanding the history of its own records, VuFind can provide RSS feeds that show recent changes**, and it can export its contents using the popular OAI-PMH protocol.
+>
+> Keeping track of the information needed to support these features adds some overhead – more data in your MySQL database, and **slower indexing times**. Because not everyone needs the features, they are disabled by default. ...
+>
+> ...
+>
+> ###### Enabling Change Tracking
+>
+> ...
+>
+> ####### A Note on Memory Usage
+>
+> SolrMarc may require more memory in order to update the database and the Solr index at the same time. ...
+>
+> ###### Enhanced RSS Functionality
+>
+> When record change tracking is enabled, RSS feeds will be more effective. Without tracking, RSS dates are based on publication dates, which may or may not correspond with the dates that items were added to your collection. With change tracking turned on, RSS feeds will be sorted by index date and will display index dates within the feed. This means that patrons can truly track searches in order to be notified of new additions within their chosen areas of interest.
+>
+> Note that you can customize some of the RSS behavior in VuFind – see the [RSS] section of searches.ini.
+>
+> ###### Solr-driven New Items
+>
+> By default, VuFind tries to use the ILS driver to power the “new items” search. However, not all ILS drivers support this functionality. If you turn on record change tracking, you can modify the method setting to “solr” in the [NewItem] section of searches.ini to gain new item searches without an ILS dependency.
+>
+> ...
+
+#### Videos
+
+- [OAI-PMH Server and Harvest Functionality](https://vufind.org/wiki/videos:oai-pmh_server_and_harvest_functionality)
+  - [MP4](https://vufind.org/video/OAI-PMH.mp4) / [YouTube](https://youtu.be/vfDQElhYNQ8)
+- [XML Change Tracking and Email Alerts](https://vufind.org/wiki/videos:xml_change_tracking_and_email_alerts)
+  - [MP4](https://vufind.org/video/Email_Alerts.mp4) / [YouTube](https://youtu.be/uIIEqyKPNk0)

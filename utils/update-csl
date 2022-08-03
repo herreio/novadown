@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+curl "https://www.zotero.org/styles/apa?source=1" > biblio/apa.csl

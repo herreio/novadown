@@ -1,0 +1,4 @@
+# References
+
+Rendered PDF file: [`references.pdf`](./biblio/references.pdf)  
+BibTeX source files: [`literature.bib`](./biblio/literature.bib) [`publications.bib`](./biblio/publications.bib)

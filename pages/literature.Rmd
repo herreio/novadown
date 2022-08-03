@@ -1,0 +1,27 @@
+# Literature
+
+## Concepts
+
+### Accessions List
+
+> @Philipps1990
+>
+> 12.5 Accessions List
+>
+> To inform users about newly acquired books, an accessions list should be prepared every three months. The accessions list is best compiled by main classification group and within each group in alphabetical order according to author. The easiest way to compile the accessions list probably is to keep the catalogue cards for the classified catalogue and to only file them after the accessions list has been typed. But if you are using a card duplicator for the reproduction of catalogue cards, you can also prepare one more card to be used for the accessions list. The number of distribution copies required will influence your decision on how to duplicate the accessions list. If it is meant for internal use only, photocopying is sufficient. But if you intend to send it to external users and other organizations, the use of a stencil machine is recommended in order to save on duplicating costs.
+>
+> A suggested form for an accessions list is given in Fig. 53.
+>
+> ![Fig. 53, URL: http://www.nzdl.org/gsdl/collect/hdl/index/assoc/HASH01fd/2e8f1c30.dir/p142.png (Accessed: 2022-08-01)](images/lit-Philipps1990-p142.png)
+
+### Current Awareness
+
+DBLP: [q=current awareness](https://dblp.org/search?q=current%20awareness)
+
+### Selective Dissemination of Information
+
+DBLP: [q=selective dissemination of information](https://dblp.org/search?q=selective%20dissemination%20of%20information)
+
+## Implementations
+
+- Universitätsbibliothek der Europa-Universität Viadrina [@Klauss1996]

@@ -1,0 +1,174 @@
+# Examples
+
+## Deutsches Historisches Institut (DHI) Paris (`DE-2795`)
+
+- [GBV-Datenbankverzeichnis](https://uri.gbv.de/database/opac-fr-751035202) (`opac-fr-751035202`)
+
+### Neuerwerbungen / New Acquisitions / Nouvelles acquisitions
+
+- [DHIP-Scheme / DHIP-Systematik](https://vzlbs2.gbv.de/DB=44/NEUERWERBUNGEN) via [LBS](https://vzlbs2.gbv.de/DB=44/) / [IKTLIST](https://vzlbs2.gbv.de/DB=44/XML=1.0/IKTLIST)
+
+## Herzogin Anna Amalia Bibliothek (`DE-32`)
+
+- [GBV-Datenbankverzeichnis](https://uri.gbv.de/database/opac-de-32) (`opac-de-32`)
+
+### Neuerwerbungen
+
+- [Fachgebiete](https://haab.weimar-klassik.de/newlweimar.php) via [LBS](https://opac.lbs-weimar.gbv.de/DB=2/) / [IKTLIST](https://opac.lbs-weimar.gbv.de/DB=2/XML=1.0/IKTLIST)
+
+### RSS Feed
+
+Diese Suchanfrage abonnieren (RSS)  
+`vzlbs.gbv.de/php/rssopc/rss_feeds.php` 
+
+#### Parameter
+
+- HOST
+- INTPORT
+- EXTPORT
+- DB
+- SEARCH
+- SEARCHTEXT
+- EDOC
+- COOKIE
+
+#### Response
+
+```xml
+<error> No search server definition or HOST, INTPORT or/and EXTPORT parameter in link.</error>
+```
+
+## Ibero-Amerikanisches Institut (`DE-204`)
+
+- [GBV-Datenbankverzeichnis](https://uri.gbv.de/database/opac-de-204) (`opac-de-204`)
+
+### New Acquisitions / Neuerwerbungen
+
+- [Start](https://lbsiai.gbv.de/DB=1/NEUERWERBUNGEN) via [LBS](https://lbsiai.gbv.de/DB=1/) / [IKTLIST](https://lbsiai.gbv.de/DB=1/XML=1.0/IKTLIST)
+- [New Services from the Library’s OPAC: Lists of New Acquisitions](https://web.archive.org/web/20200729065829/https://www.iai.spk-berlin.de/fileadmin/dokumentenbibliothek/Oeffentlichkeitsarbeit/Einblicke_in_die_Arbeit_des_IAI_-_Archiv/2009/032009_ENG.pdf) (2009-03)
+
+## Niedersächsische Staats- und Universitätsbibliothek Göttingen (`DE-7`)
+
+- Neuerwerbungen via Atom Feed (`www.sub.uni-goettingen.de/opac.atom`) / [OPAC](https://opac.sub.uni-goettingen.de/)
+  - [Philosophie](https://www.sub.uni-goettingen.de/geisteswissenschaften-und-theologie/philosophie/neuerwerbungen/)
+    - Beispielanfrage: [`q=(lkl d * or lkl da* or lkl db* or lkl dc* or lkl df* or lkl dh* or lkl di* or lkl dk* or lkl dm* or lkl dn* or lkl do* or lkl dq* or lkl dr* or lkl ds* or lkl dt* or lkl du*)`](https://www.sub.uni-goettingen.de/opac.atom?q=(lkl+d+*+or+lkl+da*+or+lkl+db*+or+lkl+dc*+or+lkl+df*+or+lkl+dh*+or+lkl+di*+or+lkl+dk*+or+lkl+dm*+or+lkl+dn*+or+lkl+do*+or+lkl+dq*+or+lkl+dr*+or+lkl+ds*+or+lkl+dt*+or+lkl+du*))
+  - [Digital Humanities](https://www.sub.uni-goettingen.de/geisteswissenschaften-und-theologie/digital-humanities/neuerwerbungen/)
+    - Beispielanfrage: [`q=(lkl+g+000)`](https://www.sub.uni-goettingen.de/opac.atom?q=(lkl+g+000))
+- [GBV-Datenbankverzeichnis](https://uri.gbv.de/database/opac-de-7)
+
+## Leibniz-Institut für Deutsche Sprache (IDS)
+
+- [Neuerwerbungen](https://www.ids-mannheim.de/bibliothek/neuerwerb/) via [Koha](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?op=list&category=2) (Public lists)
+
+## Fachinformationsdienst BBI (`FID-BBI-DE-23`)
+
+### RSS Feed
+
+- [Katalogsuchen](https://katalog.fid-bbi.de/) via finc/VuFind
+  - Beispielanfrage: [(Title:neuerwerbungsliste)](https://katalog.fid-bbi.de/Search/Results?join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=neuerwerbungsliste&type0%5B%5D=Title)
+    - [view=rss](https://katalog.fid-bbi.de/Search/Results?join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=neuerwerbungsliste&type0%5B%5D=Title&view=rss)
+
+```xml
+<rss xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" version="2.0">
+<channel>
+  <title>Results for (Title:neuerwerbungsliste)</title>
+  <description>Showing 1 - 15 results of 15</description>
+  <generator>Zend_Feed_Writer 2 (http://framework.zend.com)</generator>
+  <link>https://katalog.fid-bbi.de/Search/Results?sort=score+desc&limit=50&join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=neuerwerbungsliste&type0%5B%5D=Title</link>
+  <opensearch:totalResults>15</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <opensearch:itemsPerPage>50</opensearch:itemsPerPage>
+  <opensearch:Query role="request" searchTerms="neuerwerbungsliste" startIndex="0"/>
+  ...
+  <item>
+    <title><i>Neuerwerbungsliste / Nordstadtbücherei, Stadtbüchereien Hannover</i>. [Hannover].</title>
+    <link>https://katalog.fid-bbi.de/Record/183-629835926</link>
+    <guid>https://katalog.fid-bbi.de/Record/183-629835926</guid>
+    <slash:comments>0</slash:comments>
+  </item>
+  <item>
+    <title><i>Neuerwerbungsliste / Stadtbüchereien Hannover, Fahrbücherei</i>. [Hannover].</title>
+    <link>https://katalog.fid-bbi.de/Record/183-629835896</link>
+    <guid>https://katalog.fid-bbi.de/Record/183-629835896</guid>
+    <slash:comments>0</slash:comments>
+  </item>
+  ...
+</channel>
+</rss>
+```
+
+## Stanford University
+
+### Science Library
+
+- [New acquisitions](https://library.stanford.edu/science/collections/new-acquisitions) via [SearchWork](https://searchworks.stanford.edu/) (VuFind)
+  - [2021 archives](https://library.stanford.edu/science/collections/new-acquisitions/2021-archives)
+
+### SearchWorks
+
+- [System Status](https://library-status.stanford.edu/)
+
+## Heidelberg University
+
+- [MyUB-Info verwenden](https://www.ub.uni-heidelberg.de/service/MyUBinfo/verwenden.html#profil-anlegen-mit-7-klicks)
+- [Neuerwerbungslisten](https://www.ub.uni-heidelberg.de/helios/nel/NEL.html)
+  - [Neuerwerbungslisten der UB](https://www.ub.uni-heidelberg.de/helios/nel/Welcome.html)
+  - [Neuerwerbungslisten der Fachinformationsdienste arthistoricum.net, Propylaeum und CrossAsia](https://www.ub.uni-heidelberg.de/helios/nel_ssg/)
+    - [Ägyptologie](https://www.ub.uni-heidelberg.de/helios/nel_ssg/00/AY00/Welcome.html)
+    - [Klassische Archäologie](https://www.ub.uni-heidelberg.de/helios/nel_ssg/00/AC00/Welcome.html)
+    - [Mittlere und Neuere Kunstgeschichte bis 1945 und Allgemeine Kunstwissenschaft](https://www.ub.uni-heidelberg.de/helios/nel_ssg/Kunst.html)
+    - [Südasien](https://www.ub.uni-heidelberg.de/helios/nel_ssg/Suedasien.html)
+  - [Dezentrale Bibliotheken](https://www.ub.uni-heidelberg.de/helios/nel_inst/Welcome.html)
+
+## Kunsthochschule für Medien Köln (`DE-Kn185`)
+
+### Neuerwerbungen / New Acquisitions
+
+- [Monatslisten](https://www.khm.de/bib_neuerwerbungen/) / [monthly list](https://en.khm.de/bib_neuerwerbungen/) via Primo
+
+### SDI via OPAC
+
+[Hilfe](http://bibkatalog.khm.de/)
+
+> SDI (Selective Dissemination of Information) ist ein Dienst, über den Benutzer über neue Titel in ihrem Interessengebiet informiert werden können. Mit dem SDI-Mechanismus sendet Ihre Bibliothek eine Nachricht, sobald es neue Bücher in einem bestimmten Themenfeld oder neue Hefte einer Zeitschrift gibt.
+>
+> Sie müssen eine SDI-Berechtigung in Ihrem Profil haben, um SDI-Anfragen anlegen zu können.
+> 
+> Um eine SDI-Anfrage anzulegen, klicken Sie aus der Ergebnisliste oder dem Suchverlauf auf einen SDI-Link. So gelangen Sie auf die Seite SDI-Profil (neu/ändern). In diesem Fenster können Sie ein neues SDI-Profil anlegen oder ein bestehendes ändern. Es enthält die folgenden Felder:
+>
+> - SDI-Name: Geben Sie den Namen an, unter dem Ihre Anfrage gespeichert werden soll.
+> - Print Format: Wählen Sie das Format, in dem Sie die Titel erhalten möchten.
+> - Intervall: Legen Sie die Abstände zwischen den Durchläufen der SDI-Anfrage fest, z.B. sieben Tage oder vier Wochen.
+> - SDI-Nachricht: Geben Sie Text ein, der in der gesendeten E-Mail erscheinen soll.
+> - SDI-Anfrage: Hier wird der ursprüngliche Suchbegriff angezeigt (z.B. words=Buddhism).
+> - SDI-Zweigstelle: Sie können die Anfrage für eine einzelne Zweigstelle oder für alle Zweigstellen laufen lassen.
+> - SDI-Datenbankliste: Wählen Sie die Datenbanken, in denen Ihre Anfrage laufen soll.
+> - Alternative E-Mail: Sie können Ihre SDI-Ergebnisse an eine weitere E-Mail-Adresse senden lassen.
+> - E-Mail-Betreff: Wählen Sie einen Betreff für die SDI-Ergebnislisten.
+> - Ablaufdatum: Wählen Sie ein Ablaufdatum. Die Ergebnislisten werden nach diesem Datum nicht mehr gesendet.
+> - SDI aussetzen von/bis: Sie können für bestimmte Zeiträume (z.B. Ferien) die SDI-Suchen aussetzen. Bis zum Ende dieses Zeitraums werden Sie keine Benachrichtigungen erhalten.
+> - Codierung: Wählen Sie den Zeichensatz, in dem Sie die Listen empfangen wollen.
+> - Nachricht bei keinen Ergebnissen: Hier stellen Sie ein, ob Sie auch eine Benachrichtigung erhalten möchten, wenn die Suche keine Ergebnisse hat.
+>
+> Um alle Ihre SDI-Profile zu sehen, gehen Sie in den Benutzerausweis und klicken Sie dort auf den Link SDI-Profile. Dort können Sie Ihre Profile ändern, duplizieren oder löschen. Wenn Sie auf Sofort suchen klicken, wird die Suche sogleich ausgeführt; eine E-Mail-Benachrichtigung wird in diesem Fall nicht verschickt.
+
+## Leo Baeck Institute (LBI)
+
+- [New Library Acquisitions](https://www.lbi.org/collections/new-library-acquisitions/) / [Neuerwerbungen der LBI Bibliothek](https://www.lbi.org/de/collections/new-library-acquisitions/) via Primo
+  - [View new library acquisitions in the Catalog](http://search.cjh.org/primo-explore/search?query=any,contains,%22LBI%20Library%20New%20Acquisitions%202022%22&tab=default_tab&search_scope=LBI&vid=lbi&lang=en_US&offset=0)
+    - „Liste von Neuerwerbungen in unserem online Katalog“
+  - [View 2021 library acquisitions in the Catalog](http://search.cjh.org/primo-explore/search?query=any,contains,%22LBI%20Library%20New%20Acquisitions%202021%22&tab=default_tab&search_scope=LBI&vid=lbi&lang=en_US&offset=0)
+    - „Bibliothekserwerbungen 2021 im Katalog anzeigen“
+
+## University of Florence
+
+- [Nuove acquisizioni](https://sbafirenze.it/Alma_newacq2/) via ALMA
+
+## University of Oregon
+
+- [New Acquisitions List](https://library.uoregon.edu/new-acquisitions-list) via Primo
+
+## Warburg Library
+
+- [New Acquisitions](https://warburg.libguides.com/collections/new) via [LibGuides](http://warburg.libguides.com/)
+- [#NewAcquisitions](https://twitter.com/search?q=(%23NewAcquisitions)%20(from%3AWarburg_Library)&f=live) via [Twitter](https://twitter.com/Warburg_Library) (\@Warburg_Library)
