@@ -1,0 +1,7 @@
+---
+output: pdf_document
+bibliography: publications.bib
+nocite: '@*'
+---
+
+# `publications.bib`

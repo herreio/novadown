@@ -1,7 +1,0 @@
----
-output: pdf_document
-bibliography: [literature.bib, publications.bib]  
-nocite: '@*'
----
-
-# References

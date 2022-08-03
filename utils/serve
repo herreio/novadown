@@ -1,4 +1,4 @@
 #!/usr/bin/env Rscript
-rmarkdown::render("biblio/references.Rmd", output_dir = "biblio")
 library(servr)
+source("utils/biblio")
 bookdown::serve_book()
