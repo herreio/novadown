@@ -23,6 +23,47 @@
 
 ## PICA3/PICA+
 
+### `201A` / `7902` - Datum der Ersterfassung
+
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=7902&katalog=Standard) (SWB)
+
+### `201B` / `7903` - Datum und Uhrzeit der letzten Änderung
+
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=7903&katalog=Standard) (SWB)
+
+### `201D` / `7901` - Quelle und Datum der Ersterfassung
+
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=7901&katalog=Standard) (SWB)
+
+> Das Feld enthält die Bibliothek (ELN) und das Anlege-Datum des Exemplarsatzes. Es dient dem Schutz des Datensatzes von Korrekturen durch andere ELNs.
+>
+> Das Feld wird maschinell belegt, für manuelle Erfassung, Korrektur oder Löschung nicht zugelassen.
+
+### `E001` / `208@` - Neuanlagedatum und Selektionsschlüssel
+
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=E001&katalog=Standard) (SWB)
+
+#### `b` - Selektionsschlüssel
+
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=E001&katalog=Standard#_:_) (SWB)
+
+> **Besonderheiten für SWB-Bibliotheken:**  
+> Zugelassener Inhalt für Pos. 1 = "l" oder "e".  
+> Pos. 2-3 ist numerisch, erlaubte Inhalte "01"-"99"; Pos. 2-3 bei Pos. 1="e" muss identisch sein mit einem Pica-Exemplarsatz mit Pos.1="l" unter der gleichen ELN.
+>
+> Bei Neuanlegen eines Satzes muss es manuell mit dem Inhalt "Status" belegt werden. Das Neuanlagedatum wird maschinell bei Speicherung des Satzes vergeben.
+>
+> Status="l" für Lokalsatz auf Pos. 1  
+> Pos. 2-3 laufenden Nummerierung des Lokalsatzes, linksbündig und zweistellig.  
+> Status = "e" für Exemplarsatz auf Pos. 1  
+> Pos. 2-3 linksbündig und zweistellig die Nummerierung des Lokalsatzes.  
+> Status = "z" für aus der ZDB übernommenen Bestandssatz (wird bei Übernahme maschinell gesetzt, ergänzt durch die zweistellige Nummer der Sortierhilfe aus ZDB-Feld 8032)  
+> Status = "zez" für aus der ZDB übernommenen Bestandssatz, der aus der EZB über den gemeinsamen Lieferdienst „EZB ZDB“ übertragen wurde.  
+
 ### `4880` / `237B` - Selektion und Sortierung von Neuerwerbungslisten
 
-- K10plushelp.pl [SWB](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=4880&katalog=Standard)
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=4880&katalog=Standard) (SWB)
+
+### `7904` / `202D` - GBV: Quelle (Bearb. bzw. Programm und Datum der letzten Änderung)
+
+- `Exemplardaten_Pica3_sortiert_20181121_oeff.pdf`

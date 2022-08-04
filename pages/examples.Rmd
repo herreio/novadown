@@ -8,6 +8,77 @@
 
 - [DHIP-Systematik / DHIP-Scheme / Classement systématique IHAP](https://vzlbs2.gbv.de/DB=44/NEUERWERBUNGEN) via [LBS](https://vzlbs2.gbv.de/DB=44/) / [IKTLIST](https://vzlbs2.gbv.de/DB=44/XML=1.0/IKTLIST)
 
+#### Beispielanfragen
+
+- August 2022: [dtm 202208? not \8410 a? not \8410 r? not \8600 av?](https://vzlbs2.gbv.de/DB=44/CMD?ACT=SRCHA&SRT=YOP&IKT=1016&TRM=dtm+202208%3F+not+%5C8410+a%3F+not+%5C8410+r%3F+not+%5C8600+av%3F)
+- Juli 2022: [dtm 202207? not \8410 a? not \8410 r? not \8600 av?](https://vzlbs2.gbv.de/DB=44/CMD?ACT=SRCHA&SRT=YOP&IKT=1016&TRM=dtm+202207%3F+not+%5C8410+a%3F+not+%5C8410+r%3F+not+%5C8600+av%3F)
+- Juni 2022: [dtm 202206? not \8410 a? not \8410 r? not \8600 av?](https://vzlbs2.gbv.de/DB=44/CMD?ACT=SRCHA&SRT=YOP&IKT=1016&TRM=dtm+202206%3F+not+%5C8410+a%3F+not+%5C8410+r%3F+not+%5C8600+av%3F)
+- Mai 2022: [dtm 202205? not \8410 a? not \8410 r? not \8600 av?](https://vzlbs2.gbv.de/DB=44/CMD?ACT=SRCHA&SRT=YOP&IKT=1016&TRM=dtm+202205%3F+not+%5C8410+a%3F+not+%5C8410+r%3F+not+%5C8600+av%3F)
+- April 2022: [dtm 202204? not \8410 a? not \8410 r? not \8600 av?](https://vzlbs2.gbv.de/DB=44/CMD?ACT=SRCHA&SRT=YOP&IKT=1016&TRM=dtm+202204%3F+not+%5C8410+a%3F+not+%5C8410+r%3F+not+%5C8600+av%3F)
+- März 2022: [dtm 202203? not \8410 a? not \8410 r? not \8600 av?](https://vzlbs2.gbv.de/DB=44/CMD?ACT=SRCHA&SRT=YOP&IKT=1016&TRM=dtm+202203%3F+not+%5C8410+a%3F+not+%5C8410+r%3F+not+%5C8600+av%3F)
+- Februar 2022: [dtm 202202? not \8410 a? not \8410 r? not \8600 av?](https://vzlbs2.gbv.de/DB=44/CMD?ACT=SRCHA&SRT=YOP&IKT=1016&TRM=dtm+202202%3F+not+%5C8410+a%3F+not+%5C8410+r%3F+not+%5C8600+av%3F)
+
+**Fachgebiete August 2022**
+
+- Deutsch-französische Beziehungen: [dtm 202208? not \8410 a? not \8410 r? not \8600 av? & \8317 Ab?](https://vzlbs2.gbv.de/DB=44/CMD?ACT=SRCHA&SRT=YOP&IKT=1016&TRM=dtm+202208%3F+not+%5C8410+a%3F+not+%5C8410+r%3F+not+%5C8600+av%3F+%26+%5C8317+Ab%3F)
+- Geschichte Frankreichs (ab 1492): [dtm 202208? not \8410 a? not \8410 r? not \8600 av? & \8317 E?](https://vzlbs2.gbv.de/DB=44/CMD?ACT=SRCHA&SRT=YOP&IKT=1016&TRM=dtm+202208%3F+not+%5C8410+a%3F+not+%5C8410+r%3F+not+%5C8600+av%3F+%26+%5C8317+E%3F)
+- Kulturwissenschaft: [dtm 202208? not \8410 a? not \8410 r? not \8600 av? & \8317 L?](https://vzlbs2.gbv.de/DB=44/CMD?ACT=SRCHA&SRT=YOP&IKT=1016&TRM=dtm+202208%3F+not+%5C8410+a%3F+not+%5C8410+r%3F+not+%5C8600+av%3F+%26+%5C8317+L%3F)
+- Sozial- und Wirtschaftsgeschichte: [dtm 202208? not \8410 a? not \8410 r? not \8600 av? & \8317 N?](https://vzlbs2.gbv.de/DB=44/CMD?ACT=SRCHA&SRT=YOP&IKT=1016&TRM=dtm+202208%3F+not+%5C8410+a%3F+not+%5C8410+r%3F+not+%5C8600+av%3F+%26+%5C8317+N%3F)
+
+##### Schlüssel
+
+- `BBG`: Bibliografische Gattung und Status (`8600`)
+- `DTM`: Datum (`30`)
+- `SGA`: Signatur (`8317`)
+- `SLK`: Datum und Selektionsschluessel (`8410`)
+
+##### Klassifikation (DHIP-Systematik)
+
+- `Aa` Allgemeine Lexika und Hilfsmittel
+- `Ab` Deutsch-französische Beziehungen
+- `Ac` Internationale Bibliographien
+- `Ad` Reihen und Serien
+- `Ae` bis `Ai` Sonderdrucke und Kleinschrifttum
+- `As` Festschriften
+- `At` Aufsatzsammlungen einzelner Autoren
+- `B` Mittelalter Deutschland und Frankreich
+- `C` Deutsche Geschichte (ab 1500)
+- `D` Deutsche Landesgeschichte
+- `E` Geschichte Frankreichs (ab 1492)
+- `F` Französische Landesgeschichte
+- `G` Weltgeschichte
+- `H` Geschichte einzelner Länder
+- `J` Historische Hilfswissenschaften
+- `K` Archive, Bibliotheken, Museen, Ausstellungen
+- `L` Kulturwissenschaften
+- `M` Rechts-, Verfassungs-, Verwaltungs- u. Militärgeschichte
+- `N` Sozial- und Wirtschaftsgeschichte
+- `P` Kirchengeschichte
+
+##### Katalogisate
+
+###### 1812522223 (SGA E)
+
+- https://vzlbs2.gbv.de/DB=44/XMLPRS=N/PPN?PPN=1812522223
+- https://vzlbs2.gbv.de/DB=44/XML=1.0/PPN?PPN=1812522223
+- https://unapi.gbv.de/?id=opac-fr-751035202:ppn:1812522223&format=pp
+
+```txt
+101@ $a350
+201@/01 $aPraesenzbestand|verfuegbar$b1$e4174727597$mmon$f44$lhttp://vzlbs2.gbv.de:8080/loan/REQ?EPN=4174727597&MTR=mon&BES=44$uPraesenzbestand$vverfuegbar
+201A/01 $001-08-22
+201B/01 $002-08-22$t17:43:32.000
+201F/01 $00
+201U/01 $0utf8
+202D/01 $002-08-22$b829467$a8293/0003
+203@/01 $04174727597
+208@/01 $a01-08-22$bz
+209A/01 $fMAG2$aEg 7085$di$x00
+209C/01 $a2022/0772$x00
+209G/01 $a9791024017075
+220B/01 $aha geschenk Thomas Maissen
+```
+
 ## Herzogin Anna Amalia Bibliothek (`DE-32`)
 
 - [GBV-Datenbankverzeichnis](https://uri.gbv.de/database/opac-de-32) (`opac-de-32`)
@@ -15,6 +86,56 @@
 ### Neuerwerbungen
 
 - [Fachgebiete](https://haab.weimar-klassik.de/newlweimar.php) via [LBS](https://opac.lbs-weimar.gbv.de/DB=2/) / [IKTLIST](https://opac.lbs-weimar.gbv.de/DB=2/XML=1.0/IKTLIST)
+
+#### Beispielanfragen
+
+**Allgemeines, Kultur- und Kommunikationswissenschaften, Philosophie**
+
+- Juli 2022: [bkl 0? slk z# 2022-07?](https://opac.lbs-weimar.gbv.de/DB=2/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=bkl+0%3F+slk+z%23+2022-07%3F)
+- Juni 2022: [bkl 0? slk z# 2022-06?](https://opac.lbs-weimar.gbv.de/DB=2/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=bkl+0%3F+slk+z%23+2022-06%3F)
+- Mai 2022: [bkl 0? slk z# 2022-05?](https://opac.lbs-weimar.gbv.de/DB=2/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=bkl+0%3F+slk+z%23+2022-05%3F)
+- April 2022: [bkl 0? slk z# 2022-04?](https://opac.lbs-weimar.gbv.de/DB=2/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=bkl+0%3F+slk+z%23+2022-04%3F)
+
+##### Schlüssel
+
+- `ALL`: Alle Wörter (`1016`)
+- `BKL`: Basisklassifikation (`5004`)
+- `SLK`: Datum und Suchschlüssel (`8410`)
+
+##### Klassifikation (Basisklassifikation)
+
+- `0`: Allgemeines, Kultur- und Kommunikationswissenschaften, Philosophie
+- `1`: Geisteswissenschaften (ohne Philosophie)
+- `2`: Kunst
+- `3`: Naturwissenschaften (ohne Biowissenschaften)
+- `4`: Biowissenschaften
+- `5`: Technik
+- `7`: Sozialwissenschaften
+- `8`: Pädagogik, Volks- und Betriebswirtschaft, Recht, Verwaltung, Politik
+
+##### Katalogisate
+
+###### 1811465803 (BKL 1)
+
+- https://opac.lbs-weimar.gbv.de/DB=2/XMLPRS=N/PPN?PPN=1811465803
+- https://opac.lbs-weimar.gbv.de/DB=2/XML=1.0/PPN?PPN=1811465803
+- https://unapi.gbv.de/?id=opac-de-32:ppn:1811465803&format=pp
+
+```txt
+101@ $a61
+201@/01 $aPraesenzbestand/Lesesaalbenutzung| $b0$e4172265472$mmon$f2$uPraesenzbestand/Lesesaalbenutzung$v
+201A/01 $025-07-22
+201B/01 $025-07-22$t11:04:25.000
+201F/01 $00
+201U/01 $0utf8
+202D/01 $025-07-22$b7608$a0032
+203@/01 $04172265472
+208@/01 $a25-07-22$bz
+209A/01 $fZSAUSL$df$ic$x00
+209A/01 $aZB 1621 (2022)$x09
+231B/01 $a74.2022,2
+237A/01 $aBitte selbst am Standort: Zeitschriftenauslage (unter Titel: "Comparativ literature") entnehmen
+```
 
 ### RSS Feed
 
@@ -154,7 +275,7 @@ Diese Suchanfrage abonnieren (RSS)
 > SDI (Selective Dissemination of Information) ist ein Dienst, über den Benutzer über neue Titel in ihrem Interessengebiet informiert werden können. Mit dem SDI-Mechanismus sendet Ihre Bibliothek eine Nachricht, sobald es neue Bücher in einem bestimmten Themenfeld oder neue Hefte einer Zeitschrift gibt.
 >
 > Sie müssen eine SDI-Berechtigung in Ihrem Profil haben, um SDI-Anfragen anlegen zu können.
-> 
+>
 > Um eine SDI-Anfrage anzulegen, klicken Sie aus der Ergebnisliste oder dem Suchverlauf auf einen SDI-Link. So gelangen Sie auf die Seite SDI-Profil (neu/ändern). In diesem Fenster können Sie ein neues SDI-Profil anlegen oder ein bestehendes ändern. Es enthält die folgenden Felder:
 >
 > - SDI-Name: Geben Sie den Namen an, unter dem Ihre Anfrage gespeichert werden soll.
