@@ -23,7 +23,7 @@
 <meta name="author" content="Donatus Herre" />
 
 
-<meta name="date" content="2022-08-03" />
+<meta name="date" content="2022-08-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -220,7 +220,12 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#pica3pica"><i class="fa fa-check"></i>PICA3/PICA+</a>
 <ul>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#a-7902---datum-der-ersterfassung"><i class="fa fa-check"></i><code>201A</code> / <code>7902</code> - Datum der Ersterfassung</a></li>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#b-7903---datum-und-uhrzeit-der-letzten-änderung"><i class="fa fa-check"></i><code>201B</code> / <code>7903</code> - Datum und Uhrzeit der letzten Änderung</a></li>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#d-7901---quelle-und-datum-der-ersterfassung"><i class="fa fa-check"></i><code>201D</code> / <code>7901</code> - Quelle und Datum der Ersterfassung</a></li>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#e001-208---neuanlagedatum-und-selektionsschlüssel"><i class="fa fa-check"></i><code>E001</code> / <code>208@</code> - Neuanlagedatum und Selektionsschlüssel</a></li>
 <li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#b---selektion-und-sortierung-von-neuerwerbungslisten"><i class="fa fa-check"></i><code>4880</code> / <code>237B</code> - Selektion und Sortierung von Neuerwerbungslisten</a></li>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#d---gbv-quelle-bearb.-bzw.-programm-und-datum-der-letzten-änderung"><i class="fa fa-check"></i><code>7904</code> / <code>202D</code> - GBV: Quelle (Bearb. bzw. Programm und Datum der letzten Änderung)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i>Literature</a>
@@ -441,15 +446,15 @@ value 1, e.g. <code>tx_find_find[facet][typ][formular]=1</code></li>
 <p>Path: <a href="https://github.com/vufind-org/vufind/blob/dev/solr/vufind/biblio/conf/schema.xml">vufind/solr/vufind/biblio/conf/schema.xml</a></p>
 <div id="tracking" class="section level5 hasAnchor">
 <h5>Tracking<a href="software.html#tracking" class="anchor-section" aria-label="Anchor link to header"></a></h5>
-<div class="sourceCode" id="cb4"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb4-1"><a href="software.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Tracking fields to keep track of oldest and most recent index times --&gt;</span></span>
-<span id="cb4-2"><a href="software.html#cb4-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">field</span><span class="ot"> name=</span><span class="st">&quot;first_indexed&quot;</span><span class="ot"> type=</span><span class="st">&quot;date&quot;</span><span class="ot"> indexed=</span><span class="st">&quot;true&quot;</span><span class="ot"> stored=</span><span class="st">&quot;true&quot;</span><span class="ot"> docValues=</span><span class="st">&quot;true&quot;</span>/&gt;</span>
-<span id="cb4-3"><a href="software.html#cb4-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">field</span><span class="ot"> name=</span><span class="st">&quot;last_indexed&quot;</span><span class="ot"> type=</span><span class="st">&quot;date&quot;</span><span class="ot"> indexed=</span><span class="st">&quot;true&quot;</span><span class="ot"> stored=</span><span class="st">&quot;true&quot;</span><span class="ot"> docValues=</span><span class="st">&quot;true&quot;</span>/&gt;</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb6-1"><a href="software.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Tracking fields to keep track of oldest and most recent index times --&gt;</span></span>
+<span id="cb6-2"><a href="software.html#cb6-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">field</span><span class="ot"> name=</span><span class="st">&quot;first_indexed&quot;</span><span class="ot"> type=</span><span class="st">&quot;date&quot;</span><span class="ot"> indexed=</span><span class="st">&quot;true&quot;</span><span class="ot"> stored=</span><span class="st">&quot;true&quot;</span><span class="ot"> docValues=</span><span class="st">&quot;true&quot;</span>/&gt;</span>
+<span id="cb6-3"><a href="software.html#cb6-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">field</span><span class="ot"> name=</span><span class="st">&quot;last_indexed&quot;</span><span class="ot"> type=</span><span class="st">&quot;date&quot;</span><span class="ot"> indexed=</span><span class="st">&quot;true&quot;</span><span class="ot"> stored=</span><span class="st">&quot;true&quot;</span><span class="ot"> docValues=</span><span class="st">&quot;true&quot;</span>/&gt;</span></code></pre></div>
 <p>Lines: <a href="https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/solr/vufind/biblio/conf/schema.xml#L228-L230">L228-L230</a></p>
 <hr />
 <p>Path: <a href="#">solr/biblio/admin/file?file=schema.xml</a> (<code>finc-main</code>)</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb5-1"><a href="software.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--  Tracking fields to keep track of oldest and most recent index times  --&gt;</span></span>
-<span id="cb5-2"><a href="software.html#cb5-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">field</span><span class="ot"> name=</span><span class="st">&quot;first_indexed&quot;</span><span class="ot"> type=</span><span class="st">&quot;date&quot;</span><span class="ot"> indexed=</span><span class="st">&quot;true&quot;</span><span class="ot"> stored=</span><span class="st">&quot;true&quot;</span><span class="ot"> docValues=</span><span class="st">&quot;true&quot;</span>/&gt;</span>
-<span id="cb5-3"><a href="software.html#cb5-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">field</span><span class="ot"> name=</span><span class="st">&quot;last_indexed&quot;</span><span class="ot"> type=</span><span class="st">&quot;date&quot;</span><span class="ot"> indexed=</span><span class="st">&quot;true&quot;</span><span class="ot"> stored=</span><span class="st">&quot;true&quot;</span><span class="ot"> docValues=</span><span class="st">&quot;true&quot;</span><span class="ot"> default=</span><span class="st">&quot;NOW&quot;</span>/&gt;</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb7-1"><a href="software.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--  Tracking fields to keep track of oldest and most recent index times  --&gt;</span></span>
+<span id="cb7-2"><a href="software.html#cb7-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">field</span><span class="ot"> name=</span><span class="st">&quot;first_indexed&quot;</span><span class="ot"> type=</span><span class="st">&quot;date&quot;</span><span class="ot"> indexed=</span><span class="st">&quot;true&quot;</span><span class="ot"> stored=</span><span class="st">&quot;true&quot;</span><span class="ot"> docValues=</span><span class="st">&quot;true&quot;</span>/&gt;</span>
+<span id="cb7-3"><a href="software.html#cb7-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">field</span><span class="ot"> name=</span><span class="st">&quot;last_indexed&quot;</span><span class="ot"> type=</span><span class="st">&quot;date&quot;</span><span class="ot"> indexed=</span><span class="st">&quot;true&quot;</span><span class="ot"> stored=</span><span class="st">&quot;true&quot;</span><span class="ot"> docValues=</span><span class="st">&quot;true&quot;</span><span class="ot"> default=</span><span class="st">&quot;NOW&quot;</span>/&gt;</span></code></pre></div>
 </div>
 </div>
 <div id="example_atom.xsl" class="section level4 hasAnchor">
@@ -484,25 +489,25 @@ value 1, e.g. <code>tx_find_find[facet][typ][formular]=1</code></li>
 <div id="config.ini" class="section level4 hasAnchor">
 <h4><code>config.ini</code><a href="software.html#config.ini" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Path: <a href="https://github.com/vufind-org/vufind/blob/dev/config/vufind/config.ini">vufind/config/vufind/config.ini</a></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb7-1"><a href="software.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">; This section controls features related to user accounts</span></span>
-<span id="cb7-2"><a href="software.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">[Account]</span></span>
-<span id="cb7-3"><a href="software.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">; ...</span></span>
-<span id="cb7-4"><a href="software.html#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="software.html#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">; Allow the user to &quot;subscribe&quot; to search history entries in order to receive</span></span>
-<span id="cb7-6"><a href="software.html#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">; email notifications of new search results.</span></span>
-<span id="cb7-7"><a href="software.html#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="dt">schedule_searches </span><span class="ot">=</span><span class="st"> </span><span class="kw">false</span></span>
-<span id="cb7-8"><a href="software.html#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="software.html#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">; Should we always send a scheduled search email the first time we run notices</span></span>
-<span id="cb7-10"><a href="software.html#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">; after a user has subscribed (true), or should we only send an email when there</span></span>
-<span id="cb7-11"><a href="software.html#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">; is actually something new (false, default)</span></span>
-<span id="cb7-12"><a href="software.html#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="dt">force_first_scheduled_email </span><span class="ot">=</span><span class="st"> </span><span class="kw">false</span></span>
-<span id="cb7-13"><a href="software.html#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-14"><a href="software.html#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co">; When schedule_searches is set to true, you can customize the schedule frequencies</span></span>
-<span id="cb7-15"><a href="software.html#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co">; here -- just use the number of days between notifications in the brackets. Labels</span></span>
-<span id="cb7-16"><a href="software.html#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co">; will be run through the translator.</span></span>
-<span id="cb7-17"><a href="software.html#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co">;scheduled_search_frequencies[0] = schedule_none</span></span>
-<span id="cb7-18"><a href="software.html#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="co">;scheduled_search_frequencies[1] = schedule_daily</span></span>
-<span id="cb7-19"><a href="software.html#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co">;scheduled_search_frequencies[7] = schedule_weekly</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb9-1"><a href="software.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">; This section controls features related to user accounts</span></span>
+<span id="cb9-2"><a href="software.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">[Account]</span></span>
+<span id="cb9-3"><a href="software.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">; ...</span></span>
+<span id="cb9-4"><a href="software.html#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="software.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">; Allow the user to &quot;subscribe&quot; to search history entries in order to receive</span></span>
+<span id="cb9-6"><a href="software.html#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">; email notifications of new search results.</span></span>
+<span id="cb9-7"><a href="software.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="dt">schedule_searches </span><span class="ot">=</span><span class="st"> </span><span class="kw">false</span></span>
+<span id="cb9-8"><a href="software.html#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="software.html#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">; Should we always send a scheduled search email the first time we run notices</span></span>
+<span id="cb9-10"><a href="software.html#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">; after a user has subscribed (true), or should we only send an email when there</span></span>
+<span id="cb9-11"><a href="software.html#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co">; is actually something new (false, default)</span></span>
+<span id="cb9-12"><a href="software.html#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="dt">force_first_scheduled_email </span><span class="ot">=</span><span class="st"> </span><span class="kw">false</span></span>
+<span id="cb9-13"><a href="software.html#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="software.html#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co">; When schedule_searches is set to true, you can customize the schedule frequencies</span></span>
+<span id="cb9-15"><a href="software.html#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">; here -- just use the number of days between notifications in the brackets. Labels</span></span>
+<span id="cb9-16"><a href="software.html#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co">; will be run through the translator.</span></span>
+<span id="cb9-17"><a href="software.html#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="co">;scheduled_search_frequencies[0] = schedule_none</span></span>
+<span id="cb9-18"><a href="software.html#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="co">;scheduled_search_frequencies[1] = schedule_daily</span></span>
+<span id="cb9-19"><a href="software.html#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="co">;scheduled_search_frequencies[7] = schedule_weekly</span></span></code></pre></div>
 <p>Lines: <a href="https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/config/vufind/config.ini#L392-L412">392-412</a></p>
 </div>
 <div id="searches.ini" class="section level4 hasAnchor">
@@ -510,47 +515,47 @@ value 1, e.g. <code>tx_find_find[facet][typ][formular]=1</code></li>
 <p>Path: <a href="https://github.com/vufind-org/vufind/blob/dev/config/vufind/searches.ini">vufind/config/vufind/searches.ini</a></p>
 <div id="new-items" class="section level5 hasAnchor">
 <h5>New Items<a href="software.html#new-items" class="anchor-section" aria-label="Anchor link to header"></a></h5>
-<div class="sourceCode" id="cb8"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb8-1"><a href="software.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">; This section controls the &quot;New Items&quot; search.</span></span>
-<span id="cb8-2"><a href="software.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">[NewItem]</span></span>
-<span id="cb8-3"><a href="software.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">; New item information can be retrieved from Solr or from the ILS; this setting</span></span>
-<span id="cb8-4"><a href="software.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">; controls which mechanism is used. If using Solr, change tracking must be enabled</span></span>
-<span id="cb8-5"><a href="software.html#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">; (see https://vufind.org/wiki/indexing:tracking_record_changes). If using the ILS,</span></span>
-<span id="cb8-6"><a href="software.html#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">; your driver must support the getNewItems() method.</span></span>
-<span id="cb8-7"><a href="software.html#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">; Valid options: ils, solr; default: ils</span></span>
-<span id="cb8-8"><a href="software.html#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="dt">method </span><span class="ot">=</span><span class="st"> ils</span></span>
-<span id="cb8-9"><a href="software.html#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">; Comma-separated list of date ranges to offer to the user (i.e. 1,5,30 = one day</span></span>
-<span id="cb8-10"><a href="software.html#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">; old, or five days old, or thirty days old). If using the &quot;ils&quot; method, be careful</span></span>
-<span id="cb8-11"><a href="software.html#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">; about raising the maximum age too high -- searching very long date ranges may put</span></span>
-<span id="cb8-12"><a href="software.html#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co">; a load on your ILS.</span></span>
-<span id="cb8-13"><a href="software.html#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="dt">ranges </span><span class="ot">=</span><span class="st"> 1,5,30</span></span>
-<span id="cb8-14"><a href="software.html#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co">; This setting only applies when using the &quot;ils&quot; method. It controls the maximum</span></span>
-<span id="cb8-15"><a href="software.html#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co">; number of pages of results that will show up when doing a new item search.</span></span>
-<span id="cb8-16"><a href="software.html#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co">; It is necessary to limit the number of results to avoid getting a &quot;too many boolean</span></span>
-<span id="cb8-17"><a href="software.html#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co">; clauses&quot; error from the Solr index (see notes at</span></span>
-<span id="cb8-18"><a href="software.html#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co">; https://vufind.org/jira/browse/VUFIND-128 for more details).  However, if you</span></span>
-<span id="cb8-19"><a href="software.html#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co">; set the value too low, you may get the same results no matter which range setting</span></span>
-<span id="cb8-20"><a href="software.html#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co">; is selected!</span></span>
-<span id="cb8-21"><a href="software.html#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="dt">result_pages </span><span class="ot">=</span><span class="st"> </span><span class="dv">10</span></span>
-<span id="cb8-22"><a href="software.html#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co">; This setting can be used to automatically apply filter queries to the New Item</span></span>
-<span id="cb8-23"><a href="software.html#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co">; results.  For example, you might want to filter out certain content types.  You</span></span>
-<span id="cb8-24"><a href="software.html#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="co">; can add multiple filters by repeating the &quot;filter[] =&quot; line, or you can skip</span></span>
-<span id="cb8-25"><a href="software.html#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="co">; filtering entirely by leaving the line commented out.</span></span>
-<span id="cb8-26"><a href="software.html#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="co">; filter[] = &quot;format:Book&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb10-1"><a href="software.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">; This section controls the &quot;New Items&quot; search.</span></span>
+<span id="cb10-2"><a href="software.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">[NewItem]</span></span>
+<span id="cb10-3"><a href="software.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">; New item information can be retrieved from Solr or from the ILS; this setting</span></span>
+<span id="cb10-4"><a href="software.html#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">; controls which mechanism is used. If using Solr, change tracking must be enabled</span></span>
+<span id="cb10-5"><a href="software.html#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">; (see https://vufind.org/wiki/indexing:tracking_record_changes). If using the ILS,</span></span>
+<span id="cb10-6"><a href="software.html#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">; your driver must support the getNewItems() method.</span></span>
+<span id="cb10-7"><a href="software.html#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">; Valid options: ils, solr; default: ils</span></span>
+<span id="cb10-8"><a href="software.html#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="dt">method </span><span class="ot">=</span><span class="st"> ils</span></span>
+<span id="cb10-9"><a href="software.html#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co">; Comma-separated list of date ranges to offer to the user (i.e. 1,5,30 = one day</span></span>
+<span id="cb10-10"><a href="software.html#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co">; old, or five days old, or thirty days old). If using the &quot;ils&quot; method, be careful</span></span>
+<span id="cb10-11"><a href="software.html#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co">; about raising the maximum age too high -- searching very long date ranges may put</span></span>
+<span id="cb10-12"><a href="software.html#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co">; a load on your ILS.</span></span>
+<span id="cb10-13"><a href="software.html#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="dt">ranges </span><span class="ot">=</span><span class="st"> 1,5,30</span></span>
+<span id="cb10-14"><a href="software.html#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co">; This setting only applies when using the &quot;ils&quot; method. It controls the maximum</span></span>
+<span id="cb10-15"><a href="software.html#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co">; number of pages of results that will show up when doing a new item search.</span></span>
+<span id="cb10-16"><a href="software.html#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="co">; It is necessary to limit the number of results to avoid getting a &quot;too many boolean</span></span>
+<span id="cb10-17"><a href="software.html#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="co">; clauses&quot; error from the Solr index (see notes at</span></span>
+<span id="cb10-18"><a href="software.html#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="co">; https://vufind.org/jira/browse/VUFIND-128 for more details).  However, if you</span></span>
+<span id="cb10-19"><a href="software.html#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="co">; set the value too low, you may get the same results no matter which range setting</span></span>
+<span id="cb10-20"><a href="software.html#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="co">; is selected!</span></span>
+<span id="cb10-21"><a href="software.html#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="dt">result_pages </span><span class="ot">=</span><span class="st"> </span><span class="dv">10</span></span>
+<span id="cb10-22"><a href="software.html#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="co">; This setting can be used to automatically apply filter queries to the New Item</span></span>
+<span id="cb10-23"><a href="software.html#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="co">; results.  For example, you might want to filter out certain content types.  You</span></span>
+<span id="cb10-24"><a href="software.html#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="co">; can add multiple filters by repeating the &quot;filter[] =&quot; line, or you can skip</span></span>
+<span id="cb10-25"><a href="software.html#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="co">; filtering entirely by leaving the line commented out.</span></span>
+<span id="cb10-26"><a href="software.html#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="co">; filter[] = &quot;format:Book&quot;</span></span></code></pre></div>
 <p>Lines: <a href="https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/config/vufind/searches.ini#L503-L528">503-528</a></p>
 </div>
 <div id="rss-feed-2" class="section level5 hasAnchor">
 <h5>RSS Feed<a href="software.html#rss-feed-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
-<div class="sourceCode" id="cb9"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb9-1"><a href="software.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">; This section controls RSS feed behavior</span></span>
-<span id="cb9-2"><a href="software.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">[RSS]</span></span>
-<span id="cb9-3"><a href="software.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">; If set, this setting will override sort settings associated with RSS feeds.  This</span></span>
-<span id="cb9-4"><a href="software.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">; allows you to ensure that newly added or changed items in your index appear at</span></span>
-<span id="cb9-5"><a href="software.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">; the top of the feed.  Use &quot;first_indexed desc&quot; if you only want newly-added items</span></span>
-<span id="cb9-6"><a href="software.html#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">; to be listed first.  Use &quot;last_indexed desc&quot; if you want newly-added-or-changed</span></span>
-<span id="cb9-7"><a href="software.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">; items.  Comment out the whole setting if you do not want custom RSS sorting.</span></span>
-<span id="cb9-8"><a href="software.html#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">; IMPORTANT: In order for first_indexed and last_indexed sorting to work properly,</span></span>
-<span id="cb9-9"><a href="software.html#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">;            you need to index record change dates; see the Wiki page at</span></span>
-<span id="cb9-10"><a href="software.html#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">;            https://vufind.org/wiki/indexing:tracking_record_changes</span></span>
-<span id="cb9-11"><a href="software.html#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="dt">sort </span><span class="ot">=</span><span class="st"> &quot;last_indexed desc&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb11-1"><a href="software.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">; This section controls RSS feed behavior</span></span>
+<span id="cb11-2"><a href="software.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">[RSS]</span></span>
+<span id="cb11-3"><a href="software.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">; If set, this setting will override sort settings associated with RSS feeds.  This</span></span>
+<span id="cb11-4"><a href="software.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">; allows you to ensure that newly added or changed items in your index appear at</span></span>
+<span id="cb11-5"><a href="software.html#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co">; the top of the feed.  Use &quot;first_indexed desc&quot; if you only want newly-added items</span></span>
+<span id="cb11-6"><a href="software.html#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">; to be listed first.  Use &quot;last_indexed desc&quot; if you want newly-added-or-changed</span></span>
+<span id="cb11-7"><a href="software.html#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">; items.  Comment out the whole setting if you do not want custom RSS sorting.</span></span>
+<span id="cb11-8"><a href="software.html#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co">; IMPORTANT: In order for first_indexed and last_indexed sorting to work properly,</span></span>
+<span id="cb11-9"><a href="software.html#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co">;            you need to index record change dates; see the Wiki page at</span></span>
+<span id="cb11-10"><a href="software.html#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">;            https://vufind.org/wiki/indexing:tracking_record_changes</span></span>
+<span id="cb11-11"><a href="software.html#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="dt">sort </span><span class="ot">=</span><span class="st"> &quot;last_indexed desc&quot;</span></span></code></pre></div>
 <p>Lines: <a href="https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/config/vufind/searches.ini#L530-L540">530-540</a></p>
 </div>
 </div>
