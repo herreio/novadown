@@ -178,6 +178,8 @@ Diese Suchanfrage abonnieren (RSS)
   - Geisteswissenschaften und Theologie
     - [Digital Humanities](https://www.sub.uni-goettingen.de/geisteswissenschaften-und-theologie/digital-humanities/neuerwerbungen/)
     - [Philosophie](https://www.sub.uni-goettingen.de/geisteswissenschaften-und-theologie/philosophie/neuerwerbungen/)
+  - Naturwissenschaften, Mathematik und Informatik
+    - [Informatik](https://www.sub.uni-goettingen.de/naturwissenschaften-mathematik-und-informatik/informatik/neuerwerbungen/)
   - ...
 
 ### Atom Feed
@@ -187,11 +189,19 @@ Diese Suchanfrage abonnieren (RSS)
 #### Beispielanfragen
 
 - Digital Humanities: [`q=(lkl+g+000)`](https://www.sub.uni-goettingen.de/opac.atom?q=(lkl+g+000))
-- Philosophie: [`q=(lkl d * or lkl da* or lkl db* or lkl dc* or lkl df* or lkl dh* or lkl di* or lkl dk* or lkl dm* or lkl dn* or lkl do* or lkl dq* or lkl dr* or lkl ds* or lkl dt* or lkl du*)`](https://www.sub.uni-goettingen.de/opac.atom?q=(lkl+d+*+or+lkl+da*+or+lkl+db*+or+lkl+dc*+or+lkl+df*+or+lkl+dh*+or+lkl+di*+or+lkl+dk*+or+lkl+dm*+or+lkl+dn*+or+lkl+do*+or+lkl+dq*+or+lkl+dr*+or+lkl+ds*+or+lkl+dt*+or+lkl+du*))
+- Philosophie: [q=(lkl+d+*)](https://www.sub.uni-goettingen.de/opac.atom?q=(lkl+d+*)) / [`q=(lkl d * or lkl da* or lkl db* or lkl dc* or lkl df* or lkl dh* or lkl di* or lkl dk* or lkl dm* or lkl dn* or lkl do* or lkl dq* or lkl dr* or lkl ds* or lkl dt* or lkl du*)`](https://www.sub.uni-goettingen.de/opac.atom?q=(lkl+d+*+or+lkl+da*+or+lkl+db*+or+lkl+dc*+or+lkl+df*+or+lkl+dh*+or+lkl+di*+or+lkl+dk*+or+lkl+dm*+or+lkl+dn*+or+lkl+do*+or+lkl+dq*+or+lkl+dr*+or+lkl+ds*+or+lkl+dt*+or+lkl+du*))
+- Informatik: [`q=(lkl+ah*)`](https://www.sub.uni-goettingen.de/opac.atom?q=(lkl+ah*))
 
 ## Leibniz-Institut für Deutsche Sprache (IDS)
 
 - [Neuerwerbungen](https://www.ids-mannheim.de/bibliothek/neuerwerb/) via [Koha](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?op=list&category=2) (Public lists)
+  - [Juli 2022](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=36) / [RSS](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?rss=1&op=view&shelfnumber=36)
+  - [Juni 2022](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=33) / [RSS](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?rss=1&op=view&shelfnumber=33)
+  - [Mai 2022](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=30) / [RSS](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?rss=1&op=view&shelfnumber=30)
+  - [April 2022](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=29) / [RSS](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?rss=1&op=view&shelfnumber=29)
+  - [März 2022](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=28) / [RSS](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?rss=1&op=view&shelfnumber=28)
+  - [Februar 2022](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=27) / [RSS](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?rss=1&op=view&shelfnumber=27)
+  - [Januar 2022](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=26) / [RSS](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?rss=1&op=view&shelfnumber=26)
 
 ## Fachinformationsdienst BBI (`FID-BBI-DE-23`)
 
@@ -293,6 +303,10 @@ Diese Suchanfrage abonnieren (RSS)
 > - Nachricht bei keinen Ergebnissen: Hier stellen Sie ein, ob Sie auch eine Benachrichtigung erhalten möchten, wenn die Suche keine Ergebnisse hat.
 >
 > Um alle Ihre SDI-Profile zu sehen, gehen Sie in den Benutzerausweis und klicken Sie dort auf den Link SDI-Profile. Dort können Sie Ihre Profile ändern, duplizieren oder löschen. Wenn Sie auf Sofort suchen klicken, wird die Suche sogleich ausgeführt; eine E-Mail-Benachrichtigung wird in diesem Fall nicht verschickt.
+
+### Siehe auch
+
+[Top 10 Ausleihe](https://www.khm.de/bib_top_ausleihe/) (Quartals- und Jahresausleihe)
 
 ## Leo Baeck Institute (LBI)
 
