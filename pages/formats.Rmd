@@ -1,6 +1,6 @@
 # Formats
 
-## MARC21
+## MARC 21
 
 ### `005` - Date and Time of Latest Transaction
 
@@ -50,13 +50,101 @@ Computer-generated, six-character numeric string that indicates the date the MAR
 
 ## PICA3 / PICA+
 
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl)
+
 ### `4880` / `237B` - Selektion und Sortierung von Neuerwerbungslisten
 
-- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=4880&katalog=Standard) (SWB)
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=4880&katalog=Standard)
+
+In Feld `4880` können Angaben zur Selektion und Sortierung von Neuerwerbungslisten erfasst werden. Neben dem Datum können bibliotheksspezifisch Notationen, Schlagwörter, Codes usw. angegeben werden.
+
+#### Unterfelder
+
+| Pica3 | Pica+  | Inhalt                | wiederholbar | Marc21 |
+|:------|:-------|:----------------------|:-------------|:-------|
+| ohne  | $0     | Datum                 | Nein         | 938 $a |
+| $a    | $a     | Text                  |  Ja          | --     |
+| $b    | $b     | Text                  |  Ja          | --     |
+| $c    | $c     | Text                  |  Ja          | --     |
+| $d    | $d     | Text                  |  Ja          | --     |
+| $e    | $e     | Text                  |  Ja          | --     |
+| $f    | $f     | Fachgruppe            |  Ja          | 938 $f |
+| $w    | $w     | Weitere Eintragungen  |  Ja          | 938 $w |
+
+##### Indexierung
+
+| Unterfeld | Indextyp (IKT) | Indexschlüssel (IKT) | Routine |
+|:----------|:---------------|:---------------------|:--------|
+| ohne / $0 | NWL (4005)     | NEL (8004)           | Phrase  |
+| ohne / $0 | NWL (4005)     | NWD (4006)           | Phrase  |
+| $a        | NWL (4005)     | NEA (8005)           | Phrase  |
+| $b        | NWL (4005)     | NEL (8004)           | Phrase  |
+| $c        | NWL (4005)     | NEL (8004)           | Phrase  |
+| $d        | NWL (4005)     | NEL (8004)           | Phrase  |
+| $e        | NWL (4005)     | NEL (8004)           | Phrase  |
+| $f        | NWL (4005)     | NWF (4007)           | Phrase  |
+
+### `7110` / `209A/$x00-09` - Signatur
+
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=7100&katalog=Standard)
+
+#### Signatur
+
+| Pica3 | Pica+  | wiederholbar | Marc 21         |
+|:------|:-------|:-------------|:----------------|
+| $a    | $a     | Nein         | 852 $c / 924 $g |
+
+Bei Bestellkatalogisaten kann anstelle der Signatur ein Kommentar (z.B. `bestellt`) erfasst werden.
+
+#### Ausleihindikator (nur SWB)
+
+| Pica3 | Pica+  | wiederholbar | Marc 21                  |
+|:------|:-------|:-------------|:-------------------------|
+| $D    | $D     | Nein         | 852 $m / 938 $k / 924 $d |
+
+Bei der Belegung von `$D` wird unterschieden, ob ein Exemplarsatz mit der Kennung `l` in `E001` oder mit der Kennung `e` in `E001` belegt wird. In Exemplarsätzen mit der Kennung `l` können in `$D` nur die unten beschriebenen festgelegten Codes vergeben werden. Bei Exemplarsätzen mit der Kennung `e` kann freier Text eingegeben werden.
+
+Für die Online-Fernleihe werden nur die mit `l` gekennzeichneten Exemplarsätze berücksichtigt.
+
+Folgende Codes für eine Ausleihbeschränkung sind definiert:
+
+| Indikator | Bedeutung                    |
+|:----------|:-----------------------------|
+| e         | Erwerbungsdaten              |
+| l         | Nur für den Lesesaal         |
+| p         | Präsenzbestand               |
+| n         | Nicht verleihbar             |
+| s         | Für die Benutzung gesperrt   |
+| u         | Sonstige Ausleihbeschränkung |
+| v         | Nicht verfügbar              |
+
+### `7800` / `203@` - EPN des Exemplarsatzes
+
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=7800&katalog=Standard)
+
+##### Hinweis
+
+Bei Datensätzen, die aus der Migration der Datenbanken von SWB und GBV stammen, wurde die EPN des SWB in das Feld 7801 umgesetzt.
+
+##### Validation
+
+Das Feld wird maschinell vergeben, für manuelle Erfassung, Korrektur und Löschung nicht zugelassen.
+
+#### Exemplarproduktionsnummer
+
+| Pica3 | Pica+  | wiederholbar | Marc 21                                   |
+|:------|:-------|:-------------|:------------------------------------------|
+| ohne  | $0     | Nein         | 001 / 003 DE-627 / 014 $a DE-627 / 924 $a |
+
+##### Indexierung
+
+| Indextyp (IKT) | Indexschlüssel (IKT) | Routine |
+|:---------------|:---------------------|:--------|
+|   EPN (8000)   |  EPN (8000)          |  Wort   |
 
 ### `7901` / `201D` - Quelle und Datum der Ersterfassung
 
-- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=7901&katalog=Standard) (SWB)
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=7901&katalog=Standard)
 
 Das Feld enthält die Bibliothek (ELN) und das Anlege-Datum des Exemplarsatzes. Es dient dem Schutz des Datensatzes von Korrekturen durch andere ELNs.
 
@@ -64,31 +152,75 @@ Das Feld wird maschinell belegt, für manuelle Erfassung, Korrektur oder Löschu
 
 ### `7902` / `201A` - Datum der Ersterfassung
 
-- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=7902&katalog=Standard) (SWB)
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=7902&katalog=Standard)
 
 ### `7903` / `201B` - Datum und Uhrzeit der letzten Änderung
 
-- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=7903&katalog=Standard) (SWB)
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=7903&katalog=Standard)
 
 ### `7904` / `202D` - GBV: Quelle (Bearb. bzw. Programm und Datum der letzten Änderung)
 
 - `Exemplardaten_Pica3_sortiert_20181121_oeff.pdf`
 
+### `8012` / `209B/$x12` - Vierstellige, recherchierbare Abrufzeichen
+
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=8012&katalog=Standard)
+
+| Pica3 | Pica+         | wiederholbar | Marc 21  |
+|:------|:--------------|:-------------|:---------|
+| 8012  | 209B/$x12     | Nein         | --       |
+
+Das Feld 8012 enthält vierstellige, recherchierbare Abrufzeichen.
+
+#### Abrufzeichen
+
+| Pica3 | Pica+  | wiederholbar | Marc 21  |
+|:------|:-------|:-------------|:---------|
+| $a    | $a     | Ja           | 935 $a   |
+
+Die Abrufzeichen müssen immer vier Stellen umfassen.  
+Das erste Abrufzeichen ist ohne Unterfeld zu erfassen. Mehrere Abrufzeichen werden mit `$a` voneinander getrennt.  
+[Liste der verbundübergreifenden Abrufzeichen](https://opus.k10plus.de/frontdoor/deliver/index/docId/508/file/K10plus_Tabelle_8012.pdf).
+
+##### Indexierung
+
+| Indextyp (IKT) | Indexschlüssel (IKT) | Routine |
+|:---------------|:---------------------|:--------|
+|   ABL (3060)   |  ABL (3060)          |  Phrase |
+|   EXK (8578)   |  EXK (8578)          |  Wort   |
+
+#### Beispiel
+
+```
+101@ $a2006$cBSZ
+201A/01 $028-07-22
+201B/01 $028-07-22$t14:29:31.000
+201D/01 $0DDSU:28-07-22
+201U/01 $0utf8
+203@/01 $04173480881
+208@/01 $a28-07-22$bl01
+209A/01 $B14$x00
+209B/01 $aNABZ$aut22$x12
+209R/01 $uhttps://elibrary.utb.de/doi/book/10.46499/9783734414329
+```
+
+Quelle: https://unapi.k10plus.de/?id=swb:ppn:1811926894&format=pp (2022-08-07)
+
 ### `E001` / `208@` - Neuanlagedatum und Selektionsschlüssel
 
-- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=E001&katalog=Standard) (SWB)
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=E001&katalog=Standard)
 
-Das Feld E001-E999 ist das erste (Pflicht-)Feld eines jeden Exemplardatensatzes (E001 für den 1. Exemplarsatz, E002 für den 2. Exemplarsatz usw. bis E999 für den 999. und letzten Exemplarsatz) und enthält das Erfassungsdatum und den Selektionsschlüssel.
+Das Feld `E001`-`E999` ist das erste (Pflicht-)Feld eines jeden Exemplardatensatzes (`E001` für den 1. Exemplarsatz, `E002` für den 2. Exemplarsatz usw. bis `E999` für den 999. und letzten Exemplarsatz) und enthält das Erfassungsdatum und den Selektionsschlüssel.
 
 Eingegeben wird nur der Selektionsschlüssel. Das Erfassungsdatum des Exemplarsatzes wird automatisch vom System ergänzt.
 
 #### Neuanlagedatum
 
-| Pica3 | Pica+  | wiederholbar | Marc21  |
-|:------|:-------|:-------------|:--------|
-|  ohne |  $a    |    Nein      |    --   |
+| Pica3 | Pica+  | wiederholbar | Marc 21  |
+|:------|:-------|:-------------|:---------|
+|  ohne |  $a    |    Nein      |    --    |
 
-Das Unterfeld wird vom System besetzt und enthält das Datum in der Form TT-MM-JJ.
+Das Unterfeld wird vom System besetzt und enthält das Datum in der Form `TT-MM-JJ`.
 
 ##### Indexierung
 
@@ -99,23 +231,23 @@ Das Unterfeld wird vom System besetzt und enthält das Datum in der Form TT-MM-J
 
 #### Selektionsschlüssel
 
-| Pica3 | Pica+  | wiederholbar | Marc21  |
-|:------|:-------|:-------------|:--------|
-| \_:\_ |  $b    |    Nein      |    --   |
+| Pica3 | Pica+  | wiederholbar | Marc 21  |
+|:------|:-------|:-------------|:---------|
+| \_:\_ |  $b    |    Nein      |    --    |
 
 ##### Besonderheiten für SWB-Bibliotheken
 
-Zugelassener Inhalt für Pos. 1 = "l" oder "e".  
-Pos. 2-3 ist numerisch, erlaubte Inhalte "01"-"99"; Pos. 2-3 bei Pos. 1="e" muss identisch sein mit einem Pica-Exemplarsatz mit Pos.1="l" unter der gleichen ELN.
+Zugelassener Inhalt für Pos. 1 = `l` oder `e`.  
+Pos. 2-3 ist numerisch, erlaubte Inhalte `01`-`99`; Pos. 2-3 bei Pos. 1 = `e` muss identisch sein mit einem Pica-Exemplarsatz mit Pos.1 = `l` unter der gleichen ELN.
 
-Bei Neuanlegen eines Satzes muss es manuell mit dem Inhalt "Status" belegt werden. Das Neuanlagedatum wird maschinell bei Speicherung des Satzes vergeben.
+Bei Neuanlegen eines Satzes muss es manuell mit dem Inhalt `Status` belegt werden. Das Neuanlagedatum wird maschinell bei Speicherung des Satzes vergeben.
 
-Status="l" für Lokalsatz auf Pos. 1  
+Status = `l` für Lokalsatz auf Pos. 1  
 Pos. 2-3 laufenden Nummerierung des Lokalsatzes, linksbündig und zweistellig.  
-Status = "e" für Exemplarsatz auf Pos. 1  
+Status = `e` für Exemplarsatz auf Pos. 1  
 Pos. 2-3 linksbündig und zweistellig die Nummerierung des Lokalsatzes.  
-Status = "z" für aus der ZDB übernommenen Bestandssatz (wird bei Übernahme maschinell gesetzt, ergänzt durch die zweistellige Nummer der Sortierhilfe aus ZDB-Feld 8032)  
-Status = "zez" für aus der ZDB übernommenen Bestandssatz, der aus der EZB über den gemeinsamen Lieferdienst „EZB ZDB“ übertragen wurde.  
+Status = `z` für aus der ZDB übernommenen Bestandssatz (wird bei Übernahme maschinell gesetzt, ergänzt durch die zweistellige Nummer der Sortierhilfe aus ZDB-Feld 8032)  
+Status = `zez` für aus der ZDB übernommenen Bestandssatz, der aus der EZB über den gemeinsamen Lieferdienst „EZB ZDB“ übertragen wurde.  
 
 ##### Indexierung
 
