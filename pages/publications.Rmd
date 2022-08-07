@@ -292,7 +292,7 @@
 - [IEEE Xplore](https://ieeexplore.ieee.org/servlet/opac?punumber=6530810)
 - ZDB: [2735330-8](https://ld.zdb-services.de/resource/2735330-8)
 - EZB: [2735330-8](https://ezb.ur.de/?2735330-8)
-- XML: [201677](https://ezb.ur.de/ezeit/detail.phtml?jour_id=201677&xmloutput=1)
+  - XML: [201677](https://ezb.ur.de/ezeit/detail.phtml?jour_id=201677&xmloutput=1)
 - LOC: [lccn.loc.gov/2014202414](https://lccn.loc.gov/2014202414) / [www.loc.gov/item/2014202414](https://www.loc.gov/item/2014202414/)
 
 #### Library Accessions
