@@ -2,68 +2,125 @@
 
 ## MARC21
 
-### `005`- Date and Time of Latest Transaction
+### `005` - Date and Time of Latest Transaction
 
-> Sixteen characters that indicate the date and time of the latest record transaction and serve as a version identifier for the record. They are recorded according to Representation of Dates and Times (ISO 8601). The date requires 8 numeric characters in the pattern yyyymmdd. The time requires 8 numeric characters in the pattern hhmmss.f, expressed in terms of the 24-hour (00-23) clock.
+- LOC: Bibliographic ([Full](https://www.loc.gov/marc/bibliographic/bd005.html) / [Concise](https://www.loc.gov/marc/bibliographic/concise/bd005.html))
 
-- LOC
-  - Bibliographic: [Full](https://www.loc.gov/marc/bibliographic/bd005.html) / [Concise](https://www.loc.gov/marc/bibliographic/concise/bd005.html)
+#### Field Definition and Scope
+
+Sixteen characters that indicate the date and time of the latest record transaction and serve as a version identifier for the record. They are recorded according to _Representation of Dates and Times_ (ISO 8601). The date requires 8 numeric characters in the pattern `yyyymmdd`. The time requires 8 numeric characters in the pattern `hhmmss.f`, expressed in terms of the 24-hour (00-23) clock.
+
+...
+
+The date on which a record is first entered into machine-readable form is contained in field `008/00-05`. The Date entered on file never changes.
+
+#### Input Covention
+
+**System Generation** -- Field `005` should be system generated.
 
 ### `008` - Fixed-Length Data Elements-General Information
 
-- LOC
-  - Bibliographic: [Full](https://www.loc.gov/marc/bibliographic/bd008.html) / [Concise](https://www.loc.gov/marc/bibliographic/concise/bd008.html)
+- LOC: Bibliographic ([Full](https://www.loc.gov/marc/bibliographic/bd008.html) / [Concise](https://www.loc.gov/marc/bibliographic/concise/bd008.html))
+
+#### Field Definition and Scope
+
+Forty character positions (`00-39`) that provide coded information about the record as a whole and about special bibliographic aspects of the item being cataloged. These coded data elements are potentially useful for retrieval and data management purposes.
+
+...
+
+Data elements are positionally-defined. Character positions that are not defined contain a blank (`#`). All defined character positions must contain a defined code; for some field `008` positions, this may be the fill character (`|`). The fill character may be used (in certain character positions) when a cataloging organization makes no attempt to code the character position. The fill character is not allowed in field `008` positions `00-05` (Date entered on file). ...
+
+Character positions `00-17` and `35-39` are defined the same across all types of material ...
 
 #### `00-05` - Date entered on file
 
-> Computer-generated, six-character numeric string that indicates the date the MARC record was created. Recorded in the pattern yymmdd.
+- LOC: Bibliographic ([Full](https://www.loc.gov/marc/bibliographic/bd008a.html) / [Concise](https://www.loc.gov/marc/bibliographic/concise/bd008a.html))
 
-- LOC
-  - Bibliographic: [Full](https://www.loc.gov/marc/bibliographic/bd008a.html) / [Concise](https://www.loc.gov/marc/bibliographic/concise/bd008a.html)
+##### Guidelines for Applying Content Designators
 
-## PICA3/PICA+
+Computer-generated, six-character numeric string that indicates the date the MARC record was created. Recorded in the pattern `yymmdd`.
 
-### `201A` / `7902` - Datum der Ersterfassung
+... The date entered on file in `008/00-05` is never changed. The date and time of latest transaction information in field `005` changes each time a transaction is made to the record. The latest transaction information enables an organization handling more than one version of a record to identify the most current version. The fill character (`|`) is not allowed in any of these positions. Field `008/00-05` is usually system generated.
 
-- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=7902&katalog=Standard) (SWB)
+#### Input Convention
 
-### `201B` / `7903` - Datum und Uhrzeit der letzten Änderung
+**Capitalization** -- Alphabetic codes are input in lowercase.
 
-- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=7903&katalog=Standard) (SWB)
+**Field length** -- Field `008` should always consist of forty (40) character positions.
 
-### `201D` / `7901` - Quelle und Datum der Ersterfassung
-
-- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=7901&katalog=Standard) (SWB)
-
-> Das Feld enthält die Bibliothek (ELN) und das Anlege-Datum des Exemplarsatzes. Es dient dem Schutz des Datensatzes von Korrekturen durch andere ELNs.
->
-> Das Feld wird maschinell belegt, für manuelle Erfassung, Korrektur oder Löschung nicht zugelassen.
-
-### `E001` / `208@` - Neuanlagedatum und Selektionsschlüssel
-
-- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=E001&katalog=Standard) (SWB)
-
-#### `b` - Selektionsschlüssel
-
-- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=E001&katalog=Standard#_:_) (SWB)
-
-> **Besonderheiten für SWB-Bibliotheken:**  
-> Zugelassener Inhalt für Pos. 1 = "l" oder "e".  
-> Pos. 2-3 ist numerisch, erlaubte Inhalte "01"-"99"; Pos. 2-3 bei Pos. 1="e" muss identisch sein mit einem Pica-Exemplarsatz mit Pos.1="l" unter der gleichen ELN.
->
-> Bei Neuanlegen eines Satzes muss es manuell mit dem Inhalt "Status" belegt werden. Das Neuanlagedatum wird maschinell bei Speicherung des Satzes vergeben.
->
-> Status="l" für Lokalsatz auf Pos. 1  
-> Pos. 2-3 laufenden Nummerierung des Lokalsatzes, linksbündig und zweistellig.  
-> Status = "e" für Exemplarsatz auf Pos. 1  
-> Pos. 2-3 linksbündig und zweistellig die Nummerierung des Lokalsatzes.  
-> Status = "z" für aus der ZDB übernommenen Bestandssatz (wird bei Übernahme maschinell gesetzt, ergänzt durch die zweistellige Nummer der Sortierhilfe aus ZDB-Feld 8032)  
-> Status = "zez" für aus der ZDB übernommenen Bestandssatz, der aus der EZB über den gemeinsamen Lieferdienst „EZB ZDB“ übertragen wurde.  
+## PICA3 / PICA+
 
 ### `4880` / `237B` - Selektion und Sortierung von Neuerwerbungslisten
 
 - [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=4880&katalog=Standard) (SWB)
 
+### `7901` / `201D` - Quelle und Datum der Ersterfassung
+
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=7901&katalog=Standard) (SWB)
+
+Das Feld enthält die Bibliothek (ELN) und das Anlege-Datum des Exemplarsatzes. Es dient dem Schutz des Datensatzes von Korrekturen durch andere ELNs.
+
+Das Feld wird maschinell belegt, für manuelle Erfassung, Korrektur oder Löschung nicht zugelassen.
+
+### `7902` / `201A` - Datum der Ersterfassung
+
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=7902&katalog=Standard) (SWB)
+
+### `7903` / `201B` - Datum und Uhrzeit der letzten Änderung
+
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=7903&katalog=Standard) (SWB)
+
 ### `7904` / `202D` - GBV: Quelle (Bearb. bzw. Programm und Datum der letzten Änderung)
 
 - `Exemplardaten_Pica3_sortiert_20181121_oeff.pdf`
+
+### `E001` / `208@` - Neuanlagedatum und Selektionsschlüssel
+
+- [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&val=E001&katalog=Standard) (SWB)
+
+Das Feld E001-E999 ist das erste (Pflicht-)Feld eines jeden Exemplardatensatzes (E001 für den 1. Exemplarsatz, E002 für den 2. Exemplarsatz usw. bis E999 für den 999. und letzten Exemplarsatz) und enthält das Erfassungsdatum und den Selektionsschlüssel.
+
+Eingegeben wird nur der Selektionsschlüssel. Das Erfassungsdatum des Exemplarsatzes wird automatisch vom System ergänzt.
+
+#### Neuanlagedatum
+
+| Pica3 | Pica+  | wiederholbar | Marc21  |
+|:------|:-------|:-------------|:--------|
+|  ohne |  $a    |    Nein      |    --   |
+
+Das Unterfeld wird vom System besetzt und enthält das Datum in der Form TT-MM-JJ.
+
+##### Indexierung
+
+| Indextyp (IKT) | Indexschlüssel (IKT) | Routine |
+|:---------------|:---------------------|:--------|
+|   SEL (8880)   |  SEL (8880)          |  Datum  |
+|   SXN (4015)   |  SXN (4015)          |  Phrase |
+
+#### Selektionsschlüssel
+
+| Pica3 | Pica+  | wiederholbar | Marc21  |
+|:------|:-------|:-------------|:--------|
+| \_:\_ |  $b    |    Nein      |    --   |
+
+##### Besonderheiten für SWB-Bibliotheken
+
+Zugelassener Inhalt für Pos. 1 = "l" oder "e".  
+Pos. 2-3 ist numerisch, erlaubte Inhalte "01"-"99"; Pos. 2-3 bei Pos. 1="e" muss identisch sein mit einem Pica-Exemplarsatz mit Pos.1="l" unter der gleichen ELN.
+
+Bei Neuanlegen eines Satzes muss es manuell mit dem Inhalt "Status" belegt werden. Das Neuanlagedatum wird maschinell bei Speicherung des Satzes vergeben.
+
+Status="l" für Lokalsatz auf Pos. 1  
+Pos. 2-3 laufenden Nummerierung des Lokalsatzes, linksbündig und zweistellig.  
+Status = "e" für Exemplarsatz auf Pos. 1  
+Pos. 2-3 linksbündig und zweistellig die Nummerierung des Lokalsatzes.  
+Status = "z" für aus der ZDB übernommenen Bestandssatz (wird bei Übernahme maschinell gesetzt, ergänzt durch die zweistellige Nummer der Sortierhilfe aus ZDB-Feld 8032)  
+Status = "zez" für aus der ZDB übernommenen Bestandssatz, der aus der EZB über den gemeinsamen Lieferdienst „EZB ZDB“ übertragen wurde.  
+
+##### Indexierung
+
+| Indextyp (IKT) | Indexschlüssel (IKT) | Routine |
+|:---------------|:---------------------|:--------|
+|   LNR (2160)   |  LFZ (8640)          |  Wort   |
+|   SEL (8880)   |  SEL (8880)          |  Datum  |
+|   SLS (8149)   |  SLS (8149)          |  Wort   |
