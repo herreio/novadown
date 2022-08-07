@@ -16,8 +16,13 @@
 ## Koha
 
 - [Homepage](https://koha-community.org/)
-- [Search RSS Feeds](https://koha-community.org/manual/20.05/en/html/opac.html#search-rss-feeds) (20.05)
-- [Custom RSS Feeds](https://koha-community.org/manual/16.11/html/ch12s05.html#customrss) (16.11)
+  - [Bibliography](https://koha-community.org/documentation/koha-bibliography/)
+- [Documentation](https://koha-community.org/documentation/)
+  - [Search RSS Feeds](https://koha-community.org/manual/20.05/en/html/opac.html#search-rss-feeds) (20.05)
+  - [Custom RSS Feeds](https://koha-community.org/manual/16.11/html/ch12s05.html#customrss) (16.11)
+- [Gitea](https://git.koha-community.org/)
+  - [koha-community/koha](https://git.koha-community.org/koha-community/koha)
+- [Koha-Community/Koha](https://github.com/Koha-Community/Koha) (GitHub/Mirror)
 
 ## Laminas
 
@@ -46,13 +51,24 @@ Previously known as **Zend Framework**. Used by [VuFind](#vufind).
       - [Neuerwerbungslisten per RSS](https://verbundwiki.gbv.de/x/DQAgAg)
     - [Suchergebnisse in anderen Formaten (RSS, XML, ...)](https://verbundwiki.gbv.de/x/B4CNAg)
 
+    > Man kann natürlich auch direkt auf die XML-Ausgabe zugreifen, z.B.: `gso.gbv.de/DB=2.1/XML=1.0/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=[SUCHSTRING]`
+
 ## Typo3
 
-- Tutorials > Best practice > [RSS feed](https://docs.typo3.org/p/georgringer/news/main/en-us/Tutorials/BestPractice/Rss/Index.html)
+### news
 
-### Find
+- [georgringer/news](https://github.com/georgringer/news) (GitHub)
+- [georgringer/news](https://docs.typo3.org/p/georgringer/news/main/en-us/Index.html) (Docs)
+  - Tutorials > Best practice > [RSS feed](https://docs.typo3.org/p/georgringer/news/main/en-us/Tutorials/BestPractice/Rss/Index.html)
+
+### solr
+
+- [apache-solr-for-typo3/solr](https://docs.typo3.org/p/apache-solr-for-typo3/solr/main/en-us/Index.html) (Docs)
+
+### find
 
 - [subgoe/typo3-find](https://github.com/subugoe/typo3-find) (GitHub)
+- [Docs](https://typo3-find.readthedocs.io/en/latest/) (ReadTheDocs)
 
 > #### [Data export](https://github.com/subugoe/typo3-find#data-export)
 > 
@@ -101,6 +117,34 @@ Previously known as **Zend Framework**. Used by [VuFind](#vufind).
 > - `extended`: whether to show the extended search form
 > - `sort`: the sort order to use
 
+## UnAPI
+
+### KXP
+
+- [Schnittstelle](https://unapi.k10plus.de)
+- [Wiki](https://wiki.k10plus.de/x/CYCWBw)
+
+#### Datenbanken
+
+- [Wiki](https://wiki.k10plus.de/x/LQCGBw)
+
+#### Formate
+
+##### PICA
+
+- `pp`
+- `picajson`
+- `picaxml`
+
+##### MARC
+
+- `marcjson`
+- `marcxml`
+
+##### JSON Lite
+
+- `jsmf-json`
+
 ## VuFind
 
 ### Code
@@ -146,7 +190,7 @@ Path: [vufind/solr/vufind/biblio/conf/xslt/example_rss.xsl](https://github.com/v
 
 #### `marc_local.properties`
 
-Path: [vufind/import/marc_local.properties](https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/import/marc_local.properties)
+Path: [vufind/import/marc_local.properties](https://github.com/vufind-org/vufind/blob/dev/import/marc_local.properties)
 
 ##### Tracking
 
@@ -192,7 +236,7 @@ Lines: [392-412](https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b
 
 #### `searches.ini`
 
-Path: [vufind/config/vufind/searches.ini](https://github.com/vufind-org/vufind/blob/dev/config/vufind/searches.ini)
+Path: [vufind/config/vufind/searches.ini](https://github.com/vufind-org/vufind/blob/dev/config/vufind/searches.ini) / [vufind/local/config/vufind/searches.ini](https://git.sc.uni-leipzig.de/ubl/finc/vufind/-/blob/finc/local/config/vufind/searches.ini)
 
 ##### New Items
 
@@ -227,6 +271,39 @@ result_pages = 10
 
 Lines: [503-528](https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/config/vufind/searches.ini#L503-L528)
 
+---
+
+```ini
+; This section controls the "New Items" search.
+[NewItem]
+; New item information can be retrieved from Solr or from the ILS; this setting
+; controls which mechanism is used. If using Solr, change tracking must be enabled
+; (see https://vufind.org/wiki/indexing:tracking_record_changes). If using the ILS,
+; your driver must support the getNewItems() method.
+; Valid options: ils, solr; default: ils
+method = solr
+; Comma-separated list of date ranges to offer to the user (i.e. 1,5,30 = one day
+; old, or five days old, or thirty days old). If using the "ils" method, be careful
+; about raising the maximum age too high -- searching very long date ranges may put
+; a load on your ILS.
+ranges = 1,5,30
+; This setting only applies when using the "ils" method. It controls the maximum
+; number of pages of results that will show up when doing a new item search.
+; It is necessary to limit the number of results to avoid getting a "too many boolean
+; clauses" error from the Solr index (see notes at
+; https://vufind.org/jira/browse/VUFIND-128 for more details).  However, if you
+; set the value too low, you may get the same results no matter which range setting
+; is selected!
+result_pages = 10
+; This setting can be used to automatically apply filter queries to the New Item
+; results.  For example, you might want to filter out certain content types.  You
+; can add multiple filters by repeating the "filter[] =" line, or you can skip
+; filtering entirely by leaving the line commented out.
+; filter[] = "format:Book"
+```
+
+Lines: [450-475](https://git.sc.uni-leipzig.de/ubl/finc/vufind/-/blob/5d6baeac34a1602a44e38f52bcf6519b21fde545/local/config/vufind/searches.ini#L450-L475)
+
 ##### RSS Feed
 
 ```ini
@@ -243,7 +320,7 @@ Lines: [503-528](https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b
 sort = "last_indexed desc"
 ```
 
-Lines: [530-540](https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/config/vufind/searches.ini#L530-L540)
+Lines: [530-540](https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b679cfdd2fccdafd28ef/config/vufind/searches.ini#L530-L540) / [477-487](https://git.sc.uni-leipzig.de/ubl/finc/vufind/-/blob/5d6baeac34a1602a44e38f52bcf6519b21fde545/local/config/vufind/searches.ini#L477-L487)
 
 ### Issues
 
@@ -280,6 +357,26 @@ Lines: [530-540](https://github.com/vufind-org/vufind/blob/e95d47a3650a3afc35d3b
 > Starting with release 6.1, VuFind supports “selective dissemination of information” (SDI) – users can subscribe to searches and receive notifications in the form of regular email alerts when new records appear in those result sets.
 >
 > ...
+
+> ##### [Local Settings Directory](https://vufind.org/wiki/configuration:local_settings_directory)
+>
+> ...
+>
+> ##### Default Settings Directory
+>
+> VuFind's distribution includes a default settings directory called “local.” If you accept default settings when running VuFind's installer, this is where all of your configurations will be found. (For example, on most Linux systems, config.ini will be found at `/usr/local/vufind/local/config/vufind/config.ini`).
+>
+> ...
+
+##### Files
+
+> ###### [`config.ini`](https://vufind.org/wiki/configuration:files:config.ini)
+>
+> The `config.ini` file contains VuFind's primary configuration settings.
+>
+> In VuFind 2.0 and later, it is found in the `config/vufind` subdirectory of your [local settings directory](#local-settings-directory).
+>
+> You can view the latest version of the file [here](https://github.com/vufind-org/vufind/blob/dev/config/vufind/config.ini).
 
 #### Indexing
 
