@@ -285,6 +285,13 @@
   - KXP: [612289885](https://swb.bsz-bw.de/DB=2.1/PPNSET?PPN=612289885&INDEXSET=21)
   - SLUB: [0-612289885](https://katalog.slub-dresden.de/id/0-612289885)
 
+## SUB Hamburg
+
+- Neuerwerbungen ausländischer Literatur (1949–1950)
+  - SLUB: [0-169119793](https://katalog.slub-dresden.de/id/0-169119793)
+- Neuerwerbungen (1950–1972)
+  - SLUB: [0-167632299](https://katalog.slub-dresden.de/id/0-167632299)
+
 ## American Institute of Electrical Engineers
 
 ### Proceedings (1905–1919)
