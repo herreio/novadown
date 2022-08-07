@@ -1,6 +1,5 @@
 ---
 title: "novadown"
-subtitle: "Notes on Library Accessions"
 author: "Donatus Herre"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
