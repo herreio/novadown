@@ -23,7 +23,7 @@
 <meta name="author" content="Donatus Herre" />
 
 
-<meta name="date" content="2022-08-04" />
+<meta name="date" content="2022-08-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -215,17 +215,17 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#marc21"><i class="fa fa-check"></i>MARC21</a>
 <ul>
-<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#date-and-time-of-latest-transaction"><i class="fa fa-check"></i><code>005</code>- Date and Time of Latest Transaction</a></li>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#date-and-time-of-latest-transaction"><i class="fa fa-check"></i><code>005</code> - Date and Time of Latest Transaction</a></li>
 <li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#fixed-length-data-elements-general-information"><i class="fa fa-check"></i><code>008</code> - Fixed-Length Data Elements-General Information</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#pica3pica"><i class="fa fa-check"></i>PICA3/PICA+</a>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#pica3-pica"><i class="fa fa-check"></i>PICA3 / PICA+</a>
 <ul>
-<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#a-7902---datum-der-ersterfassung"><i class="fa fa-check"></i><code>201A</code> / <code>7902</code> - Datum der Ersterfassung</a></li>
-<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#b-7903---datum-und-uhrzeit-der-letzten-änderung"><i class="fa fa-check"></i><code>201B</code> / <code>7903</code> - Datum und Uhrzeit der letzten Änderung</a></li>
-<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#d-7901---quelle-und-datum-der-ersterfassung"><i class="fa fa-check"></i><code>201D</code> / <code>7901</code> - Quelle und Datum der Ersterfassung</a></li>
-<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#e001-208---neuanlagedatum-und-selektionsschlüssel"><i class="fa fa-check"></i><code>E001</code> / <code>208@</code> - Neuanlagedatum und Selektionsschlüssel</a></li>
 <li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#b---selektion-und-sortierung-von-neuerwerbungslisten"><i class="fa fa-check"></i><code>4880</code> / <code>237B</code> - Selektion und Sortierung von Neuerwerbungslisten</a></li>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#d---quelle-und-datum-der-ersterfassung"><i class="fa fa-check"></i><code>7901</code> / <code>201D</code> - Quelle und Datum der Ersterfassung</a></li>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#a---datum-der-ersterfassung"><i class="fa fa-check"></i><code>7902</code> / <code>201A</code> - Datum der Ersterfassung</a></li>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#b---datum-und-uhrzeit-der-letzten-änderung"><i class="fa fa-check"></i><code>7903</code> / <code>201B</code> - Datum und Uhrzeit der letzten Änderung</a></li>
 <li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#d---gbv-quelle-bearb.-bzw.-programm-und-datum-der-letzten-änderung"><i class="fa fa-check"></i><code>7904</code> / <code>202D</code> - GBV: Quelle (Bearb. bzw. Programm und Datum der letzten Änderung)</a></li>
+<li class="chapter" data-level="" data-path="formats.html"><a href="formats.html#e001-208---neuanlagedatum-und-selektionsschlüssel"><i class="fa fa-check"></i><code>E001</code> / <code>208@</code> - Neuanlagedatum und Selektionsschlüssel</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i>Literature</a>
@@ -307,76 +307,161 @@ div.csl-indent {
 <div id="marc21" class="section level2 hasAnchor">
 <h2>MARC21<a href="formats.html#marc21" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="date-and-time-of-latest-transaction" class="section level3 hasAnchor">
-<h3><code>005</code>- Date and Time of Latest Transaction<a href="formats.html#date-and-time-of-latest-transaction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<blockquote>
-<p>Sixteen characters that indicate the date and time of the latest record transaction and serve as a version identifier for the record. They are recorded according to Representation of Dates and Times (ISO 8601). The date requires 8 numeric characters in the pattern yyyymmdd. The time requires 8 numeric characters in the pattern hhmmss.f, expressed in terms of the 24-hour (00-23) clock.</p>
-</blockquote>
+<h3><code>005</code> - Date and Time of Latest Transaction<a href="formats.html#date-and-time-of-latest-transaction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li>LOC
-<ul>
-<li>Bibliographic: <a href="https://www.loc.gov/marc/bibliographic/bd005.html">Full</a> / <a href="https://www.loc.gov/marc/bibliographic/concise/bd005.html">Concise</a></li>
-</ul></li>
+<li>LOC: Bibliographic (<a href="https://www.loc.gov/marc/bibliographic/bd005.html">Full</a> / <a href="https://www.loc.gov/marc/bibliographic/concise/bd005.html">Concise</a>)</li>
 </ul>
+<div id="field-definition-and-scope" class="section level4 hasAnchor">
+<h4>Field Definition and Scope<a href="formats.html#field-definition-and-scope" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Sixteen characters that indicate the date and time of the latest record transaction and serve as a version identifier for the record. They are recorded according to <em>Representation of Dates and Times</em> (ISO 8601). The date requires 8 numeric characters in the pattern <code>yyyymmdd</code>. The time requires 8 numeric characters in the pattern <code>hhmmss.f</code>, expressed in terms of the 24-hour (00-23) clock.</p>
+<p>…</p>
+<p>The date on which a record is first entered into machine-readable form is contained in field <code>008/00-05</code>. The Date entered on file never changes.</p>
+</div>
+<div id="input-covention" class="section level4 hasAnchor">
+<h4>Input Covention<a href="formats.html#input-covention" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>System Generation</strong> – Field <code>005</code> should be system generated.</p>
+</div>
 </div>
 <div id="fixed-length-data-elements-general-information" class="section level3 hasAnchor">
 <h3><code>008</code> - Fixed-Length Data Elements-General Information<a href="formats.html#fixed-length-data-elements-general-information" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li>LOC
-<ul>
-<li>Bibliographic: <a href="https://www.loc.gov/marc/bibliographic/bd008.html">Full</a> / <a href="https://www.loc.gov/marc/bibliographic/concise/bd008.html">Concise</a></li>
-</ul></li>
+<li>LOC: Bibliographic (<a href="https://www.loc.gov/marc/bibliographic/bd008.html">Full</a> / <a href="https://www.loc.gov/marc/bibliographic/concise/bd008.html">Concise</a>)</li>
 </ul>
+<div id="field-definition-and-scope-1" class="section level4 hasAnchor">
+<h4>Field Definition and Scope<a href="formats.html#field-definition-and-scope-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Forty character positions (<code>00-39</code>) that provide coded information about the record as a whole and about special bibliographic aspects of the item being cataloged. These coded data elements are potentially useful for retrieval and data management purposes.</p>
+<p>…</p>
+<p>Data elements are positionally-defined. Character positions that are not defined contain a blank (<code>#</code>). All defined character positions must contain a defined code; for some field <code>008</code> positions, this may be the fill character (<code>|</code>). The fill character may be used (in certain character positions) when a cataloging organization makes no attempt to code the character position. The fill character is not allowed in field <code>008</code> positions <code>00-05</code> (Date entered on file). …</p>
+<p>Character positions <code>00-17</code> and <code>35-39</code> are defined the same across all types of material …</p>
+</div>
 <div id="date-entered-on-file" class="section level4 hasAnchor">
 <h4><code>00-05</code> - Date entered on file<a href="formats.html#date-entered-on-file" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<blockquote>
-<p>Computer-generated, six-character numeric string that indicates the date the MARC record was created. Recorded in the pattern yymmdd.</p>
-</blockquote>
 <ul>
-<li>LOC
+<li>LOC: Bibliographic (<a href="https://www.loc.gov/marc/bibliographic/bd008a.html">Full</a> / <a href="https://www.loc.gov/marc/bibliographic/concise/bd008a.html">Concise</a>)</li>
+</ul>
+<div id="guidelines-for-applying-content-designators" class="section level5 hasAnchor">
+<h5>Guidelines for Applying Content Designators<a href="formats.html#guidelines-for-applying-content-designators" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Computer-generated, six-character numeric string that indicates the date the MARC record was created. Recorded in the pattern <code>yymmdd</code>.</p>
+<p>… The date entered on file in <code>008/00-05</code> is never changed. The date and time of latest transaction information in field <code>005</code> changes each time a transaction is made to the record. The latest transaction information enables an organization handling more than one version of a record to identify the most current version. The fill character (<code>|</code>) is not allowed in any of these positions. Field <code>008/00-05</code> is usually system generated.</p>
+</div>
+</div>
+<div id="input-convention" class="section level4 hasAnchor">
+<h4>Input Convention<a href="formats.html#input-convention" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Capitalization</strong> – Alphabetic codes are input in lowercase.</p>
+<p><strong>Field length</strong> – Field <code>008</code> should always consist of forty (40) character positions.</p>
+</div>
+</div>
+</div>
+<div id="pica3-pica" class="section level2 hasAnchor">
+<h2>PICA3 / PICA+<a href="formats.html#pica3-pica" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="b---selektion-und-sortierung-von-neuerwerbungslisten" class="section level3 hasAnchor">
+<h3><code>4880</code> / <code>237B</code> - Selektion und Sortierung von Neuerwerbungslisten<a href="formats.html#b---selektion-und-sortierung-von-neuerwerbungslisten" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li>Bibliographic: <a href="https://www.loc.gov/marc/bibliographic/bd008a.html">Full</a> / <a href="https://www.loc.gov/marc/bibliographic/concise/bd008a.html">Concise</a></li>
-</ul></li>
+<li><a href="https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&amp;val=4880&amp;katalog=Standard">K10plus Format-Dokumentation</a> (SWB)</li>
 </ul>
 </div>
+<div id="d---quelle-und-datum-der-ersterfassung" class="section level3 hasAnchor">
+<h3><code>7901</code> / <code>201D</code> - Quelle und Datum der Ersterfassung<a href="formats.html#d---quelle-und-datum-der-ersterfassung" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&amp;val=7901&amp;katalog=Standard">K10plus Format-Dokumentation</a> (SWB)</li>
+</ul>
+<p>Das Feld enthält die Bibliothek (ELN) und das Anlege-Datum des Exemplarsatzes. Es dient dem Schutz des Datensatzes von Korrekturen durch andere ELNs.</p>
+<p>Das Feld wird maschinell belegt, für manuelle Erfassung, Korrektur oder Löschung nicht zugelassen.</p>
 </div>
-</div>
-<div id="pica3pica" class="section level2 hasAnchor">
-<h2>PICA3/PICA+<a href="formats.html#pica3pica" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="a-7902---datum-der-ersterfassung" class="section level3 hasAnchor">
-<h3><code>201A</code> / <code>7902</code> - Datum der Ersterfassung<a href="formats.html#a-7902---datum-der-ersterfassung" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="a---datum-der-ersterfassung" class="section level3 hasAnchor">
+<h3><code>7902</code> / <code>201A</code> - Datum der Ersterfassung<a href="formats.html#a---datum-der-ersterfassung" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&amp;val=7902&amp;katalog=Standard">K10plus Format-Dokumentation</a> (SWB)</li>
 </ul>
 </div>
-<div id="b-7903---datum-und-uhrzeit-der-letzten-änderung" class="section level3 hasAnchor">
-<h3><code>201B</code> / <code>7903</code> - Datum und Uhrzeit der letzten Änderung<a href="formats.html#b-7903---datum-und-uhrzeit-der-letzten-änderung" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="b---datum-und-uhrzeit-der-letzten-änderung" class="section level3 hasAnchor">
+<h3><code>7903</code> / <code>201B</code> - Datum und Uhrzeit der letzten Änderung<a href="formats.html#b---datum-und-uhrzeit-der-letzten-änderung" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&amp;val=7903&amp;katalog=Standard">K10plus Format-Dokumentation</a> (SWB)</li>
 </ul>
 </div>
-<div id="d-7901---quelle-und-datum-der-ersterfassung" class="section level3 hasAnchor">
-<h3><code>201D</code> / <code>7901</code> - Quelle und Datum der Ersterfassung<a href="formats.html#d-7901---quelle-und-datum-der-ersterfassung" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="d---gbv-quelle-bearb.-bzw.-programm-und-datum-der-letzten-änderung" class="section level3 hasAnchor">
+<h3><code>7904</code> / <code>202D</code> - GBV: Quelle (Bearb. bzw. Programm und Datum der letzten Änderung)<a href="formats.html#d---gbv-quelle-bearb.-bzw.-programm-und-datum-der-letzten-änderung" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li><a href="https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&amp;val=7901&amp;katalog=Standard">K10plus Format-Dokumentation</a> (SWB)</li>
+<li><code>Exemplardaten_Pica3_sortiert_20181121_oeff.pdf</code></li>
 </ul>
-<blockquote>
-<p>Das Feld enthält die Bibliothek (ELN) und das Anlege-Datum des Exemplarsatzes. Es dient dem Schutz des Datensatzes von Korrekturen durch andere ELNs.</p>
-<p>Das Feld wird maschinell belegt, für manuelle Erfassung, Korrektur oder Löschung nicht zugelassen.</p>
-</blockquote>
 </div>
 <div id="e001-208---neuanlagedatum-und-selektionsschlüssel" class="section level3 hasAnchor">
 <h3><code>E001</code> / <code>208@</code> - Neuanlagedatum und Selektionsschlüssel<a href="formats.html#e001-208---neuanlagedatum-und-selektionsschlüssel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&amp;val=E001&amp;katalog=Standard">K10plus Format-Dokumentation</a> (SWB)</li>
 </ul>
-<div id="b---selektionsschlüssel" class="section level4 hasAnchor">
-<h4><code>b</code> - Selektionsschlüssel<a href="formats.html#b---selektionsschlüssel" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ul>
-<li><a href="https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&amp;val=E001&amp;katalog=Standard#_:_">K10plus Format-Dokumentation</a> (SWB)</li>
-</ul>
-<blockquote>
-<p><strong>Besonderheiten für SWB-Bibliotheken:</strong><br />
-Zugelassener Inhalt für Pos. 1 = “l” oder “e”.<br />
+<p>Das Feld E001-E999 ist das erste (Pflicht-)Feld eines jeden Exemplardatensatzes (E001 für den 1. Exemplarsatz, E002 für den 2. Exemplarsatz usw. bis E999 für den 999. und letzten Exemplarsatz) und enthält das Erfassungsdatum und den Selektionsschlüssel.</p>
+<p>Eingegeben wird nur der Selektionsschlüssel. Das Erfassungsdatum des Exemplarsatzes wird automatisch vom System ergänzt.</p>
+<div id="neuanlagedatum" class="section level4 hasAnchor">
+<h4>Neuanlagedatum<a href="formats.html#neuanlagedatum" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Pica3</th>
+<th align="left">Pica+</th>
+<th align="left">wiederholbar</th>
+<th align="left">Marc21</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">ohne</td>
+<td align="left">$a</td>
+<td align="left">Nein</td>
+<td align="left">–</td>
+</tr>
+</tbody>
+</table>
+<p>Das Unterfeld wird vom System besetzt und enthält das Datum in der Form TT-MM-JJ.</p>
+<div id="indexierung" class="section level5 hasAnchor">
+<h5>Indexierung<a href="formats.html#indexierung" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Indextyp (IKT)</th>
+<th align="left">Indexschlüssel (IKT)</th>
+<th align="left">Routine</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">SEL (8880)</td>
+<td align="left">SEL (8880)</td>
+<td align="left">Datum</td>
+</tr>
+<tr class="even">
+<td align="left">SXN (4015)</td>
+<td align="left">SXN (4015)</td>
+<td align="left">Phrase</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="selektionsschlüssel" class="section level4 hasAnchor">
+<h4>Selektionsschlüssel<a href="formats.html#selektionsschlüssel" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Pica3</th>
+<th align="left">Pica+</th>
+<th align="left">wiederholbar</th>
+<th align="left">Marc21</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">_:_</td>
+<td align="left">$b</td>
+<td align="left">Nein</td>
+<td align="left">–</td>
+</tr>
+</tbody>
+</table>
+<div id="besonderheiten-für-swb-bibliotheken" class="section level5 hasAnchor">
+<h5>Besonderheiten für SWB-Bibliotheken<a href="formats.html#besonderheiten-für-swb-bibliotheken" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Zugelassener Inhalt für Pos. 1 = “l” oder “e”.<br />
 Pos. 2-3 ist numerisch, erlaubte Inhalte “01”-“99”; Pos. 2-3 bei Pos. 1=“e” muss identisch sein mit einem Pica-Exemplarsatz mit Pos.1=“l” unter der gleichen ELN.</p>
 <p>Bei Neuanlegen eines Satzes muss es manuell mit dem Inhalt “Status” belegt werden. Das Neuanlagedatum wird maschinell bei Speicherung des Satzes vergeben.</p>
 <p>Status=“l” für Lokalsatz auf Pos. 1<br />
@@ -385,21 +470,38 @@ Status = “e” für Exemplarsatz auf Pos. 1<br />
 Pos. 2-3 linksbündig und zweistellig die Nummerierung des Lokalsatzes.<br />
 Status = “z” für aus der ZDB übernommenen Bestandssatz (wird bei Übernahme maschinell gesetzt, ergänzt durch die zweistellige Nummer der Sortierhilfe aus ZDB-Feld 8032)<br />
 Status = “zez” für aus der ZDB übernommenen Bestandssatz, der aus der EZB über den gemeinsamen Lieferdienst „EZB ZDB“ übertragen wurde.</p>
-</blockquote>
 </div>
-</div>
-<div id="b---selektion-und-sortierung-von-neuerwerbungslisten" class="section level3 hasAnchor">
-<h3><code>4880</code> / <code>237B</code> - Selektion und Sortierung von Neuerwerbungslisten<a href="formats.html#b---selektion-und-sortierung-von-neuerwerbungslisten" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><a href="https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl?cmd=kat&amp;val=4880&amp;katalog=Standard">K10plus Format-Dokumentation</a> (SWB)</li>
-</ul>
-</div>
-<div id="d---gbv-quelle-bearb.-bzw.-programm-und-datum-der-letzten-änderung" class="section level3 hasAnchor">
-<h3><code>7904</code> / <code>202D</code> - GBV: Quelle (Bearb. bzw. Programm und Datum der letzten Änderung)<a href="formats.html#d---gbv-quelle-bearb.-bzw.-programm-und-datum-der-letzten-änderung" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><code>Exemplardaten_Pica3_sortiert_20181121_oeff.pdf</code></li>
-</ul>
+<div id="indexierung-1" class="section level5 hasAnchor">
+<h5>Indexierung<a href="formats.html#indexierung-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Indextyp (IKT)</th>
+<th align="left">Indexschlüssel (IKT)</th>
+<th align="left">Routine</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">LNR (2160)</td>
+<td align="left">LFZ (8640)</td>
+<td align="left">Wort</td>
+</tr>
+<tr class="even">
+<td align="left">SEL (8880)</td>
+<td align="left">SEL (8880)</td>
+<td align="left">Datum</td>
+</tr>
+<tr class="odd">
+<td align="left">SLS (8149)</td>
+<td align="left">SLS (8149)</td>
+<td align="left">Wort</td>
+</tr>
+</tbody>
+</table>
 
+</div>
+</div>
 </div>
 </div>
 </div>
