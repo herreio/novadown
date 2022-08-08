@@ -185,6 +185,10 @@
 220B/01 $aha geschenk Thomas Maissen
 ```
 
+### Neuerwerbungsregal
+
+![Mar 2, 2018 · [\@dhiparis](https://twitter.com/dhiparis/status/969512229870690305) (Twitter)](./images/twitter-dhiparis-969512229870690305.jpeg)
+
 ## Herzogin Anna Amalia Bibliothek [`DE-32`]
 
 - [GBV-Datenbankverzeichnis](https://uri.gbv.de/database/opac-de-32) [`opac-de-32`]
