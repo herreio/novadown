@@ -44,7 +44,7 @@ Previously known as **Zend Framework**. Used by [VuFind](#vufind).
 - OCLC PICA (Wikipedia: [EN](https://en.wikipedia.org/wiki/OCLC_PICA) / [DE](https://de.wikipedia.org/wiki/OCLC_PICA))
 - OCLC: [Fusionen und Akquisitionen](https://www.oclc.org/de/about/finance/mergers.html) (PICA B.V. / OCLC EMEA B.V)
 
-### LBS OPC
+### LBS
 
 - OCLC: [Lokales Bibliotheksverwaltungssystem mit integrierten Funktionen zum Katalogisieren und Bestellen](https://www.oclc.org/de/lbs.html)
 - GBV: [LBS - Das Lokale Bibliothekssystem](https://verbundwiki.gbv.de/x/AoAJAg)
@@ -58,6 +58,14 @@ Previously known as **Zend Framework**. Used by [VuFind](#vufind).
 ### TouchPoint
 
 - OCLC: [Endnutzer-Service nach Maß](https://www.oclc.org/de/touchpoint.html)
+
+## Pazpar2
+
+- [Index Data](https://www.indexdata.com/resources/software/pazpar2/)
+- GitHub: [indexdata/pazpar2](https://github.com/indexdata/pazpar2)
+- TYPO3 extension: [subugoe/pazpar2/typo3-pazpar2](https://gitlab.gwdg.de/subugoe/pazpar2/typo3-pazpar2)
+  - [pazpar2 Neuerwerbungen](https://gitlab.gwdg.de/subugoe/pazpar2/typo3-pazpar2/-/tree/master/Documentation#pazpar2-neuerwerbungen)
+- See also [subugoe/Opac-2-Atom](https://github.com/subugoe/Opac-2-Atom)
 
 ## Typo3
 

@@ -51,6 +51,11 @@ Computer-generated, six-character numeric string that indicates the date the MAR
 ## PICA3 / PICA+
 
 - [K10plus Format-Dokumentation](https://swbtools.bsz-bw.de/cgi-bin/k10plushelp.pl)
+- [Sigel Format-Dokumentation](https://sigel.staatsbibliothek-berlin.de/vergabe/adressenformat) / [PDF](https://wiki.dnb.de/display/ILTIS/ILTIS-Handbuch?preview=/43090988/154987315/FV_Bibliotheksdatei_2019-12-05.pdf)
+
+### `856` / `009Q` - Endnutzer Service-URLs
+
+- [Sigel Format-Dokumentation](https://sigel.staatsbibliothek-berlin.de/vergabe/adressenformat/856/)
 
 ### `4880` / `237B` - Selektion und Sortierung von Neuerwerbungslisten
 
