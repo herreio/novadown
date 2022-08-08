@@ -70,7 +70,10 @@ Previously known as **Zend Framework**. Used by [VuFind](#vufind).
 - [Index Data](https://www.indexdata.com/resources/software/pazpar2/)
 - GitHub: [indexdata/pazpar2](https://github.com/indexdata/pazpar2)
 - TYPO3 extension: [subugoe/pazpar2/typo3-pazpar2](https://gitlab.gwdg.de/subugoe/pazpar2/typo3-pazpar2)
-  - [pazpar2 Neuerwerbungen](https://gitlab.gwdg.de/subugoe/pazpar2/typo3-pazpar2/-/tree/master/Documentation#pazpar2-neuerwerbungen)
+  - [Documentation/README.rst](https://gitlab.gwdg.de/subugoe/pazpar2/typo3-pazpar2/-/blob/master/Documentation/README.rst)
+    - `neuerwerbungen`
+  - [Classes/Controller/Pazpar2neuerwerbungenController.php](https://gitlab.gwdg.de/subugoe/pazpar2/typo3-pazpar2/-/blob/master/Classes/Controller/Pazpar2neuerwerbungenController.php)
+  - [Classes/Domain/Model/Pazpar2neuerwerbungen.php](https://gitlab.gwdg.de/subugoe/pazpar2/typo3-pazpar2/-/blob/master/Classes/Domain/Model/Pazpar2neuerwerbungen.php)
 - See also [subugoe/Opac-2-Atom](https://github.com/subugoe/Opac-2-Atom)
 
 ## Typo3
