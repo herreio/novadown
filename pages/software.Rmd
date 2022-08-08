@@ -1,5 +1,10 @@
 # Software
 
+## Django
+
+- Documentation
+  - [The syndication feed framework](https://docs.djangoproject.com/en/4.1/ref/contrib/syndication/)
+
 ## Ex Libris
 
 - Knowledge Center
@@ -16,12 +21,13 @@
 ## Koha
 
 - [Homepage](https://koha-community.org/)
-  - [Bibliography](https://koha-community.org/documentation/koha-bibliography/)
 - [Documentation](https://koha-community.org/documentation/)
   - [Lists and cart](https://koha-community.org/manual/22.05/en/html/lists.html) (22.05)
   - [OPAC](https://koha-community.org/manual/22.05/en/html/opac.html) (22.05)
     - [Search RSS feeds](https://koha-community.org/manual/22.05/en/html/opac.html#search-rss-feeds) (22.05)
     - [Custom RSS feeds](https://koha-community.org/manual/22.05/en/html/opac.html#custom-rss-feeds-label) (22.05)
+- [Bibliography](https://koha-community.org/documentation/koha-bibliography/)
+  - [Zotero Group](https://www.zotero.org/groups/6684/koha)
 - [Gitea](https://git.koha-community.org/)
   - [koha-community/koha](https://git.koha-community.org/koha-community/koha)
 - [Koha-Community/Koha](https://github.com/Koha-Community/Koha) (GitHub/Mirror)
