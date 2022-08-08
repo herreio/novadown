@@ -53,6 +53,10 @@ Previously known as **Zend Framework**. Used by [VuFind](#vufind).
 
     > Man kann natürlich auch direkt auf die XML-Ausgabe zugreifen, z.B.: `gso.gbv.de/DB=2.1/XML=1.0/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=[SUCHSTRING]`
 
+### TouchPoint
+
+- OCLC: [Endnutzer-Service nach Maß](https://www.oclc.org/de/touchpoint.html)
+
 ## Typo3
 
 ### news
