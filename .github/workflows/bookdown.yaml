@@ -20,7 +20,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: xu-cheng/latex-action@v2
+      - name: Install texlive
+        run: sudo apt-get install -y texlive-core
 
       - uses: r-lib/actions/setup-pandoc@v2
 
