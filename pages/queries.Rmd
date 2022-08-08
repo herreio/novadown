@@ -2,13 +2,13 @@
 
 ## RVK
 
-### AN 95200 -- Selektive Informationsvermittlung (SDI)
+### `AN 95200` -- Selektive Informationsvermittlung (SDI)
 
-### ST 515 -- Wissensmanagement, Information engineering
+### `ST 515` -- Wissensmanagement, Information engineering
 
 ## ISSN Portal
 
-https://portal.issn.org/
+https://portal.issn.org
 
 ### `neuerwerbungen` (ALL)
 
@@ -29,3 +29,14 @@ https://dbis.ur.de
 ### `Neuerwerbungen` (Suchwort)
 
 8 Treffer
+
+## Twitter
+
+### Neuerwerbungen
+
+- [People](https://twitter.com/search?q=neuerwerbungen&src=typed_query&f=user)
+
+### \#Neuerwerbungen
+
+- [Top](https://twitter.com/search?q=%23neuerwerbungen&src=typed_query&f=top)
+- [Latest](https://twitter.com/search?q=%23neuerwerbungen&src=typed_query&f=live)
