@@ -52,6 +52,12 @@
     - [Südslawisch](https://slavistik-portal.de/olcned/olcned_rss.php?sel=suedslav)
     - [in westeu. Sprachen](https://slavistik-portal.de/olcned/olcned_rss.php?sel=wla)
 
+## ICI Berlin [`DE-B1578`]
+
+- [GBV-Datenbankverzeichnis](#) (?)
+- [LBS](https://vzlbs2.gbv.de/DB=50/) / [IKTLIST](https://vzlbs2.gbv.de/DB=50/XML=1.0/IKTLIST)
+- [New Acquisitions](https://www.ici-berlin.org/library/new-acquisitions/)
+
 ## Technische Informationsbibliothek (TIB) [`DE-89`]
 
 ### Neuerwerbungen
@@ -325,7 +331,7 @@ Diese Suchanfrage abonnieren (RSS)
 
 - [Explore our new acquisitions](https://libaac.de/request/new-books/)
 - RSS Feed
-  - „Fatal error: Uncaught Error: Class 'XSLTProcessor' not found in `/var/www/html/packages/tmpl_fidaac/Resources/Public/Scripts/Pazpar2Atom/opac-feed2.php:46` Stack trace: \#0 {main} thrown in `/var/www/html/packages/tmpl_fidaac/Resources/Public/Scripts/Pazpar2Atom/opac-feed2.php` on line 46“
+  - „Fatal error: Uncaught Error: Class 'XSLTProcessor' not found in /var/www/html/packages/tmpl_fidaac/Resources/Public/Scripts/Pazpar2Atom/opac-feed2.php:46 Stack trace: \#0 {main} thrown in /var/www/html/packages/tmpl_fidaac/Resources/Public/Scripts/Pazpar2Atom/opac-feed2.php on line 46“
 
 ## Universitätsbibliothek Frankfurt am Main [`DE-30`]
 
@@ -338,11 +344,19 @@ Diese Suchanfrage abonnieren (RSS)
   - „myUB ist eine Dienstleistung für BibliotheksbenutzerInnen, die einen gültigen Ausweis haben.“
   - „Sie finden in myUB: ... Neuerwerbungen für Ihr Fach“
 
+## Saarländische Universitäts- und Landesbibliothek (SULB) [`DE-291`]
+
+- [Neuerwerungslisten](https://www.sulb.uni-saarland.de/neuerwerbungslisten) via [LBS](https://swb2.bsz-bw.de/DB=2.340/) / [IKTLIST](https://swb2.bsz-bw.de/DB=2.340/XML=1.0/IKTLIST) (Error)
+
+### Schlüssel
+
+- `NWL`: Neuerwerbungen unaufgeschlüsselt [`4005`]
+
 ## Deutsches Museum [`DE-210`]
 
 ### Neuerwerbungen
 
-- [Neuerwerbungen der Bibliothek](https://www.deutsches-museum.de/forschung/bibliothek/neuerwerbungen) via [TouchPoint](https://opac.deutsches-museum.de/)
+- [Neuerwerbungen der Bibliothek](https://www.deutsches-museum.de/forschung/bibliothek/neuerwerbungen) via [TouchPoint](https://opac.deutsches-museum.de/) (OCLC)
   - „Im Folgenden werden die Neuerwerbungen für die zentralen Sammelgebiete der Bibliothek quartalsweise zum Download zur Verfügung gestellt.“
   - Neuerwerbungen 2022
     - Technik- und Bauchtechnikgeschichte
@@ -364,6 +378,16 @@ Diese Suchanfrage abonnieren (RSS)
   - [März 2022](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=28) / [RSS](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?rss=1&op=view&shelfnumber=28)
   - [Februar 2022](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=27) / [RSS](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?rss=1&op=view&shelfnumber=27)
   - [Januar 2022](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=26) / [RSS](https://ids-mannheim.bsz-bw.de/cgi-bin/koha/opac-shelves.pl?rss=1&op=view&shelfnumber=26)
+
+## Bibliothek für Bildungsgeschichtliche Forschung in Berlin (BBF) [`DE-B478`]
+
+- Neuerwerbungen via [Koha](https://bibliothekskatalog.bbf.dipf.de/) (Public lists)
+  - [Juli 2022](https://bibliothekskatalog.bbf.dipf.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=1090&sortfield=title)
+  - [Juni 2022](https://bibliothekskatalog.bbf.dipf.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=1075&sortfield=title)
+  - [Mai 2022](https://bibliothekskatalog.bbf.dipf.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=1062&sortfield=title)
+  - [April 2022](https://bibliothekskatalog.bbf.dipf.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=1053&sortfield=title)
+  - [März 2022](https://bibliothekskatalog.bbf.dipf.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=1049&sortfield=title)
+  - [Februar 2022](https://bibliothekskatalog.bbf.dipf.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=1042&sortfield=title)
 
 ## Fachinformationsdienst Buch-, Bibliotheks- und Informationswissenschaft [`FID-BBI-DE-23`]
 
@@ -409,6 +433,16 @@ Diese Suchanfrage abonnieren (RSS)
 - [Neuerwerbungen](https://www.menalib.de/vifa/neuerwerbungen/)
   - „Dieses Feature wird zur Zeit überarbeitet. Bitte nutzen Sie in der Zwischenzeit die [Systematik des FID](https://www.menalib.de/vifa/systematik-des-fid-nahost-nordafrika-und-islamstudien/) für einen thematischen Einstieg in unseren Bestand. Die neusten Erwerbungen erscheinen im Katalog zuerst.“
   - „Bitte teilen Sie uns hier Ihre Erfahrungen mit den Neuerwerbungslisten mit: Haben Sie die Neuerwerbungslisten des FID in der Vergangenheit genutzt?“
+
+## Universitätsbibliothek Trier (`DE-385`)
+
+- [Neuerwerbungen](https://www.uni-trier.de/bibliothek/a-z/n/neuerwerbungen)
+  - ... via [TriCat](https://tricat.uni-trier.de/primo-explore/search?vid=TRI_UB_I) (Primo)
+    - Facette „Neue Datensätze“: Beispielsuche [`philosophie`](https://tricat.uni-trier.de/primo-explore/search?query=any,contains,philosophie&tab=default_tab&search_scope=TRI_ALL&vid=TRI_UB_I&offset=0)
+      - [Neu seit den letzten 3 Monaten](https://tricat.uni-trier.de/primo-explore/search?query=any,contains,philosophie&tab=default_tab&search_scope=TRI_ALL&vid=TRI_UB_I&facet=newrecords,include,90%20days%20back&offset=0)
+      - [Neu seit letztem Monat](https://tricat.uni-trier.de/primo-explore/search?query=any,contains,philosophie&tab=default_tab&search_scope=TRI_ALL&vid=TRI_UB_I&facet=newrecords,include,30%20days%20back&offset=0)
+      - [Neu seit letzter Woche](https://tricat.uni-trier.de/primo-explore/search?query=any,contains,philosophie&tab=default_tab&search_scope=TRI_ALL&vid=TRI_UB_I&facet=newrecords,include,07%20days%20back&offset=0)
+  - ... via [Twitter](https://www.uni-trier.de/bibliothek/a-z/t/twitter)
 
 ## Stanford University
 
@@ -517,6 +551,13 @@ Diese Suchanfrage abonnieren (RSS)
 
 [Top 10 Ausleihe](https://www.khm.de/bib_top_ausleihe/) (Quartals- und Jahresausleihe)
 
+## Medizinische Universität Wien [`AT-UBMUW-100`]
+
+- [Neuerwerbungen](https://ub.meduniwien.ac.at/blog/?tag=neuerwerbungen) (Blog)
+- [Neuerwerbungen](https://ubsearch.meduniwien.ac.at/primo-explore/collectionDiscovery?vid=UMW&collectionId=8139368290003344) (2019–2022) via [Primo](https://ubsearch.meduniwien.ac.at/primo-explore/collectionDiscovery?vid=UMW) (Collection Discovery)
+  - [August 2022](https://ubsearch.meduniwien.ac.at/primo-explore/collectionDiscovery?vid=UMW&collectionId=8142908690003344)
+  - [Juli 2022](https://ubsearch.meduniwien.ac.at/primo-explore/collectionDiscovery?vid=UMW&collectionId=8142178600003344)
+
 ## Leo Baeck Institute (LBI)
 
 - [New Library Acquisitions](https://www.lbi.org/collections/new-library-acquisitions/) / [Neuerwerbungen der LBI Bibliothek](https://www.lbi.org/de/collections/new-library-acquisitions/) via Primo
@@ -533,7 +574,7 @@ Diese Suchanfrage abonnieren (RSS)
 
 - [New Acquisitions List](https://library.uoregon.edu/new-acquisitions-list) via Primo
 
-## Warburg Library
+## Warburg Library [`GB-UkLoWI`]
 
 - [New Acquisitions](https://warburg.libguides.com/collections/new) via [LibGuides](http://warburg.libguides.com/)
 - [#NewAcquisitions](https://twitter.com/search?q=(%23NewAcquisitions)%20(from%3AWarburg_Library)&f=live) via [Twitter](https://twitter.com/Warburg_Library) (\@Warburg_Library)
