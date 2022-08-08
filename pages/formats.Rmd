@@ -129,7 +129,7 @@ Folgende Codes für eine Ausleihbeschränkung sind definiert:
 
 ##### Hinweis
 
-Bei Datensätzen, die aus der Migration der Datenbanken von SWB und GBV stammen, wurde die EPN des SWB in das Feld 7801 umgesetzt.
+Bei Datensätzen, die aus der Migration der Datenbanken von SWB und GBV stammen, wurde die EPN des SWB in das Feld `7801` umgesetzt.
 
 ##### Validation
 
@@ -175,7 +175,7 @@ Das Feld wird maschinell belegt, für manuelle Erfassung, Korrektur oder Löschu
 |:------|:--------------|:-------------|:---------|
 | 8012  | 209B/$x12     | Nein         | --       |
 
-Das Feld 8012 enthält vierstellige, recherchierbare Abrufzeichen.
+Das Feld `8012` enthält vierstellige, recherchierbare Abrufzeichen.
 
 #### Abrufzeichen
 

@@ -8,16 +8,16 @@
 
 ### Neuerwerbungen
 
-- [Neue Bücher und mehr zum östlichen Europa](https://neuerwerbungen.bsb-muenchen.de/ned/newsearch?view=oe) (Fachinformationsdienst Ost-, Ostmittel- und Südosteuropa) [`FID-OST-DE-12`]
-  - [Neue Bücher und mehr zum östlichen Europa](https://www.osmikon.de/services/neue-buecher-und-mehr) (Osmikon)
-- [Artikel und Rezensionen zu Ost-, Ostmittel- und Südosteuropa](https://abo.osmikon.de/ned/newsearch?view=artos) (Osmikon)
-  - [Neue Aufsätze und mehr zum östlichen Europa](https://www.osmikon.de/services/neue-aufsaetze-und-mehr) (Osmikon)
-- [Neue Bücher und mehr zu Geschichte und Altertum](https://neuerwerbungen.bsb-muenchen.de/ned/newsearch?view=hist) (Fachinformationsdienst Geschichtswissenschaft) [`FID-ALT-DE-12` / `FID-HIST-DE-12`]
+- [Neue Bücher und mehr zu Geschichte und Altertum](https://neuerwerbungen.bsb-muenchen.de/ned/newsearch?view=hist) (Fachinformationsdienst Geschichtswissenschaft / Altertumswissenschaften) [`FID-HIST-DE-12` / `FID-ALT-DE-12`]
   - [historicum.net](https://www.historicum.net/services/neuerwerbungen/geschichtswissenschaft)
-    - [Weiter Neuerwerbungsdienste](https://www.historicum.net/services/neuerwerbungen/weitere-neuerwerbungsdienste)
+    - [Weitere Neuerwerbungsdienste](https://www.historicum.net/services/neuerwerbungen/weitere-neuerwerbungsdienste)
   - [propylaeum.de](https://www.propylaeum.de/service/neuerwerbungen/)
 - [Neuerwerbungen Musik](https://neuerwerbungen.bsb-muenchen.de/ned/newsearch?view=mus) (Fachinformationsdienst Musikwissenschaft) [`FID-MUS-DE-12`]
   - [musiconn](https://www.musiconn.de/services/neuerwerbungen)
+- [Neue Bücher und mehr zum östlichen Europa](https://neuerwerbungen.bsb-muenchen.de/ned/newsearch?view=oe) (Fachinformationsdienst Ost-, Ostmittel- und Südosteuropa) [`FID-OST-DE-12`]
+  - [Neue Bücher und mehr zum östlichen Europa](https://www.osmikon.de/services/neue-buecher-und-mehr) (Osmikon)
+- [Artikel und Rezensionen zu Ost-, Ostmittel- und Südosteuropa](https://abo.osmikon.de/ned/newsearch?view=artos) (Osmikon/ARTOS)
+  - [Neue Aufsätze und mehr zum östlichen Europa](https://www.osmikon.de/services/neue-aufsaetze-und-mehr) (Osmikon)
 
 ## Staatsbibliothek zu Berlin [`DE-1` / `DE-1a`]
 
