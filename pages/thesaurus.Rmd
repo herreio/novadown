@@ -1,0 +1,21 @@
+# Thesaurus
+
+## Basisklassifikation (BK)
+
+## Regensburger Verbundklassifikation (RVK)
+
+- [RVK Online](https://rvk.uni-regensburg.de/regensburger-verbundklassifikation-online)
+  - [Download](https://rvk.uni-regensburg.de/regensburger-verbundklassifikation-online/rvk-download)
+  - [RVK-API](https://rvk.uni-regensburg.de/regensburger-verbundklassifikation-online/rvk-api)
+
+### API
+
+- [Kurzdoku](https://rvk.uni-regensburg.de/api/)
+
+#### Beispielaufrufe
+
+##### `LP 10280 - LP 10500`
+
+- Node: https://rvk.uni-regensburg.de/api/json/node/LP%2010280%20-%20LP%2010500
+- Ancestors: https://rvk.uni-regensburg.de/api/json/ancestors/LP%2010280%20-%20LP%2010500
+- Children: https://rvk.uni-regensburg.de/api/json/children/LP%2010280%20-%20LP%2010500
