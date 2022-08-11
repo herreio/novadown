@@ -28,7 +28,11 @@ https://dbis.ur.de
 
 ### `Neuerwerbungen` (Suchwort)
 
-8 Treffer
+- [13 Treffer](https://dbis.ur.de/dbliste.php?lett=fs&Suchwort=Neuerwerbungen) (2022-08-10)
+
+### `Neuerwerbungen` (Titelwort(e))
+
+- [4 Treffer](https://dbis.ur.de//dbliste.php?bib_id=alle&colors=3&ocolors=40&lett=k&jq_type1=AL&jq_term1=&jq_bool2=AND&jq_not2=1&jq_type2=KT&jq_term2=Neuerwerbungen&jq_bool3=AND&jq_not3=1&jq_type3=CO&jq_term3=&jq_bool4=AND&jq_not4=1&jq_type4=KW&jq_term4=&formal_type=0) (2022-08-10)
 
 ## Twitter
 
@@ -40,3 +44,9 @@ https://dbis.ur.de
 
 - [Top](https://twitter.com/search?q=%23neuerwerbungen&src=typed_query&f=top)
 - [Latest](https://twitter.com/search?q=%23neuerwerbungen&src=typed_query&f=live)
+
+## ZDB
+
+### `neuerwerbungen` (All fields)
+
+- [964 Treffer](https://zdb-katalog.de/list.xhtml?t=neuerwerbungen) (2022-08-10)
