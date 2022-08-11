@@ -389,6 +389,16 @@ Diese Suchanfrage abonnieren (RSS)
   - [März 2022](https://bibliothekskatalog.bbf.dipf.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=1049&sortfield=title)
   - [Februar 2022](https://bibliothekskatalog.bbf.dipf.de/cgi-bin/koha/opac-shelves.pl?op=view&shelfnumber=1042&sortfield=title)
 
+## Universitätsbibliothek Tübingen (`DE-21`)
+
+### Neuerwerbungen
+
+- ... via [Katalog Plus](https://rds-tue.ibs-bw.de/opac/RDSIndex/Home) (VuFind)
+  - [Fachgebiete](http://biber3.ub.uni-tuebingen.de/nelol/cgi-bin/neuerw.pl)
+    - Beispiel: [Biologie Mai 2022 -- August 2022](https://rds-tue.ibs-bw.de/opac/RDSIndex/Search?lookfor=dbs_date%3A%5B2205%20TO%202208%5D%20AND%20zj%3A21%20AND%20dbs%3A47) (`dbs_date:[2205 TO 2208] AND zj:21 AND dbs:47`)
+  - [Institute](http://biber3.ub.uni-tuebingen.de/nelol/cgi-bin/neuerw.pl?nowindow=0&loc=institute)
+    - Beispiel: [Kriminologie Mai 2022 -- August 2022](https://rds-tue.ibs-bw.de/opac/RDSIndex/Search?lookfor=dbs_date%3A%5B2205%20TO%202208%5D%20AND%20zj%3A21-110) (`dbs_date:[2205 TO 2208] AND zj:21-110`)
+
 ## Fachinformationsdienst Buch-, Bibliotheks- und Informationswissenschaft [`FID-BBI-DE-23`]
 
 ### RSS Feed
